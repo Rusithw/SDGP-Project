@@ -1,0 +1,24 @@
+.main{
+
+}
+
+.nav-bar{
+    width: 100%;
+    display: inline-block;
+}
+.nav-bar ul{
+    list-style: none;
+}
+
+.nav-bar ul li{
+    float: left;
+    padding-right: 90px;
+}
+.text{
+    width: 100%;
+    display: inline-block;
+}
+.paragraph{
+    width: 100%;
+    display: inline-block;
+}
