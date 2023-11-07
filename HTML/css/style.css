@@ -22,3 +22,28 @@
     width: 100%;
     display: inline-block;
 }
+.login{
+    text-align: center;
+}
+.sign-in-form{
+
+}
+.width-100{
+    width: 100%;
+
+}
+.width-50{
+    width: 50%;
+    float: right;
+    font-size: 20px;
+    
+
+}
+.button{
+    padding: 0px 25px;
+}
+
+.login-image img{
+    width: 90%;
+    height: auto;
+}
