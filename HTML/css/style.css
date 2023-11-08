@@ -5,6 +5,8 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
+    background-image: url("../Images/images2.jfif");
+    background-size: 100%;
 }
 body p,body label{
     font-size: 19px;
@@ -22,6 +24,16 @@ body p,body label{
     float: left;
     padding-right: 90px;
 }
+
+
+.nav-bar ul li a {
+        font-weight: 800;
+        color: #4949ff;
+        float: left;
+        text-decoration: none; 
+}
+
+
 .text{
     width: 100%;
     display: inline-block;
@@ -33,9 +45,6 @@ body p,body label{
 .login{
     text-align: center;
 }
-.sign-in-form{
-
-}
 .width-100{
     width: 100%;
 
@@ -43,8 +52,7 @@ body p,body label{
 .width-50{
     width: 50%;
     float: right;
-    font-size: 20px;
-    
+    font-size: 20px;   
 
 }
 .button{
@@ -72,7 +80,7 @@ body p,body label{
     padding-right: 20px;
 }
 
-.sign-in-form input{
+.form-style1 input,.form-style1 select{
     width: 100%;
     height: 54px;
     background-color: #e0edff;
@@ -81,9 +89,26 @@ body p,body label{
     padding: 0px 15px;
     color: #202020;
 }
-.sign-in-form input:focus-visible{
+.form-style1 input:focus-visible, .form-style1 select:focus-visible{
     border-color: red;
 }
 .login-content {
     padding: 0px 45px;
 }
+.login-message {
+    text-align: center;
+}
+.login-message a{
+    color: #0066ff;
+    text-decoration: none;
+
+}
+.sign-up-message{
+    text-align: center;
+}
+.sign-up-message a{
+   color: #0066ff;
+   text-decoration: none;
+}
+
+
