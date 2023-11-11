@@ -19,6 +19,7 @@ body p,body label{
 .nav-bar{
     width: 100%;
     display: inline-block;
+    cursor: pointer;
 }
 .nav-bar ul{
     list-style: none;
@@ -66,6 +67,7 @@ body p,body label{
     color: #fff;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
     
 }
 .login-content .button{
@@ -128,6 +130,7 @@ body p,body label{
 }
 .save-button .button{
     width: 100%;
+    cursor: pointer;
 }
 .profile-image img{
     width: 100%;
@@ -140,4 +143,38 @@ body p,body label{
 
 .profile-image-content {
     padding-right: 20px;
+}
+.prediction-image img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    padding-right: 10px;
+    padding: 25px;
+}
+
+.prediction-image-content {
+    padding-right: 20px;
+}
+.button-editor {
+    width: 100%;
+    display: inline-block;
+}
+.button-editor .clear-button, .button-editor .Submit-button{
+    float: left;
+}
+
+.button-editor .Submit-button{
+    margin: 0px 20px;
+}
+
+.detail-form input,.year-module-colour {
+   
+    background-color: #f7f7f747;
+    padding: 20px;
+  
+}
+
+.detail-form input,.year-module-non-colour{
+    padding: 20px;
 }
