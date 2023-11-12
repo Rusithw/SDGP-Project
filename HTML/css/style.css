@@ -183,6 +183,3 @@ body p,body label{
     height: 50px;
     background-color: #e0edff;
 }
-.form-style1 input:focus-visible, .form-style1 select:focus-visible{
-    border-color: red;
-}
