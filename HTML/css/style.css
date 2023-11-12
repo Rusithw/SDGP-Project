@@ -178,8 +178,29 @@ body p,body label{
 .detail-form input,.year-module-non-colour{
     padding: 20px;
 }
-.form-style1 input,.form-program-selector select{
-    width: 40%;
+.form-program-selector select{
+    width: 30%;
     height: 50px;
     background-color: #e0edff;
+}
+.program-detail-image {
+    text-align: center;
+}
+   
+.program-detail-image img{
+    width: 70%;
+}
+.program-detail-content{
+    width: 68%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    padding: 1%;
+}
+.course-outline{
+    width: 68%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    padding: 1%;
 }
