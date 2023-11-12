@@ -178,3 +178,11 @@ body p,body label{
 .detail-form input,.year-module-non-colour{
     padding: 20px;
 }
+.form-style1 input,.form-program-selector select{
+    width: 40%;
+    height: 50px;
+    background-color: #e0edff;
+}
+.form-style1 input:focus-visible, .form-style1 select:focus-visible{
+    border-color: red;
+}
