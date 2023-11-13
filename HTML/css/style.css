@@ -60,6 +60,12 @@ body p,body label{
     font-size: 20px;   
 
 }
+.width-33{
+    width: 33.333%;
+    float: right;
+    font-size: 20px;   
+
+}
 .button{
     padding: 9px 25px;
     font-size: 18px;
@@ -203,4 +209,20 @@ body p,body label{
     text-align: center;
     background-color: white;
     padding: 1%;
+}
+.detail-form.modules{
+    background-color:#2929d1; 
+    color: #e0edff;
+    padding: 35px;
+}
+.team-images img{
+    width: 100%;
+    height: auto;
+}
+.team-images .width-33{
+    float: left;
+}
+.team-images .width-33 .space{
+    padding: 70px 70px; 
+    min-height: 393px;
 }
