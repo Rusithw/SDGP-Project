@@ -37,7 +37,13 @@ body p,body label{
       float: left;
       text-decoration: none; 
 }
-
+.nav-bar ul li a:hover {
+background-color: yellow;
+  font-weight: 800;
+  color: #4949ff;
+  float: left;
+  text-decoration: none; 
+}
 
 .text{
   width: 100%;

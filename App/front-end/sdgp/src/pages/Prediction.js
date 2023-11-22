@@ -20,10 +20,9 @@ function Prediction() {
                   
                   <label for="degree-selector">Select you degree program: </label><br />
                   <select name="degree-program">
-                    <option value="volvo=">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+                    <option value="SE=">BEng(Hons)Software Engineering</option>
+                    <option value="CS">BSc(Hons)Computer Science</option>
+                    <option value="AI">BSc(Hons)Artificial Intelligence And Data Science</option>
                   </select>
                   <br/> <br/>
                   
@@ -32,10 +31,7 @@ function Prediction() {
                   <div className="year-module-colour">
                     <label for="first-year-modules">Select your 1st year module 1 </label><br/>
                     <select name="modules">
-                      <option value="volvo=">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="opel">Opel</option>
-                      <option value="audi">Audi</option>
+                      <option value="TSC=">Trends in Computer Science</option>
                     </select>
                     <br/> <br/>
                 
