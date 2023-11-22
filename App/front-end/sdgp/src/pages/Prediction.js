@@ -6,7 +6,7 @@ function Prediction() {
   return (
     <div className="main">
       <div> 
-      <NavBar/>
+      <NavBar value={"prediction"}/>
        <div className="width-100">
         <div className="width-50 prediction-image">
             <div className="prediction-img-content">

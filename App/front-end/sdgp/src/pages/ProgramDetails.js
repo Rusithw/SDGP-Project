@@ -5,7 +5,7 @@ function ProgramDetails() {
   return (
     <div className="main">
       <div>
-       <NavBar/>
+       <NavBar value={"program-details"}  />
         <div className="form-program-selector">
             <h2>Please select your degree program </h2>
                   

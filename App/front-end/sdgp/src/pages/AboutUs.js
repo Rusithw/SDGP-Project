@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <div className="main">
     <div>
-      <NavBar/>
+      <NavBar value={"about_us"} />
       <div className="text">
         <h1><strong> Our Team </strong></h1>
       </div>

@@ -6,7 +6,7 @@ function Home() {
     <div className="main">
       <div>
         {/* NavBar is a component */}
-        <NavBar/>
+        <NavBar value={"home"}/>
         <div className="text">
           <h1><strong>Career Prediction </strong></h1>
         </div>

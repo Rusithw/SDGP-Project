@@ -5,7 +5,7 @@ function Profile() {
   return (
     <div className="main">
     <div>
-     <NavBar/>
+     <NavBar value={"profile"} />
      <div className="width-100">
       <div className="width-50 profile-image">
           <div className="profile-img-content">
