@@ -172,7 +172,6 @@ function Prediction() {
                     <br/> <br/>
                   </div>
                   
-
                   
                   
                     <div className="button-editor">
