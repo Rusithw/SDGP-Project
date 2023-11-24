@@ -54,6 +54,9 @@ function ProgramDetails() {
                   
                   LO5 Demonstrate a good level of knowledge and understanding of the basic principles and constructs involved in writing computer programs.
                   </p>
+                  <br/>
+                  <h3> 3. Software Development 2</h3>
+                  <p>The module aims to develop skills in the selection and implementation of problem-solving algorithms while learning the Java programming language. It will strengthen abilities in the implementation of algorithms, in terms of adherence to requirements, design and modelling, through to the application of sound programming principles. The understanding of structures and advanced programming methods will also be developed, including sorting, the implementation of classes and methods, as well as more sophisticated data structures such as lists, queues, and stacks.</p>
         </div>
 
       </div>
