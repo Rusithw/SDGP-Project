@@ -37,8 +37,7 @@ body p,body label{
       float: left;
       text-decoration: none; 
 }
-.nav-bar ul li a:hover {
-background-color: yellow;
+.nav-bar ul li a{
   font-weight: 800;
   color: #4949ff;
   float: left;
@@ -231,4 +230,7 @@ background-color: yellow;
 .team-images .width-33 .space{
   padding: 70px 70px; 
   min-height: 200px;
+}
+.nav-bar ul li a.active {
+  color: green;
 }
