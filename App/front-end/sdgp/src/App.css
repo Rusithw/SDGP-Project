@@ -182,13 +182,9 @@ body p,body label{
 .detail-form input,.year-module-colour {
  
   background-color: #f7f7f747;
-  padding: 20px;
 
 }
 
-.detail-form input,.year-module-non-colour{
-  padding: 20px;
-}
 .form-program-selector select{
   width: 30%;
   height: 50px;
