@@ -70,6 +70,7 @@ function Profile() {
                   </label>
                   <br />
                   <select name="firstYearModuleSelect" onChange={handleChange}>
+                    <option value="select=">First year module select </option>
                     <option value="volvo=">Volvo</option>
                     <option value="saab">Saab</option>
                     <option value="opel">Opel</option>
