@@ -46,7 +46,7 @@ function ProgramDetails() {
                   framework which employs appropriate styles of documentation and referencing.
                   </p>
                   <br/>
-                  <h3> 2. Software Development 1 </h3>
+                  <h3> 2. Software Development I </h3>
                  <p>Analyse specific problems and design their solutions by applying appropriate algorithmic techniques;
                   LO2 Apply programming concepts to implement solutions in the taught programming language;
                   LO3 Implement and manipulate simple data structures;
@@ -55,8 +55,18 @@ function ProgramDetails() {
                   LO5 Demonstrate a good level of knowledge and understanding of the basic principles and constructs involved in writing computer programs.
                   </p>
                   <br/>
-                  <h3> 3. Software Development 2</h3>
+                  <h3> 3. Software Development II </h3>
                   <p>The module aims to develop skills in the selection and implementation of problem-solving algorithms while learning the Java programming language. It will strengthen abilities in the implementation of algorithms, in terms of adherence to requirements, design and modelling, through to the application of sound programming principles. The understanding of structures and advanced programming methods will also be developed, including sorting, the implementation of classes and methods, as well as more sophisticated data structures such as lists, queues, and stacks.</p>
+                  <br/>
+                    <h3>4. Mathematics for Computing </h3>
+                    <p> Need to be added  </p>
+                    <br/>
+                    <h3>5. Computer Systems Fundamentals </h3>
+                    <p> Need to be added  </p>
+                    <br/>
+                    <h3>6. Web Design and Development </h3>
+                    <p> Need to be added  </p>
+                 
         </div>
 
       </div>
