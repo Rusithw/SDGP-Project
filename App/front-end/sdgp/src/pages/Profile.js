@@ -12,7 +12,7 @@ function Profile() {
     currentJobTitle: "",
     expectedJobRole: "",
   });
-// This is a comment test
+
   const handleChange = (event) => {   
     const { name, value } = event.target;
     setData({
