@@ -13,6 +13,12 @@ function Prediction() {
     year1Module4: "",
     year1Module5: "",
     year1Module6: "",
+    year2Module1: "",
+    year2Module2: "",
+    year2Module3: "",
+    year2Module4: "",
+    year2Module5: "",
+    year2Module6: "",
 
   });
 
@@ -100,23 +106,27 @@ function Prediction() {
                  
                   <div className="year-module-non-colour">
                     <label for="second-year-modules">Select your 2nd year module 1: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year2Module1" onChange={handleChange}>
+                    <option value="Select your 2nd year module 1">Select your 2nd year module 1</option>
+                      <option value="Object Oriented Programming">Object Oriented Programming</option>
                     </select>
                     <br/> <br/>
                     <label for="second-year-modules">Select your 2nd year module 2: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year2Module2" onChange={handleChange}>
+                    <option value="Select your 2nd year module 2">Select your 2nd year module 2</option>
+                      <option value="Client-Server Architectures">Client-Server Architectures</option>
                     </select>
                     <br/> <br/>
                     <label for="second-year-modules">Select your 2nd year module 3: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year2Module3" onChange={handleChange}>
+                    <option value="Select your 2nd year module 3">Select your 2nd year module 3</option>
+                      <option value="Software Development Group Project">Software Development Group Project</option>
                     </select>
                     <br/> <br/>
                     <label for="second-year-modules">Select your 2nd year module 4: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year2Module4" onChange={handleChange}>
+                    <option value="Select your 2nd year module 4">Select your 2nd year module 4</option>
+                      <option value="Database Systems">Database Systems</option>
                     </select>
                     <br/> <br/>
                     <label for="second-year-modules">Select your 2nd year module 5: </label><br/>
