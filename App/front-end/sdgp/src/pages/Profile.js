@@ -12,8 +12,8 @@ function Profile() {
     currentJobTitle: "",
     expectedJobRole: "",
   });
-
-  const handleChange = (event) => {
+// This a method of handle change
+  const handleChange = (event) => {   
     const { name, value } = event.target;
     setData({
       ...data_set,
