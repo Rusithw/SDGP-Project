@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from './commen/NavBar';
 
 
 function Prediction() {
+
+  const [data_set, setData] = useState({
+
+    degreeProgram: "",
+    year1Module1: "",
+    year1Module2: "",
+    year1Module3: "",
+    year1Module4: "",
+    year1Module5: "",
+    year1Module6: "",
+
+  });
   return (
     <div className="main">
       <div> 
