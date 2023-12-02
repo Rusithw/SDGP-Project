@@ -59,36 +59,41 @@ function Prediction() {
 
                   <div className="year-module-colour">
                     <label for="first-year-modules">Select your 1st year module 1 </label><br/>
-                    <select name="modules" onChange={handleChange}>
+                    <select name="year1Module1" onChange={handleChange}>
                     <option value="Select your 1st year module 1">Select your 1st year module 1</option>
-                      <option value="TSC=">Trends in Computer Science</option>
+                      <option value="Trends in Computer Science">Trends in Computer Science</option>
                     </select>
                     <br/> <br/>
                 
 
                     <label for="first-year-modules"> Select your 1st year module 2 </label><br/>
-                    <select name="modules" onChange={handleChange}>
-                      <option value="volvo=">Volvo</option>
+                    <select name="year1Module2" onChange={handleChange}>
+                    <option value="Select your 1st year module 2=">Select your 1st year module 2</option>
+                      <option value="Software Development I">Software Development I</option>
                     </select>
                     <br/> <br/>
                     <label for="first-year-modules"> Select your 1st year module 3 </label><br/>
-                    <select name="modules" onChange={handleChange}>
-                      <option value="volvo=">Volvo</option>
+                    <select name="year1Module3" onChange={handleChange}>
+                    <option value="Select your 1st year module 3">Select your 1st year module 3</option>
+                      <option value="Software Development II">Software Development II </option>
                     </select>
                     <br/> <br/>
                     <label for="first-year-modules"> Select your 1st year module 4 </label><br/>
-                    <select name="modules" >
-                      <option value="volvo=">Volvo</option>
+                    <select name="year1Module4" onChange={handleChange} >
+                    <option value="Select your 1st year module 4">Select your 1st year module 4</option>
+                      <option value="Mathematics for Computing"> Mathematics for Computing</option>
                     </select>
                     <br/> <br/>
                     <label for="first-year-modules"> Select your 1st year module 5 </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year1Module5" onChange={handleChange}>
+                    <option value="Select your 1st year module 5">Select your 1st year module 5</option>
+                      <option value="Computer Systems Fundamentals ">Computer Systems Fundamentals </option>
                     </select>
                     <br/> <br/>
                     <label for="first-year-modules"> Select your 1st year module 6 </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year1Module6" onChange={handleChange}>
+                    <option value="Select your 1st year module 6">Select your 1st year module 6</option>
+                      <option value="Web Design and Development"> Web Design and Development</option>
                     </select>
                     <br/> <br/>
                   </div>
