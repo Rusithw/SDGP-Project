@@ -202,24 +202,29 @@ function Prediction() {
                       <option value="Final Year Project">Final Year Project</option>
                     </select>
                     <br/> <br/>
+                    
                     <label for="fourth-year-modules">Select your 4th year module 3: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year4Module3" onChange={handleChange}>
+                    <option value="Select your 4th year module 3">Select your 4th year module 3</option>
+                      <option value="Applied Artificial Intelligence">Applied Artificial Intelligence</option>
                     </select>
                     <br/> <br/>
                     <label for="fourth-year-modules">Select your 4th year module 4: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year4Module4" onChange={handleChange}>
+                    <option value="Select your 4th year module 4">Select your 4th year module 4</option>
+                      <option value="Mobile Native Application Development">Mobile Native Application Development</option>
                     </select>
                     <br/> <br/>
                     <label for="fourth-year-modules">Select your 4th year module 5: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year4Module5" onChange={handleChange}>
+                    <option value="Select your 4th year module 5">Select your 4th year module 5</option>
+                      <option value="Advanced Server-Side Web Programming">Advanced Server-Side Web Programming</option>
                     </select>
                     <br/> <br/>
                     <label for="fourth-year-modules">Select your 4th year module 6: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year4Module6" onChange={handleChange}>
+                    <option value="Select your 4th year module 6">Select your 4th year module 6</option>
+                      <option value="Usability Testing">Usability Testing</option>
                     </select>
                     <br/> <br/>
                   </div>
