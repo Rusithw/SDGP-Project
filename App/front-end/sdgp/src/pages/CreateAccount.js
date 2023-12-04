@@ -15,7 +15,7 @@ function CreateAccount() {
   });
 
   const handleChange = (event) =>{
-    const [name, value] = event.target;
+    const {name, value} = event.target;
     setData({
       ...data_set,
       [name]: value,
@@ -25,43 +25,44 @@ function CreateAccount() {
   const handleSubmit = (event) =>{
     event.preventDefault();
     console.log(data_set);
-  }
+  };
 
   return (
     <div className="main">
     <div className="sign-up-form form-style1">
       <div className="width-100">
-        <div className="width-50">
+       <form onSubmit={handleSubmit}>
+       <div className="width-50">
           <div className="login-content">
             <h2>Sign up here</h2>
             <p>Please fill this form to sign up</p>
             <label for="User name ">First name: </label><br />
-            <input placeholder="First name" type="text" name="username" /> <br />
+            <input placeholder="First name" type="text" name="firstName" value={data_set.firstName} onChange={handleChange}/> <br />{" "}
             <br />
             <label for="User name ">Last name: </label><br />
-            <input placeholder="Last name" type="text" name="username" /> <br />
+            <input placeholder="Last name" type="text" name="lastName" value={data_set.lastName} onChange={handleChange}/> <br />
             <br />
             <label for="User name ">User name: </label><br />
-            <input placeholder="User name" type="text" name="username" /> <br />
+            <input placeholder="User name" type="text" name="userName" value={data_set.userName} onChange={handleChange}/> <br />
             <br />
             <label for="User name ">Email: </label><br />
-            <input placeholder="Email" type="text" name="username" /> <br />
+            <input placeholder="Email" type="text" name="email" value={data_set.email} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Password: </label><br />
-            <input placeholder="Password" type="text" name="username" /> <br />
+            <input placeholder="Password" type="password" name="password" value={data_set.password} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Re-type Password: </label><br />
-            <input placeholder="Re-type Password" type="text" name="username" /> <br />
+            <input placeholder="Re-type Password" type="password" name="reTypePassword" value={data_set.reTypePassword} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Mobile: </label><br />
-            <input placeholder="Mobile" type="text" name="username" /> <br />
+            <input placeholder="Mobile" type="text" name="mobile" value={data_set.mobile} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Address: </label><br />
-            <input placeholder="Address" type="text" name="username" /> <br />
+            <input placeholder="Address" type="text" name="address" value={data_set.address} onChange={handleChange}/> <br />
             <br/>
             <label for="Password ">City: </label><br />
            
-            <select name="City">
+            <select name="city" onChange={handleChange}>
               <option value="0" disabled="">Select City</option>
               <option value="52">Akkarepattu</option>
               <option value="9">Akuressa</option>
@@ -141,7 +142,7 @@ function CreateAccount() {
               <option value="56">Nallur</option>
               <option value="60">Narammala</option>
               <option value="75">Nattandiya</option>
-              <option value="93">Negombo</option>
+              <option value="Negombo">Negombo</option>
               <option value="89">Nugegoda</option>
               <option value="68">Nuwara Eliya</option>
               <option value="4">Panadura</option>
@@ -173,12 +174,14 @@ function CreateAccount() {
           
             <br />
             <br />
-            <button Name="button" type="button">Login</button>
+            <button Name="button" type="Login">Login</button>
             <div className="login-message">
               <p>Already have an account? <a href="Login.html"> Sign in </a></p>
             </div>
           </div>
         </div>
+
+       </form>
         <div className="width-50 login-image">
           <div className="login-image-content">
             <img src="Images/login-image.jpg" alt="#" />
