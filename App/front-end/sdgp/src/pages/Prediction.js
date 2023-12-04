@@ -19,7 +19,12 @@ function Prediction() {
     year2Module4: "",
     year2Module5: "",
     year2Module6: "",
-
+    year4Module1: "",
+    year4Module2: "",
+    year4Module3: "",
+    year4Module4: "",
+    year4Module5: "",
+    year4Module6: "",
   });
 
   const handleChange = (event) => {
@@ -182,17 +187,19 @@ function Prediction() {
                     <br/> <br/>
                   </div>
 
-               
+                  
                   
                   <div className="year-module-non-colour">
                     <label for="fourth-year-modules">Select your 4th year module 1: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year4Module1" onChange={handleChange}>
+                      <option value="Select your 4th year module 1">Select your 4th year module 1</option>
+                      <option value="Security and Forensics">Security and Forensics</option>
                     </select>
                     <br/> <br/>
                     <label for="fourth-year-modules">Select your 4th year module 2: </label><br/>
-                    <select name="modules">
-                      <option value="volvo=">Volvo</option>
+                    <select name="year4Module2" onChange={handleChange}>
+                    <option value="Select your 4th year module 2">Select your 4th year module 2</option>
+                      <option value="Final Year Project">Final Year Project</option>
                     </select>
                     <br/> <br/>
                     <label for="fourth-year-modules">Select your 4th year module 3: </label><br/>
