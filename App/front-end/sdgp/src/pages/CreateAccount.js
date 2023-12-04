@@ -1,6 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function CreateAccount() {
+
+  const [data_set, setData] = useState({
+      firstName: "",
+      lastName: "",
+      userName: "",
+      email: "",
+      password: "",
+      reTypePassword: "",
+      mobile: "",
+      address: "",
+      city: "",
+  });
+
+  const handleChange = (event) =>{
+    const [name, value] = event.target;
+    setData({
+      ...data_set,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (event) =>{
+    event.preventDefault();
+    console.log(data_set);
+  }
+
   return (
     <div className="main">
     <div className="sign-up-form form-style1">
