@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function Login() {
+  const [error, setError] = useState("");
   const [data_set, setData] = useState({
     userName: "",
     userPassword: "",
@@ -14,10 +15,34 @@ function Login() {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(data_set);
-  }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+      try {
+        const response = await fetch('http://localhost:3001/api/user/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data_set),
+        });
+  
+        if (!response.ok) {
+          throw new Error('Invalid credentials');
+        }
+  
+        const data = await response.json();
+        console.log(data);
+        if(data==="0"){
+          setError("Wrong user name or password")
+        }else{
+          setError("Ok");
+        }
+      
+      } catch (error) {
+        console.error('Error logging in:', error);
+      
+      }
+    };
 
   return (
     <div className="main">
@@ -42,6 +67,9 @@ function Login() {
                 onChange={handleChange}
               />{" "}
               <br /> <br /> <br />
+              <div className="error">
+                  {[error]}
+              </div>
               <button className="button" type="Login">
                 Login
               </button>

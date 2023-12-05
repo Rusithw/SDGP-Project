@@ -230,3 +230,6 @@ body p,body label{
 .nav-bar ul li a.active {
   color: green;
 }
+.error{
+  color: red;
+}
