@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 function CreateAccount() {
 
   const [data_set, setData] = useState({
-      firstName: "",
-      lastName: "",
-      userName: "",
-      email: "",
-      password: "",
+      user_first_name: "",
+      user_last_name: "",
+      user_name: "",
+      user_email: "",
+      user_password: "",
       reTypePassword: "",
-      mobile: "",
-      address: "",
+      user_mobile: "",
+      user_address: "",
       city: "",
   });
 
@@ -37,28 +37,28 @@ function CreateAccount() {
             <h2>Sign up here</h2>
             <p>Please fill this form to sign up</p>
             <label for="User name ">First name: </label><br />
-            <input placeholder="First name" type="text" name="firstName" value={data_set.firstName} onChange={handleChange}/> <br />{" "}
+            <input placeholder="First name" type="text" name="user_first_name" value={data_set.user_first_name} onChange={handleChange}/> <br />{" "}
             <br />
             <label for="User name ">Last name: </label><br />
-            <input placeholder="Last name" type="text" name="lastName" value={data_set.lastName} onChange={handleChange}/> <br />
+            <input placeholder="Last name" type="text" name="user_last_name" value={data_set.user_last_name} onChange={handleChange}/> <br />
             <br />
             <label for="User name ">User name: </label><br />
-            <input placeholder="User name" type="text" name="userName" value={data_set.userName} onChange={handleChange}/> <br />
+            <input placeholder="User name" type="text" name="user_name" value={data_set.user_name} onChange={handleChange}/> <br />
             <br />
             <label for="User name ">Email: </label><br />
-            <input placeholder="Email" type="text" name="email" value={data_set.email} onChange={handleChange}/> <br />
+            <input placeholder="Email" type="text" name="user_email" value={data_set.user_email} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Password: </label><br />
-            <input placeholder="Password" type="password" name="password" value={data_set.password} onChange={handleChange}/> <br />
+            <input placeholder="Password" type="password" name="user_password" value={data_set.user_password} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Re-type Password: </label><br />
             <input placeholder="Re-type Password" type="password" name="reTypePassword" value={data_set.reTypePassword} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Mobile: </label><br />
-            <input placeholder="Mobile" type="text" name="mobile" value={data_set.mobile} onChange={handleChange}/> <br />
+            <input placeholder="Mobile" type="text" name="user_mobile" value={data_set.user_mobile} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Address: </label><br />
-            <input placeholder="Address" type="text" name="address" value={data_set.address} onChange={handleChange}/> <br />
+            <input placeholder="Address" type="text" name="user_address" value={data_set.user_address} onChange={handleChange}/> <br />
             <br/>
             <label for="Password ">City: </label><br />
            
