@@ -7,6 +7,7 @@ function NavBar(props) {
   const [profile_page, setProfilePage] = useState("");
   const [program_details_page, setProgramDetailsPage] = useState("");
   const [about_us_page, setAboutUsPage] = useState("");
+  const [my_account_page, setMyAccount] = useState("");
 
   useEffect(() => {
     if (props.value === "home") {
@@ -15,26 +16,42 @@ function NavBar(props) {
       setProfilePage("");
       setProgramDetailsPage("");
       setAboutUsPage("");
+      setMyAccount("");
     } else if (props.value === "prediction") {
       setPredictionPage("active");
       setHomePage("");
       setProfilePage("");
       setProgramDetailsPage("");
       setAboutUsPage("");
+      setMyAccount("");
     } else if (props.value === "profile") {
       setProfilePage("active");
       setHomePage("");
       setPredictionPage("");
       setProgramDetailsPage("");
       setAboutUsPage("");
+      setMyAccount("");
     }else if(props.value==="program-details"){
       setProgramDetailsPage("active");
       setHomePage("");
       setPredictionPage("");
       setProfilePage("");
       setAboutUsPage("");
-    }else{
+      setMyAccount("");
+    }else if(props.value==="about_us"){
       setAboutUsPage("active");
+      setProgramDetailsPage("");
+      setHomePage("");
+      setPredictionPage("");
+      setProfilePage("");
+      setMyAccount("");
+    }else if(props.value==="my-account"){
+      setMyAccount("active");
+      setAboutUsPage("");
+      setProgramDetailsPage("");
+      setHomePage("");
+      setPredictionPage("");
+      setProfilePage("");
     }
   }, [props]);
 
@@ -69,6 +86,12 @@ function NavBar(props) {
           {" "}
           <Link to={"/about-us"} className={about_us_page}>
             AboutUS
+          </Link>{" "}
+        </li>
+        <li>
+          {" "}
+          <Link to={"/my-account"} className={my_account_page}>
+            My Account
           </Link>{" "}
         </li>
       </ul>

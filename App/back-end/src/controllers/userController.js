@@ -32,20 +32,10 @@ exports.userLogin = (req, res) => {
 
 exports.userSignUp = (req, res) => {
   const data = req.body;
-  console.log(data.firstName);
-  console.log(data.lastName);
-  console.log(data.userName);
-  console.log(data.email);
-  console.log(data.password);
-  console.log(data. reTypePassword);
-  console.log(data.mobile);
-  console.log(data.ddress);
-  console.log(data.city);
+  console.log(data);
 
   connection.query(
-    "INSERT ",
-    [data.firstName],
-    [data.lastName],
+    "INSERT INTO user SET ?", data,
     (error, results) =>{
         if(error){
           console.error("Error fetching sample data:", error);

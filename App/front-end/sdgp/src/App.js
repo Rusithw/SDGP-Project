@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import AboutUs from "./pages/AboutUs";
+import MyAccount from "./pages/MyAccount";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/login" element= {<Login/>} />
           <Route path="/create-account" element= {<CreateAccount/>} />
           <Route path="/about-us" element= {<AboutUs/>} />
+          <Route path="/my-account" element= {<MyAccount/>} />
+
 
           {/* <Route path="/about" element={<About />} /> */}
         </Routes>
