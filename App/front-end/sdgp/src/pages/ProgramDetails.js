@@ -58,6 +58,30 @@ function ProgramDetails() {
 
         </div>
 
+        <div className="detail-form modules">
+          <label for="degree-selector"> <h2>2 nd year modules</h2> </label><br />
+          <h3> 1. Object Oriented Programming</h3>
+          <p>This module will teach the fundamental ideas behind the object-oriented approach to programming. It will provide students with knowledge and practical experience in writing computer programs using object-oriented programming techniques. It will cover in a practical way the design and implementation of object-oriented software for software applications through the entire software development lifecycle.
+          </p>
+          <br />
+          <h3> 2. Client-Server Architectures </h3>
+          <p>This module introduces the concepts of the Client/Server and, more generally, Distributed Architecture that are at the base of systems where the constituting services can be virtualized, replicated, and moved. The module explains two fundamental theoretical concepts: the implications of the transition from a single to a distributed execution space and that of digital transmission of data. The module also covers the fundamental aspects of data transmission. The Client/Server Paradigm is analyzed in detail both as a simple example of a Distributed System and as a possible building block of more complex Distributed Architectures. The module also covers three main technologies used for implementation: sockets and Web Services (both SOAP and REST).
+          </p>
+          <br />
+          <h3> 3. Software Development Group Project </h3>
+          <p>In this module students gain practical work experience through their participation in a team that develops a prototype for a real-life software application suggested by industry contacts. The module takes the students through the different managerial and technical steps of software development. Students gain experience in managing a team and deliver software iteratively by using an agile approach and receiving feedback from industry contacts. The module also provides students with experience in team communication and ways to overcome any problems, as well as the opportunity to reflect on professional issues such as quality of project documentation, cybersecurity, ethics and code of conduct.</p>
+          <br />
+          <h3>4. Database Systems </h3>
+          <p>This module provides solid knowledge and skills in database systems, SQL and XML. It covers the logical design of a relational schema. It also covers the implementation of the database in a major DBMS and the manipulation of the data using SQL. Subsequently, it considers the transformation and rendering of XML documents using XSLT and the extraction of elements from XML documents using XPath and XQuery. Finally, it explores issues related to NoSQL databases and XML databases. </p>
+          <br />
+          <h3>5. To do </h3>
+          <p>   </p>
+          <br />
+          <h3>6. To do </h3>
+          <p>   </p>
+
+        </div>
+
       </div>
 
 
