@@ -24,6 +24,12 @@ function Profile() {
       } else {
         setFirstYearModules([...first_year_modules, module]);
       }
+    }else if(year === 2){
+        if(second_year_modules.includes(module)){
+          setSecondYearModules(second_year_modules.filter(item => item !==module));         
+        }else{
+          setSecondYearModules([...second_year_modules, module]);
+        }
     }
   };
 
@@ -102,12 +108,20 @@ function Profile() {
                     Select your second year modules:{" "}
                   </label>
                   <br />
-                  <select name="secondYearModuleSelect" onChange={handleChange}>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
+                  
+                  {["Module 1", "Module 2", "Module 3", "Module 4"].map(
+                    (module) => (
+                      <div key={module}>
+                        <input
+                          type="checkbox"
+                          checked={second_year_modules.includes(module)}
+                          onChange={() => handleModuleChange(2, module)}
+                        />
+                        {module}
+                      </div>
+                    )
+                  )}                        
+
                   <br />
                   <br />
                   <label for="User name ">
