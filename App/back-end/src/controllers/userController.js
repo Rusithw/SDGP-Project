@@ -46,3 +46,14 @@ exports.userSignUp = (req, res) => {
     }
   )
 };
+
+exports.profile = (req, res) => {
+ connection.query( 'SELECT * FROM university_programs', (error, results) => {
+    if(error){
+      console.error('Error fetching sample data:', error);
+      res.status(500).json({ message: 'Error creating data' });
+      return;
+    }
+    res.json({ message: 'Data created successfully' });
+ });
+}

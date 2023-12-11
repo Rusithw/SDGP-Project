@@ -5,15 +5,28 @@ function Profile() {
   const [data_set, setData] = useState({
     fullName: "",
     universityEnrollYear: "",
-    firstYearModuleSelect: "",
-    secondYearModuleSelect: "",
-    thirdYearModuleSelect: "",
-    fourthYearModuleSelect: "",
     currentJobTitle: "",
     expectedJobRole: "",
   });
 
-  const handleChange = (event) => {   
+  const [first_year_modules, setFirstYearModules] = useState([]);
+  const [second_year_modules, setSecondYearModules] = useState([]);
+  const [third_year_modules, setThirdYearModules] = useState([]);
+  const [fourth_year_modules, setFourthYearModules] = useState([]);
+
+  const handleModuleChange = (year, module) => {
+    if (year === 1) {
+      if (first_year_modules.includes(module)) {
+        setFirstYearModules(
+          first_year_modules.filter((item) => item !== module)
+        );
+      } else {
+        setFirstYearModules([...first_year_modules, module]);
+      }
+    }
+  };
+
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setData({
       ...data_set,
@@ -69,13 +82,19 @@ function Profile() {
                     Select your first year modules:{" "}
                   </label>
                   <br />
-                  <select name="firstYearModuleSelect" onChange={handleChange}>
-                    <option value="select=">First year module select </option>
-                    <option value="volvo=">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
+                  {["Module 1", "Module 2", "Module 3", "Module 4"].map(
+                    (module) => (
+                      <div key={module}>
+                        <input
+                          type="checkbox"
+                          checked={first_year_modules.includes(module)}
+                          onChange={() => handleModuleChange(1, module)}
+                        />
+                        {module}
+                      </div>
+                    )
+                  )}
+
                   <br />
                   <br />
                   <label for="User name ">
@@ -122,7 +141,6 @@ function Profile() {
                     name="currentJobTitle"
                     value={data_set.currentJobTitle}
                     onChange={handleChange}
-
                   />
                   <br />
                   <br />
