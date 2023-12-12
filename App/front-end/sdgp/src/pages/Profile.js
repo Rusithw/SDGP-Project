@@ -36,6 +36,12 @@ function Profile() {
       }else{
         setThirdYearModules([...third_year_modules, module]);
       }
+    }else if(year === 4){
+      if(fourth_year_modules.includes(module)){
+        setFourthYearModules(fourth_year_modules.filter(item => item !== module));
+      }else{
+        setFourthYearModules([...fourth_year_modules, module]);
+      }
     }
   };
   const handleChange = (event) => {
@@ -134,24 +140,38 @@ function Profile() {
                     Select your third year modules:{" "}
                   </label>
                   <br />
-                  <select name="thirdYearModuleSelect" onChange={handleChange}>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
+                  {["M_1", "M_2", "M_3", "M_4"].map(
+                    (module) => (
+                      <div key={module}>
+                        <input
+                          type="checkbox"
+                          checked={third_year_modules.includes(module)}
+                          onChange={() => handleModuleChange(3, module)}
+                        />
+                        {module}
+                      </div>
+                    )
+                  )}
+
                   <br />
                   <br />
                   <label for="User name ">
                     Select your fourth year modules:{" "}
                   </label>
                   <br />
-                  <select name="fourthYearModuleSelect" onChange={handleChange}>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
+                  <br />
+                  {["Final Year Project", "Applied AI", "Cyber Security", "Mobile Native Application Development"].map(
+                    (module) => (
+                      <div key={module}>
+                        <input
+                          type="checkbox"
+                          checked={fourth_year_modules.includes(module)}
+                          onChange={() => handleModuleChange(4, module)}
+                        />
+                        {module}
+                      </div>
+                    )
+                  )}
                   <br />
                   <br />
                   <label for="User name ">Enter your current job title: </label>
