@@ -30,9 +30,14 @@ function Profile() {
         }else{
           setSecondYearModules([...second_year_modules, module]);
         }
+    }else if(year === 3){
+      if(third_year_modules.includes(module)){
+        setThirdYearModules(third_year_modules.filter(item => item !== module));
+      }else{
+        setThirdYearModules([...third_year_modules, module]);
+      }
     }
   };
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData({
@@ -89,7 +94,7 @@ function Profile() {
                     Select your first year modules:{" "}
                   </label>
                   <br />
-                  {["Module 1", "Module 2", "Module 3", "Module 4"].map(
+                  {["SD 1", "Mathematics for Computing", "Trends in Computer Science", "SD 2", "Computer System Fundamentals", "Web Design and Development"].map(
                     (module) => (
                       <div key={module}>
                         <input
@@ -108,8 +113,9 @@ function Profile() {
                     Select your second year modules:{" "}
                   </label>
                   <br />
+                  <br />
                   
-                  {["Module 1", "Module 2", "Module 3", "Module 4"].map(
+                  {["Database Systems", "OOP", "SDGP", "Client-Side Architecture"].map(
                     (module) => (
                       <div key={module}>
                         <input
