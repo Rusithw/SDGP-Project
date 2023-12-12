@@ -11,8 +11,8 @@ router.get('/sample', sampleController.getSampleData);
 router.post('/sample', sampleController.createSampleData);
 router.post('/user/login',userController.userLogin);
 router.post('/user/signup', userController.userSignUp);
-router.get('/profile', userController.profile);
-router.post('/profile', userController.profile);
+router.get('/getProfile', userController.getProfile);
+router.post('/saveProfile', userController.seaveProfile);
 
 
 

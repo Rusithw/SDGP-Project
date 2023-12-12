@@ -5,6 +5,7 @@ function Profile() {
   const [data_set, setData] = useState({
     fullName: "",
     universityEnrollYear: "",
+    degreeProgram: "",
     currentJobTitle: "",
     expectedJobRole: "",
   });
@@ -55,6 +56,7 @@ function Profile() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(data_set);
+    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
   };
 
   return (
@@ -96,6 +98,17 @@ function Profile() {
                   />
                   <br />
                   <br />
+
+          <label for="degree-selector">Select your degree program: </label><br />
+          <select name="degree" onChange={handleChange}>
+            <option value="Software Engineering=">BEng(Hnos) Software Engineering </option>
+            <option value="Computer Science =">BSc(Hons) Computer Science</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br /> <br />
+
+
                   <label for="User name ">
                     Select your first year modules:{" "}
                   </label>

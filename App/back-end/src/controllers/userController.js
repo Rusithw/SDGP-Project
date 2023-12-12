@@ -47,7 +47,7 @@ exports.userSignUp = (req, res) => {
   )
 };
 
-exports.profile = (req, res) => {
+exports.getProfile = (req, res) => {
  connection.query( 'SELECT * FROM university_programs', (error, results) => {
     if(error){
       console.error('Error fetching sample data:', error);
