@@ -14,5 +14,3 @@ exports.getPrograms = (req, res) =>{
         res.json(results);
     });
 };
-
-//  comment
