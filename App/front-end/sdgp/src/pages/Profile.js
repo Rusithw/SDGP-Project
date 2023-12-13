@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "./commen/NavBar";
 
 function Profile() {
@@ -10,6 +10,11 @@ function Profile() {
     expectedJobRole: "",
   });
   
+  useEffect(() => {
+    profile();
+  }, []);
+
+  const[program_data, setProgramData] = useState([]);
 
   const [first_year_modules, setFirstYearModules] = useState([]);
   const [second_year_modules, setSecondYearModules] = useState([]);
@@ -53,7 +58,21 @@ function Profile() {
     });
   };
 
-  const handleSubmit = (event) => {
+
+  const profile = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/getPrograms');
+      if (!response.ok) {
+        throw new Error('Network response was not ok.');
+      }
+      const result = await response.json();
+  setProgramData(result);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const handleSubmit =  async (event) => {
     event.preventDefault();
     console.log(data_set);
     console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
@@ -101,10 +120,10 @@ function Profile() {
 
           <label for="degree-selector">Select your degree program: </label><br />
           <select name="degree" onChange={handleChange}>
-            <option value="Software Engineering=">BEng(Hnos) Software Engineering </option>
-            <option value="Computer Science =">BSc(Hons) Computer Science</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+          <option value="" >Please select an option</option>
+           {program_data.map((item) => (
+            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
+        ))}
           </select>
           <br /> <br />
 

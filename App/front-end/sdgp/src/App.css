@@ -243,3 +243,7 @@ body p,body label{
   color: #202020;
 }
 
+.detail-form input{
+  background-color: #e0edff;
+}
+

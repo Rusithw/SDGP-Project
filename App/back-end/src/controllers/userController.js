@@ -48,6 +48,12 @@ exports.userSignUp = (req, res) => {
 };
 
 exports.getProfile = (req, res) => {
+  const data = req.body;
+  console.log(data.fullName);
+  console.log(data.universityEnrollYear);
+  console.log(data. degreeProgram);
+  console.log(data.currentJobTitle);
+  console.log(data.expectedJobRole);
  connection.query( 'SELECT * FROM university_programs', (error, results) => {
     if(error){
       console.error('Error fetching sample data:', error);
@@ -56,4 +62,12 @@ exports.getProfile = (req, res) => {
     }
     res.json({ message: 'Data created successfully' });
  });
+}
+ 
+exports.saveProfile = (req, res) =>{
+
+}
+
+exports.getPrograms = (req, res) =>{
+  
 }
