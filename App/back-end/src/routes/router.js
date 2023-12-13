@@ -4,6 +4,7 @@ const router = express.Router();
 // Import controllers
 const sampleController = require('../controllers/sampleController');
 const userController = require('../controllers/userController');
+const programController = require('../controllers/programController')
 
 
 // Define routes
@@ -13,7 +14,7 @@ router.post('/user/login',userController.userLogin);
 router.post('/user/signup', userController.userSignUp);
 router.get('/getProfile', userController.getProfile);
 router.post('/saveProfile', userController.seaveProfile);
-
+router.get('/getPrograms', programController.getPrograms);
 
 
 module.exports = router;
