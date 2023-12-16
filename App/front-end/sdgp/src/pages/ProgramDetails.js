@@ -60,6 +60,7 @@ function ProgramDetails() {
 
         <div className="detail-form modules">
           <label for="degree-selector"> <h2>2 nd year modules</h2> </label><br />
+          <h2> Core Modules </h2>
           <h3> 1. Object Oriented Programming</h3>
           <p>This module will teach the fundamental ideas behind the object-oriented approach to programming. It will provide students with knowledge and practical experience in writing computer programs using object-oriented programming techniques. It will cover in a practical way the design and implementation of object-oriented software for software applications through the entire software development lifecycle.
           </p>
@@ -74,6 +75,8 @@ function ProgramDetails() {
           <h3>4. Database Systems </h3>
           <p>This module provides solid knowledge and skills in database systems, SQL and XML. It covers the logical design of a relational schema. It also covers the implementation of the database in a major DBMS and the manipulation of the data using SQL. Subsequently, it considers the transformation and rendering of XML documents using XSLT and the extraction of elements from XML documents using XPath and XQuery. Finally, it explores issues related to NoSQL databases and XML databases. </p>
           <br />
+          <h2> Optional Modules </h2>
+
           <h3>5. Advanced Client-Side Development </h3>
           <p> This module provides practical knowledge and understanding of client-side or/else front end development programming using advanced HTML5, CSS3 and JavaScript. Client-side technologies, including HTML5 Audio and Video are covered together with a client-side scripting language, a UI and CSS framework and a client-side scripting framework. The module also covers issues pertaining to front-end security.  </p>
           <br />
@@ -85,6 +88,42 @@ function ProgramDetails() {
           <br />
           <h3>8. HCI &User Experience</h3>
           <p> The module introduces students to the theoretical aspects of Human Computer Interaction (HCI) and User Experience (UX) as well as provides a practical understanding of current principles of effective interface design. The module equips students with the practical skills needed for the design and evaluation of interactive systems using a user-centered approach. It provides an understanding of the relevance and application of human abilities and limitations to the design of interactive systems and how context influences human system interaction.</p>
+          <h3>9. 3D Interactive Media Development </h3>
+          <p> This module introduces students to concepts of 3D user interfaces for interactive media. It covers essential topics including 3D modelling principles, methods and techniques, complex object creation, deformation and transformations, texture mapping, color, and lighting. It uses an industry standard games engine to demonstrate 3D animation concepts, properties, controllers, and scripting to create interactive media content. This is part of the “Usability and Interaction” and “Games and Computer Graphics Development” themes for Computer Science but is open to all courses with no prerequisite. Supported coursework path is the production of an interactive rich media product.  </p>
+          <br />
+          <h3>10. XR & Multimodal Interaction </h3>
+          <p> This module introduces students to concepts of XR (Virtual, Augmented, and Mixed Reality) interaction, and uses an industry standard games engine to develop assets, properties, controllers, and scripting for creating interactive rich media content. This is part of the “Usability and Interaction” and “Games and Computer Graphics development “themes for Computer Science but is open to all courses with no prerequisite. Supported coursework path is the production of a VR interactive media product.  </p>
+          <br />
+          <h3>11. Information Technology Security </h3>
+          <p> This module examines the issues involved with recognizing security threats to computer systems, their consequences, and methods of dealing with such threats. It provides an overview of access controls, software development security, business continuity, legal issues and compliance, and physical security. </p>
+          <br />
+          <h3>12. Algorithms: Theory, Design, and Implementation </h3>
+          <p> Algorithms are among the fundamentals of computer science and software engineering and at the heart of artificial intelligence, machine learning, data science and their applications to real world problem solving in digital humanities, economics, biosciences, social sciences, etc. The module introduces the students into the theory and practice of algorithmic strategies, development, and implementation. Hence, the module equips the students with a road map of mappings between real world problems and suitable algorithmic approaches for their solutions. The latter is crucial for the students’ professional life as problem solvers and thinkers in IT industry, society, and humanity. </p>
+          <br />
+          <h3>13. Machine Learning and Data Mining </h3>
+          <p> This module provides an understanding and hands-on experience in the fields of machine learning and data mining, covering the full life cycle from preparing data to validating and optimizing the learned model. The module covers different algorithms and approaches to machine learning and data mining, and the issues of using them on data sets of different sizes and complexity. </p>
+          <br />
+          <h3>14. Game Engine Architecture </h3>
+          <p> This module introduces students to modern game engine architecture and technologies. The conceptual architecture framework and the subsystem integration including the low-level foundation systems, the rendering engine, game asset management, the physics simulation, event-based gameplay system will be critically accessed. Students will gain the theory underlying the various subsystems that comprise a commercial game engine and the data structures and essential algorithms and develop practical skills that are typically used to implement a 3D game prototype using industry game engines. </p>
+          <br />
+          <h3>15. Math’s and Physics for Games </h3>
+          <p> This module covers the core physics and mathematical principles that are typically required for the creation of games or other scientific applications that implement realistic physical behavior of objects. The module covers the necessary classical mechanical principles and mathematical techniques required to simulate the physics of games objects in a high-level language. It also relates this material to the utilization of game-based physics engines. </p>
+          <br />
+          <h3>16. XR Multimodal Interaction </h3>
+          <p> This module introduces students to concepts of XR (Virtual, Augmented, and Mixed Reality) interaction, and uses an industry standard games engine to develop assets, properties, controllers, and scripting for creating interactive rich media content. This is part of the “Usability and Interaction” and “Games and Computer Graphics Development “themes for Computer Science but is open to all courses with no pre-requisite. Supported coursework path is the production of a VR interactive media product. </p>
+          <br />
+          <h3>17. Robotics Principles </h3>
+          <p> This module introduces the fundamentals of robotics and focuses on selected topics pertaining to this discipline. Its introductory part overviews the nature of robotics and, related to it, challenges, and issues. System modelling introduces techniques of deriving and computer implementation of models of dynamic systems with a special focus on kinematics of robots. Fundamentals of control cover the structure, basic analyses, and real-time implementations of control systems. </p>
+          <br />
+          <h3>18. Sensors & Interfaces </h3>
+          <p> The module provides an understanding of integrated smart sensing devices and emphasis on the integration of microcontroller-based systems with sensors. The students will learn about standard sensors and transducers and will be introduced to SMART sensing system concepts that have been developed for IoT applications and are built as IoT components that convert the real-world variable into a digital data stream for transmission. Apart from familiarizing with smart communication protocols, the module enables the students to understand problems related to smart sensing systems and devices as well as experiment on standard interfacing circuits including microcontroller and serial bus interfacing. </p>
+          <br />
+
+
+
+
+
+
         </div>
 
       </div>
