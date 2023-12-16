@@ -61,6 +61,7 @@ function ProgramDetails() {
         <div className="detail-form modules">
           <label for="degree-selector"> <h2>2 nd year modules</h2> </label><br />
           <h2> Core Modules </h2>
+          <br />
           <h3> 1. Object Oriented Programming</h3>
           <p>This module will teach the fundamental ideas behind the object-oriented approach to programming. It will provide students with knowledge and practical experience in writing computer programs using object-oriented programming techniques. It will cover in a practical way the design and implementation of object-oriented software for software applications through the entire software development lifecycle.
           </p>
@@ -76,6 +77,7 @@ function ProgramDetails() {
           <p>This module provides solid knowledge and skills in database systems, SQL and XML. It covers the logical design of a relational schema. It also covers the implementation of the database in a major DBMS and the manipulation of the data using SQL. Subsequently, it considers the transformation and rendering of XML documents using XSLT and the extraction of elements from XML documents using XPath and XQuery. Finally, it explores issues related to NoSQL databases and XML databases. </p>
           <br />
           <h2> Optional Modules </h2>
+          <br />
 
           <h3>5. Advanced Client-Side Development </h3>
           <p> This module provides practical knowledge and understanding of client-side or/else front end development programming using advanced HTML5, CSS3 and JavaScript. Client-side technologies, including HTML5 Audio and Video are covered together with a client-side scripting language, a UI and CSS framework and a client-side scripting framework. The module also covers issues pertaining to front-end security.  </p>
@@ -118,13 +120,66 @@ function ProgramDetails() {
           <h3>18. Sensors & Interfaces </h3>
           <p> The module provides an understanding of integrated smart sensing devices and emphasis on the integration of microcontroller-based systems with sensors. The students will learn about standard sensors and transducers and will be introduced to SMART sensing system concepts that have been developed for IoT applications and are built as IoT components that convert the real-world variable into a digital data stream for transmission. Apart from familiarizing with smart communication protocols, the module enables the students to understand problems related to smart sensing systems and devices as well as experiment on standard interfacing circuits including microcontroller and serial bus interfacing. </p>
           <br />
+         </div>
 
+         <div className='detail-form modules'>
+          <label for="degree-selector"> <h2>4 th year modules </h2> </label>
+          <h2> Core Modules </h2>
+          <br />
+          <h3>1. Final Year Project </h3>
+          <p> The module allows students to demonstrate in applied, written
+              and oral forms the effective use of competences required to
+              achieve the degree of study. It requires students to combine
+              previously acquired knowledge and techniques, with new
+              knowledge/ideas gained from investigation and research and
+              produce an extended piece of work related to their degree of
+              study. It involves the conceptualization, design,
+              implementation, and evaluation of a substantial piece of
+              software, process, model, or experimental study. </p>
+              <br />
 
-
-
-
-
-        </div>
+           <h3>2. Applied AI</h3>   
+           <p>The module will provide students with an understanding of the foundations of Artificial Intelligence and principal sub-fields of AI that have made significant impact, including but not limited to: Planning, Multi Agent Systems, Fuzzy Logic, Neural Networks, Evolutionary Computation, Computer Vision, Reinforcement Learning, Natural Language Processing, and Deep Learning. Each week an essential technique will be demonstrated via complete implementation followed by a presentation of the theory and conditions needed to enable the student to set up and use the techniques themselves. </p>
+           <br />
+           <h3>3. Cyber Security</h3>   
+           <p> This module examines various aspects of computer and network security giving a sound introduction to theoretical and practical areas such as network security, cryptography, attack vectors used by hackers, security architecture, methodologies for security hardening and defense and penetration testing strategies. A substantial amount of work will be laboratory based, involving the deployment of security tools, the hardening of operating systems and the analysis of compromised systems. </p>
+           <br />
+           <h2> Optional Modules </h2>
+          <br />
+           <h3>4. Mobile Native Application Development</h3>   
+           <p> This module shall give the student the necessary knowledge and practical experience to develop native applications for mobile platforms and in particular iOS. Swift and Objective C programming languages and relevant OOD principles are taught. Core and other frameworks are covered and utilized. Development patterns are taught in the context of the iOS mobile operating system using the XCode development environment. </p>
+           <br />
+           <h3>5. Advanced Server-Side Web Development</h3>   
+           <p> The module covers the techniques and technologies involved in building large-scale advanced web applications.  It is suitable for students with a background in web design and web development, with knowledge of web scripting and SQL.    </p>
+           <br />
+           <h3>6. Usability Testing and Evaluation</h3>   
+           <p> The module provides students with essential skills and practice in a range of usability techniques, how to conduct usability studies and evaluations of a wide range of products or platforms. The importance of applied understanding of the different evaluation approaches and the use of experimental design and statistical analysis is illustrated through real world examples. The ability to interpret and critically discuss results is stressed throughout.    </p>
+           <br />
+           <h3>7. Advanced Interactive Media Development</h3>   
+           <p> This module covers essential topics of advanced animation production (motion capture pipeline, data processing, animation blending, and incorporation of the animation in an industry standard game engine). It also provides an understanding of the issues, technologies and concepts underlying the vision of pervasive computing infrastructure to create alternative interaction styles. Specifically, concepts and basic techniques of 3D capture, analysis and representation using commercial consumer depth camera (currently Kinect).   </p>
+           <br />
+           <h3>8. Digital Marketing, Social Media, and Web Analytics</h3>   
+           <p> The module addresses the requirements and opportunities of the burgeoning Search Engine Optimization (SEO), Digital Marketing, Social Media and Web Analytics industry by exposing students to the theory and practice of the field. This module gives theoretical and practical knowledge of how to effectively promote an interactive multimedia product (IMP) in terms of SEO, email marketing, and social media marketing. This module also covers multimedia security and privacy issues through examples from SEO, social media, and web analytics.   </p>
+           <br />
+           <h3>9. Strategic Management of Information Systems</h3>   
+           <p> TO DO  </p>
+           <br />
+           <h3>10. Information Driven Entrepreneurship and Enterprise</h3>   
+           <p> This module will present and analyze major developments and issues in entrepreneurship and enterprise, underpinned and supported by information communication technologies, especially by the Internet, enterprise systems and cloud computing. It will also encourage a mind-set in creative thinking in seeking opportunities for new information driven start-ups and provide a critical assessment of their impact. </p>
+           <br />
+           <h3>11. Operational Research and Optimization</h3>   
+           <p> This module provides analytic topics in Operational Research. It covers formal optimization models and computational solutions for real-world problems. The topics covered include (non-)Integer Programming, Network models, Dynamic programming, and Multiple Objective Optimization. Advanced heuristic search methods such as genetic algorithms and particle swarm optimization are also addressed. The concepts of time-series forecasting models are introduced. </p>
+           <br />
+           <h3>12. Data Visualization and Dashboarding</h3>   
+           <p> This module provides an applied understanding and practical experience of the data visualization field including human perception, data infographics, dynamic visualizations methods and techniques and industry standard toolsets (commercial and open source) such Tableau. </p>
+           <br />
+           <h3>13. Game AI </h3>   
+           <p> Creating robust game world environments and model individual components using logic and mathematical modelling to replicate human behavior is one of the greatest challenges for game developers, yet the commercial success of a game is often dependent upon the quality of its intelligent modelling. This module introduces an engagingly realistic and immersive experience in modern videogames for creating game terrains and simulating complex behavior of game objects. The focus of the module is to learn how to create an automatic random game world with metrics to generate human like intelligent behaviors primarily in non-player characters (NPCs). </p>
+           <br />
+           <h3>14. Applied Robotics</h3>   
+           <p> This module builds on the previous knowledge and skills taught in the Level 5 module Robotic Principles. The main areas of teaching involve robotics dynamics and design of robotic control systems. The students are prepared to undertake complex tasks in analyzing and synthesizing robotic systems. The ethical and societal issues related to robotics signaled in the level 5 module are now covered in more deep and extensive manner. </p>
+           <br />
+         </div>
 
       </div>
 
