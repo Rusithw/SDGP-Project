@@ -14,3 +14,18 @@ exports.getPrograms = (req, res) =>{
         res.json(results);
     });
 };
+
+exports.getModules = (req, res) =>{
+    const data = req.body;
+    connection.query(
+        "SELECT * FROM university_program_modules WHERE university_program_id = ?", [data],
+        (error, results) => {
+            if (error) {
+                console.error("Error fetching sample data:", error);
+                res.json(results);
+                return;
+              }
+              res.json(results);
+        }
+    )
+}

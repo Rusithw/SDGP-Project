@@ -9,9 +9,10 @@ function Profile() {
     currentJobTitle: "",
     expectedJobRole: "",
   });
+
   
   useEffect(() => {
-    profile();
+    loadDegreePrograms();
   }, []);
 
   const[program_data, setProgramData] = useState([]);
@@ -58,8 +59,33 @@ function Profile() {
     });
   };
 
+  const programSelect = async (event) => {
+   const payLoad = {
+    "university_program_id": event.target.value
+   }
+    try {
+      const response = await fetch('http://localhost:3001/api/getModules', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payLoad),
+      });
 
-  const profile = async () => {
+      if (!response.ok) {
+        throw new Error('Invalid');
+      }
+
+      const data = await response.json();
+      console.log(data);   
+    } catch (error) {
+      console.error('Error modules in:', error);
+    
+    }
+  }
+
+
+  const loadDegreePrograms = async () => {
     try {
       const response = await fetch('http://localhost:3001/api/getPrograms');
       if (!response.ok) {
@@ -119,7 +145,7 @@ function Profile() {
                   <br />
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree" onChange={handleChange}>
+          <select name="degree" onChange={programSelect}>
           <option value="" >Please select an option</option>
            {program_data.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
