@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './commen/NavBar';
 
 
@@ -25,7 +25,16 @@ function Prediction() {
     year4Module4: "",
     year4Module5: "",
     year4Module6: "",
+
+    
+
   });
+
+  useEffect(() => {
+    loadDegreePrograms();
+  }, [])
+  
+  const[program_data, setProgramData] = useState([]);
 
   const handleChange = (event) => {
 
@@ -40,6 +49,21 @@ function Prediction() {
     event.preventDefault();
     console.log(data_set);
   };
+
+  const loadDegreePrograms = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/getPrograms');
+      if (!response.ok) {
+        throw new Error('Network response was not ok.');
+      }
+      const result = await response.json();
+      setProgramData(result);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+
 
   return (
     <div className="main">
@@ -59,10 +83,10 @@ function Prediction() {
                   
                   <label for="degree-selector">Select you degree program: </label><br />
                   <select name="degree-program" onChange={handleChange}>
-                  <option value="Select your degree program:=">Select you degree program:</option>
-                    <option value="BEng(Hons)Software Engineering">BEng(Hons)Software Engineering</option>
-                    <option value="BSc(Hons)Computer Science">BSc(Hons)Computer Science</option>
-                    <option value="BSc(Hons)Artificial Intelligence And Data Science">BSc(Hons)Artificial Intelligence And Data Science</option>
+                  <option value="" >Please select an option</option>
+                  {program_data.map((item) => (
+            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
+        ))}
                   </select>
                   <br/> <br/>
                   

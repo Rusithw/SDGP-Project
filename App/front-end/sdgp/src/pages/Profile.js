@@ -92,7 +92,7 @@ function Profile() {
         throw new Error('Network response was not ok.');
       }
       const result = await response.json();
-  setProgramData(result);
+      setProgramData(result);
     } catch (error) {
       console.log(error.message);
     }
