@@ -19,7 +19,7 @@ exports.getPrograms = (req, res) =>{
 exports.getModules = (req, res) =>{
     const data = req.body;
     connection.query(
-        "SELECT * FROM university_program_modules WHERE university_program_id = ?", [data],
+        "SELECT * FROM university_modules INNER JOIN university_program_modules ON university_modules.university_module_id = university_program_modules.university_module_id WHERE university_program_modules.university_program_id= ? ", [data.university_program_id],
         (error, results) => {
             if (error) {
                 console.error("Error fetching sample data:", error);
