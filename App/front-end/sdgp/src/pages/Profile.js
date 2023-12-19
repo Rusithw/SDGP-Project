@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./commen/NavBar";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+   const user_session_value =  window.sessionStorage.getItem("user_name");
+   if(user_session_value === null || user_session_value === ""){
+    navigate("/login");
+   }
+
+  }, []);
+
   const [data_set, setData] = useState({
     fullName: "",
     universityEnrollYear: "",
@@ -22,6 +34,7 @@ function Profile() {
   const [second_year_modules, setSecondYearModules] = useState([]);
   const [third_year_modules, setThirdYearModules] = useState([]);
   const [fourth_year_modules, setFourthYearModules] = useState([]);
+  
 
   const handleModuleChange = (year, module) => {
     if (year === 1) {

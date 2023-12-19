@@ -13,7 +13,7 @@ router.post('/sample', sampleController.createSampleData);
 router.post('/user/login',userController.userLogin);
 router.post('/user/signup', userController.userSignUp);
 router.get('/getProfile', userController.getProfile);
-router.post('/saveProfile', userController.saveProfile);
+router.post('/saveProfile', userController.saveProfile);    
 router.get('/getPrograms', programController.getPrograms);
 router.post('/getModules', programController.getModules);
 

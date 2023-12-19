@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function Login() {
+  const navigate = useNavigate();
   const [error, setError] = useState("");
   const [data_set, setData] = useState({
     userName: "",
@@ -34,8 +37,11 @@ function Login() {
         console.log(data);
         if(data==="0"){
           setError("Wrong user name or password")
+          window.sessionStorage.setItem("user_name", "");
         }else{
           setError("Ok");
+          window.sessionStorage.setItem("user_name", data_set.userName);
+          navigate("/");
         }
       
       } catch (error) {

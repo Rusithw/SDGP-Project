@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "./commen/NavBar";
+import { useNavigate } from "react-router-dom";
 
 function MyAccount() {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+   const user_session_value =  window.sessionStorage.getItem("user_name");
+   if(user_session_value === null || user_session_value === ""){
+    navigate("/login");
+   }
+
+  }, []);
+
   const [data_set, setData] = useState({
     fullName: "",
     universityEnrollYear: "",
