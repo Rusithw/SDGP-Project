@@ -33,8 +33,27 @@ function Prediction() {
   useEffect(() => {
     loadDegreePrograms();
   }, [])
+
   
   const[program_data, setProgramData] = useState([]);
+  const[modules_data, setModuleData] = useState([]);
+
+  const [first_year_modules, setFirstYearModules] = useState([]);
+  const [second_year_modules, setSecondYearModules] = useState([]);
+  const [third_year_modules, setThirdYearModules] = useState([]);
+  const [fourth_year_modules, setFourthYearModules] = useState([]);
+
+  const handleModuleChange = (year, module) => {
+    if(year ===1){
+      if(first_year_modules.includes(module)){
+        setFirstYearModules(
+          first_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setFirstYearModules([...first_year_modules, module]);
+      }
+    }
+  }
 
   const handleChange = (event) => {
 
@@ -49,6 +68,35 @@ function Prediction() {
     event.preventDefault();
     console.log(data_set);
   };
+
+  const programSelect = async (event) => {
+    const payLoad = {
+     "university_program_id": event.target.value
+    }
+     try {
+       const response = await fetch('http://localhost:3001/api/getModules', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(payLoad),
+       });
+ 
+       if (!response.ok) {
+         throw new Error('Invalid');
+       }
+ 
+       const data = await response.json();
+       console.log(data);  
+       setModuleData(data);
+       
+    
+     } catch (error) {
+       console.error('Error modules in:', error);
+     
+     }
+   }
+
 
   const loadDegreePrograms = async () => {
     try {
@@ -82,7 +130,7 @@ function Prediction() {
                   <h2>Please fill your details here</h2>
                   
                   <label for="degree-selector">Select you degree program: </label><br />
-                  <select name="degree-program" onChange={handleChange}>
+                  <select name="degree-program" onChange={programSelect}>
                   <option value="" >Please select an option</option>
                   {program_data.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
@@ -93,44 +141,20 @@ function Prediction() {
                 
 
                   <div className="year-module-colour">
-                    <label for="first-year-modules">Select your 1st year module 1 </label><br/>
-                    <select name="year1Module1" onChange={handleChange}>
-                    <option value="Select your 1st year module 1">Select your 1st year module 1</option>
-                      <option value="Trends in Computer Science">Trends in Computer Science</option>
-                    </select>
-                    <br/> <br/>
-                
+                   
+                  {modules_data.map((item) => (
+                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
 
-                    <label for="first-year-modules"> Select your 1st year module 2 </label><br/>
-                    <select name="year1Module2" onChange={handleChange}>
-                    <option value="Select your 1st year module 2=">Select your 1st year module 2</option>
-                      <option value="Software Development I">Software Development I</option>
-                    </select>
-                    <br/> <br/>
-                    <label for="first-year-modules"> Select your 1st year module 3 </label><br/>
-                    <select name="year1Module3" onChange={handleChange}>
-                    <option value="Select your 1st year module 3">Select your 1st year module 3</option>
-                      <option value="Software Development II">Software Development II </option>
-                    </select>
-                    <br/> <br/>
-                    <label for="first-year-modules"> Select your 1st year module 4 </label><br/>
-                    <select name="year1Module4" onChange={handleChange} >
-                    <option value="Select your 1st year module 4">Select your 1st year module 4</option>
-                      <option value="Mathematics for Computing"> Mathematics for Computing</option>
-                    </select>
-                    <br/> <br/>
-                    <label for="first-year-modules"> Select your 1st year module 5 </label><br/>
-                    <select name="year1Module5" onChange={handleChange}>
-                    <option value="Select your 1st year module 5">Select your 1st year module 5</option>
-                      <option value="Computer Systems Fundamentals ">Computer Systems Fundamentals </option>
-                    </select>
-                    <br/> <br/>
-                    <label for="first-year-modules"> Select your 1st year module 6 </label><br/>
-                    <select name="year1Module6" onChange={handleChange}>
-                    <option value="Select your 1st year module 6">Select your 1st year module 6</option>
-                      <option value="Web Design and Development"> Web Design and Development</option>
-                    </select>
-                    <br/> <br/>
+                   
                   </div>
                  
                   <div className="year-module-non-colour">

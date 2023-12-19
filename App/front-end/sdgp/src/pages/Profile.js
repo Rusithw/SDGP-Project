@@ -79,7 +79,7 @@ function Profile() {
 
       const data = await response.json();
       console.log(data);   
-      setModuleData(data)
+      setModuleData(data);
       
    
     } catch (error) {
@@ -159,9 +159,7 @@ function Profile() {
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
         ))}
           </select>
-          <br /> <br />
-
-
+          <br /> <br />       
                   <label for="User name ">
                     Select your first year modules:{" "}
                   </label>
