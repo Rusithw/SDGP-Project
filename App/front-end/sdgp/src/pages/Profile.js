@@ -16,6 +16,7 @@ function Profile() {
   }, []);
 
   const[program_data, setProgramData] = useState([]);
+  const [modules_data, setModuleData] = useState([]);
 
   const [first_year_modules, setFirstYearModules] = useState([]);
   const [second_year_modules, setSecondYearModules] = useState([]);
@@ -78,6 +79,9 @@ function Profile() {
 
       const data = await response.json();
       console.log(data);   
+      setModuleData(data)
+      
+   
     } catch (error) {
       console.error('Error modules in:', error);
     
@@ -86,6 +90,8 @@ function Profile() {
 
 
   const loadDegreePrograms = async () => {
+
+    
     try {
       const response = await fetch('http://localhost:3001/api/getPrograms');
       if (!response.ok) {
@@ -93,12 +99,14 @@ function Profile() {
       }
       const result = await response.json();
       setProgramData(result);
+      
     } catch (error) {
       console.log(error.message);
     }
   };
 
   const handleSubmit =  async (event) => {
+   
     event.preventDefault();
     console.log(data_set);
     console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
@@ -158,16 +166,15 @@ function Profile() {
                     Select your first year modules:{" "}
                   </label>
                   <br />
-                  {["SD 1", "Mathematics for Computing", "Trends in Computer Science", "SD 2", "Computer System Fundamentals", "Web Design and Development"].map(
-                    (module) => (
-                      <div key={module}>
+                  {modules_data.map((item) => (
+                        item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          checked={first_year_modules.includes(module)}
-                          onChange={() => handleModuleChange(1, module)}
+                          onChange={() => handleModuleChange(1, item.university_module_id)}
                         />
-                        {module}
+                        {item.university_module_name}
                       </div>
+                      :""
                     )
                   )}
 
