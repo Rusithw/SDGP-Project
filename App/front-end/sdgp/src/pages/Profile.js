@@ -186,16 +186,15 @@ function Profile() {
                   <br />
                   <br />
                   
-                  {["Database Systems", "OOP", "SDGP", "Client-Side Architecture"].map(
-                    (module) => (
-                      <div key={module}>
+                  {modules_data.map((item) => (
+                        item.year === "2" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          checked={second_year_modules.includes(module)}
-                          onChange={() => handleModuleChange(2, module)}
+                          onChange={() => handleModuleChange(2, item.university_module_id)}
                         />
-                        {module}
+                        {item.university_module_name}
                       </div>
+                      :""
                     )
                   )}                        
 
@@ -205,16 +204,15 @@ function Profile() {
                     Select your third year modules:{" "}
                   </label>
                   <br />
-                  {["M_1", "M_2", "M_3", "M_4"].map(
-                    (module) => (
-                      <div key={module}>
+                  {modules_data.map((item) => (
+                        item.year === "3" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          checked={third_year_modules.includes(module)}
-                          onChange={() => handleModuleChange(3, module)}
+                          onChange={() => handleModuleChange(3, item.university_module_id)}
                         />
-                        {module}
+                        {item.university_module_name}
                       </div>
+                      :""
                     )
                   )}
 
@@ -225,18 +223,19 @@ function Profile() {
                   </label>
                   <br />
                   <br />
-                  {["Final Year Project", "Applied AI", "Cyber Security", "Mobile Native Application Development"].map(
-                    (module) => (
-                      <div key={module}>
+                  
+                  {modules_data.map((item) => (
+                        item.year === "4" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          checked={fourth_year_modules.includes(module)}
-                          onChange={() => handleModuleChange(4, module)}
+                          onChange={() => handleModuleChange(4, item.university_module_id)}
                         />
-                        {module}
+                        {item.university_module_name}
                       </div>
+                      :""
                     )
                   )}
+
                   <br />
                   <br />
                   <label for="User name ">Enter your current job title: </label>
