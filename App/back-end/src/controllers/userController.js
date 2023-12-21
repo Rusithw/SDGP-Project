@@ -47,27 +47,19 @@ exports.userSignUp = (req, res) => {
   )
 };
 
-exports.getProfile = (req, res) => {
+exports.userDetailsByUserName = (req, res) => {
   const data = req.body;
-  console.log(data.fullName);
-  console.log(data.universityEnrollYear);
-  console.log(data. degreeProgram);
-  console.log(data.currentJobTitle);
-  console.log(data.expectedJobRole);
- connection.query( 'SELECT * FROM university_programs', (error, results) => {
-    if(error){
-      console.error('Error fetching sample data:', error);
-      res.status(500).json({ message: 'Error creating data' });
-      return;
+  console.log(data);
+
+  connection.query(
+    "SELECT user_name, user_first_name, user_last_name, user_email, user_mobile, user_address, city_id FROM user WHERE user_name =? ", [data.user_name],
+    (error, results) => {
+      if(error){
+        console.error("Error fetching sample data:", error);
+        res.json("0");
+        return;
+      }
+      res.json(results)
     }
-    res.json({ message: 'Data created successfully' });
- });
-}
- 
-exports.saveProfile = (req, res) =>{
-
-}
-
-exports.getPrograms = (req, res) =>{
-  
+  )
 }
