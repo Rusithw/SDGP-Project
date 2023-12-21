@@ -8,14 +8,15 @@ function Profile() {
 
   useEffect(() => {
    const user_session_value =  window.sessionStorage.getItem("user_name");
-   if(user_session_value === null || user_session_value === ""){
+   if(user_session_value === null){
     navigate("/login");
    }
+   userDetailsByUserName(user_session_value);
+   
 
   }, []);
 
   const [data_set, setData] = useState({
-    fullName: "",
     universityEnrollYear: "",
     degreeProgram: "",
     currentJobTitle: "",
@@ -26,6 +27,8 @@ function Profile() {
   useEffect(() => {
     loadDegreePrograms();
   }, []);
+
+  const [userDetailsByUserName_data, setUserDetailsByUserName] = useState("");
 
   const[program_data, setProgramData] = useState([]);
   const [modules_data, setModuleData] = useState([]);
@@ -73,6 +76,35 @@ function Profile() {
     });
   };
 
+
+  const userDetailsByUserName = async (user_name) => {
+    const payLoad = {
+      "user_name": user_name
+     }
+      try {
+        const response = await fetch('http://localhost:3001/api/userDetailsByUserName', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payLoad),
+        });
+  
+        if (!response.ok) {
+          throw new Error('Invalid');
+        }
+  
+        const data = await response.json();
+        
+       setUserDetailsByUserName(data[0].user_first_name);
+        
+     
+      } catch (error) {
+        console.error('Error modules in:', error);
+      
+      }
+  }
+
   const programSelect = async (event) => {
    const payLoad = {
     "university_program_id": event.target.value
@@ -102,9 +134,7 @@ function Profile() {
   }
 
 
-  const loadDegreePrograms = async () => {
-
-    
+  const loadDegreePrograms = async () => {   
     try {
       const response = await fetch('http://localhost:3001/api/getPrograms');
       if (!response.ok) {
@@ -139,18 +169,7 @@ function Profile() {
             <form onSubmit={handleSubmit}>
               <div className="detail-form">
                 <div className="nav-padding">
-                  <h2>Please fill your details here</h2>
-                  <label for="User name ">Enter your full name: </label>
-                  <br />
-                  <input
-                    placeholder="Enter your full name"
-                    type="text"
-                    name="fullName"
-                    value={data_set.fullName}
-                    onChange={handleChange}
-                  />
-                  <br />
-                  <br />
+                  <h2>{userDetailsByUserName_data} Please fill your details here </h2>
                   <label for="User name ">
                     Enter your university enrol year:{" "}
                   </label>

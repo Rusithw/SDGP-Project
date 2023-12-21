@@ -36,9 +36,9 @@ function Login() {
         const data = await response.json();
         console.log(data);
         if(data==="0"){
-          setError("Wrong user name or password")
-          window.sessionStorage.setItem("user_name", "");
+          setError("Wrong user name or password");
         }else{
+
           setError("Ok");
           window.sessionStorage.setItem("user_name", data_set.userName);
           navigate("/");
