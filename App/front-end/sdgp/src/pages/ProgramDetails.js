@@ -134,6 +134,29 @@ function ProgramDetails() {
           <br />
          </div>
 
+         
+         <div className="detail-form modules">
+          <label for="degree-selector"> <h2>3 rd year modules</h2> </label><br />
+          <h3> 1. Computer Networks</h3>
+          <p>This module provides students with a foundational understanding of the fundamental concepts and technologies that form the backbone of our interconnected world. Its components encompass key areas such as Network Architectures, Networking Protocols, Networking Devices, and Network Applications. Delving into these sub-parts enhances our comprehension of the intricate workings of the internet and the diverse ways in which various technologies can seamlessly collaborate. The practical applications of Computer Networks extend across a spectrum of fields, including software development, cybersecurity, game development, and beyond.
+          </p>
+          <br />
+          <h3> 2. Operating Systems</h3>
+          <p>Delving into the realm of Operating Systems not only imparts a foundational comprehension of computer functionality but also empowers individuals to construct resilient applications, oversee intricate systems, and navigate the continually interconnected landscape of technology. This knowledge finds practical applications in diverse areas such as Process Management, Security and Protection, User Interfaces, Networking, and Communication.
+          </p>
+          <br />
+          <h3> 3. Computational Theory</h3>
+          <p>It serves as the cornerstone for crafting efficient algorithms, architecting secure systems, and gaining insights into the boundaries of artificial intelligence. Computational Theory stands as a captivating module that explores the fundamental nature of computer capabilities and limitations. Within this subject, one can delve into aspects such as Models of Computation, Computability Theory, and Complexity Theory.</p>
+          <br />
+          <h3>4. Wireless Technologies and Network Programming</h3>
+          <p> This module immerses students in the captivating realm of wireless data transmission, liberating us from the limitations of physical cables. It investigates the cutting-edge technologies that underpin our seamless connectivity in the wireless era. Participants will delve into the characteristics of microwaves, radio waves, and infrared radiation, gaining insight into the diverse landscape of contemporary wireless technologies.</p>
+          <br />
+          <h3>5. Algorithms and Complexity</h3>
+          <p> Within this module, algorithms take center stage as they address problems through systematic, step-by-step instructions. Furthermore, the module equips us with essential tools to execute these algorithms efficiently. Complexity Theory is employed to quantify the time and memory requirements of an algorithm, providing insights into its efficiency in completing tasks. By delving into this module, users gain the foundational knowledge necessary for computation, empowering them to shape digital landscapes.</p>
+          <br />
+        </div>
+
+
          <div className='detail-form modules'>
           <label for="degree-selector"> <h2>4 th year modules </h2> </label>
           <h2> Core Modules </h2>
