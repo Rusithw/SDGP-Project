@@ -96,7 +96,7 @@ function CreateAccount() {
           
             <br />
             <br />
-            <button Name="button" type="Login">Login</button>
+            <button className="button" type="Login">Login</button>
             <div className="login-message">
               <p>Already have an account? <a href="Login.html"> Sign in </a></p>
             </div>
