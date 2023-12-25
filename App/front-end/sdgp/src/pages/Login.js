@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 
 function Login() {
@@ -36,13 +38,16 @@ function Login() {
         const data = await response.json();
         console.log(data);
         if(data==="0"){
-          setError("Wrong user name or password");
+          NotificationManager.error('Please try again', 'Wrong User name or Password');
           window.sessionStorage.setItem("user_name", "");
         }else{
 
-          setError("Ok");
+          NotificationManager.success('Success message', 'Correct');
+          setTimeout(() => {
+            navigate("/");
+          }, 2000);
           window.sessionStorage.setItem("user_name", data_set.userName);
-          navigate("/");
+          
         }
       
       } catch (error) {
@@ -97,6 +102,8 @@ function Login() {
           </div>
         </div>
       </div>
+      
+ <NotificationContainer/>
     </div>
   );
 }
