@@ -19,6 +19,7 @@ function Profile() {
   const [data_set, setData] = useState({
     universityEnrollYear: "",
     degreeProgram: "",
+    enrolmentStatus: "",
     currentJobTitle: "",
     expectedJobRole: "",
   });
@@ -190,6 +191,14 @@ function Profile() {
            {program_data.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
         ))}
+          </select>
+          <br /> <br />
+          <label for="status">Select your enrolment status: </label>
+          <select name="enrolmentStatus" value={data_set.enrolmentStatus} onChange={handleChange}>
+            <option value="">Please select an option</option>
+            <option value="On going">On Going</option>
+            <option value="Done">Done</option>
+            <option value="Cancel">Cancel</option>
           </select>
           <br /> <br />       
                   <label for="User name ">

@@ -69,7 +69,7 @@ function Login() {
     visible={loader}
     height="80"
     width="80"
-    color="#4fa94d"
+    color="#0066ff"
     radius="9"
     ariaLabel="three-dots-loading"
     wrapperStyle={{}}
