@@ -277,7 +277,7 @@ function Profile() {
 
                   <br />
                   <br />
-                  <label for="User name ">Enter your current job title: </label>
+                  {/* <label for="User name ">Enter your current job title: </label>
                   <br />
                   <input
                     placeholder="Enter your current job title"
@@ -285,10 +285,10 @@ function Profile() {
                     name="currentJobTitle"
                     value={data_set.currentJobTitle}
                     onChange={handleChange}
-                  />
+                  /> */}
                   <br />
                   <br />
-                  <label for="User name ">Enter your expected job role: </label>
+                  {/* <label for="User name ">Enter your expected job role: </label>
                   <br />
                   <input
                     placeholder="Enter your expected job role"
@@ -296,7 +296,7 @@ function Profile() {
                     name="expectedJobRole"
                     value={data_set.expectedJobRole}
                     onChange={handleChange}
-                  />
+                  /> */}
                   <br />
                   <br />
                   <div className="save-button">
