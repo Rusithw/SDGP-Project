@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from "./commen/NavBar";
 
 function MyAccount() {
 
@@ -56,7 +57,9 @@ function MyAccount() {
 
   return (
     <div className="main">
-    <div className="sign-up-form form-style1">
+    <div>
+      <NavBar value={"my-account"} />
+      <div className="sign-up-form form-style1">
       <div className="width-100">
        <form onSubmit={handleSubmit}>
        <div className="width-50">
@@ -111,6 +114,10 @@ function MyAccount() {
         </div>
       </div>
     </div>
+
+      </div>  
+
+
   </div>
 
   )
