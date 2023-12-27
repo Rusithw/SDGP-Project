@@ -47,7 +47,7 @@ function Login() {
           window.sessionStorage.setItem("user_name", "");
         }else{
 
-          NotificationManager.success('Welcome', 'Correct');
+          NotificationManager.success(data_set.userName,  'Welcome');
           setLoader(true)
           setTimeout(() => {
             navigate("/");
