@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { ThreeDots} from 'react-loader-spinner'
@@ -106,7 +106,7 @@ function Login() {
               <div className="sign-up-message">
                 <p>
                   Don’t have any account yet?{" "}
-                  <a href="create_acc.html"> Create an account </a>
+                  <Link to={"/create-account"} > Create an account</Link>
                 </p>
               </div>
             </div>
