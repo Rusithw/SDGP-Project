@@ -1,168 +1,119 @@
-import React, { useEffect, useState } from "react";
-import NavBar from "./commen/NavBar";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
 
 function MyAccount() {
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-   const user_session_value =  window.sessionStorage.getItem("user_name");
-   if(user_session_value === null || user_session_value === ""){
-    navigate("/login");
-   }
-  //  test comment
-
-  }, []);
-
+  const [ reTypePassword, setRetypePassword] = useState("")
   const [data_set, setData] = useState({
-    fullName: "",
-    universityEnrollYear: "",
-    firstYearModuleSelect: "",
-    secondYearModuleSelect: "",
-    thirdYearModuleSelect: "",
-    fourthYearModuleSelect: "",
-    currentJobTitle: "",
-    expectedJobRole: "",
+      user_first_name: "",
+      user_last_name: "",
+      user_name: "",
+      user_email: "",
+      user_password: "",
+      user_mobile: "",
+      user_address: "",
+      city_id: "",
   });
 
-  const handleChange = (event) => {   
-    const { name, value } = event.target;
+  const handleChange = (event) =>{
+    const {name, value} = event.target;
     setData({
       ...data_set,
       [name]: value,
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) =>{
     event.preventDefault();
-    console.log(data_set);
+  
+
+    try {
+      const response = await fetch('http://localhost:3001/api/user/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data_set),
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid credentials');
+      }
+
+      const data = await response.json();
+      console.log(data);
+      if(data==="0"){
+        // setError("Wrong user name or password")
+      }else{
+        // setError("Ok");
+      }
+    
+    } catch (error) {
+      console.error('Error logging in:', error);
+    
+    }
+
   };
 
   return (
     <div className="main">
-      <div>
-        <NavBar value={"my-account"} />
-        <div className="width-100">
-          <div className="width-50 profile-image">
-            <div className="profile-img-content">
-              <img src="Images/login-image.jpg" alt="#" />
+    <div className="sign-up-form form-style1">
+      <div className="width-100">
+       <form onSubmit={handleSubmit}>
+       <div className="width-50">
+          <div className="login-content">
+            <h2>Sign up here</h2>
+            <p>Please fill this form to sign up</p>
+            <label for="User name ">First name: </label><br />
+            <input placeholder="First name" type="text" name="user_first_name" value={data_set.user_first_name} onChange={handleChange}/> <br />{" "}
+            <br />
+            <label for="User name ">Last name: </label><br />
+            <input placeholder="Last name" type="text" name="user_last_name" value={data_set.user_last_name} onChange={handleChange}/> <br />
+            <br />
+            <label for="User name ">User name: </label><br />
+            <input placeholder="User name" type="text" name="user_name" value={data_set.user_name} onChange={handleChange}/> <br />
+            <br />
+            <label for="User name ">Email: </label><br />
+            <input placeholder="Email" type="text" name="user_email" value={data_set.user_email} onChange={handleChange}/> <br />
+            <br />
+            <label for="Password ">Password: </label><br />
+            <input placeholder="Password" type="password" name="user_password" value={data_set.user_password} onChange={handleChange}/> <br />
+            <br />
+            <label for="Password ">Re-type Password: </label><br />
+            <input placeholder="Re-type Password" type="password" name="reTypePassword" value={reTypePassword} onChange={handleChange}/> <br />
+            <br />
+            <label for="Password ">Mobile: </label><br />
+            <input placeholder="Mobile" type="text" name="user_mobile" value={data_set.user_mobile} onChange={handleChange}/> <br />
+            <br />
+            <label for="Password ">Address: </label><br />
+            <input placeholder="Address" type="text" name="user_address" value={data_set.user_address} onChange={handleChange}/> <br />
+            <br/>
+            <label for="Password ">City: </label><br />
+           
+            <select name="city_id" onChange={handleChange}>
+              <option value="0" disabled="">Select City</option>
+              <option value="1">Negombo</option>
+            </select>
+          
+            <br />
+            <br />
+            <button className="button" type="Login">Login</button>
+            <div className="login-message">
+              <p>Already have an account? <a href="Login.html"> Sign in </a></p>
             </div>
           </div>
-          <div className="width-50">
-            <form onSubmit={handleSubmit}>
-              <div className="detail-form">
-                <div className="nav-padding">
-                  <h2>Please fill your details here</h2>
-                  <label for="User name ">Enter your full name: </label>
-                  <br />
-                  <input
-                    placeholder="Enter your full name"
-                    type="text"
-                    name="fullName"
-                    value={data_set.fullName}
-                    onChange={handleChange}
-                  />
-                  <br />
-                  <br />
-                  <label for="User name ">
-                    Enter your university enrol year:{" "}
-                  </label>
-                  <br />
-                  <input
-                    placeholder="Enter your university enrol year"
-                    type="text"
-                    name="universityEnrollYear"
-                    value={data_set.universityEnrollYear}
-                    onChange={handleChange}
-                  />
-                  <br />
-                  <br />
-                  <label for="User name ">
-                    Select your first year modules:{" "}
-                  </label>
-                  <br />
-                  <select name="firstYearModuleSelect" onChange={handleChange}>
-                    <option value="select=">First year module select </option>
-                    <option value="volvo=">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
-                  <br />
-                  <br />
-                  <label for="User name ">
-                    Select your second year modules:{" "}
-                  </label>
-                  <br />
-                  <select name="secondYearModuleSelect" onChange={handleChange}>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
-                  <br />
-                  <br />
-                  <label for="User name ">
-                    Select your third year modules:{" "}
-                  </label>
-                  <br />
-                  <select name="thirdYearModuleSelect" onChange={handleChange}>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
-                  <br />
-                  <br />
-                  <label for="User name ">
-                    Select your fourth year modules:{" "}
-                  </label>
-                  <br />
-                  <select name="fourthYearModuleSelect" onChange={handleChange}>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
-                  <br />
-                  <br />
-                  <label for="User name ">Enter your current job title: </label>
-                  <br />
-                  <input
-                    placeholder="Enter your current job title"
-                    type="text"
-                    name="currentJobTitle"
-                    value={data_set.currentJobTitle}
-                    onChange={handleChange}
+        </div>
 
-                  />
-                  <br />
-                  <br />
-                  <label for="User name ">Enter your expected job role: </label>
-                  <br />
-                  <input
-                    placeholder="Enter your expected job role"
-                    type="text"
-                    name="expectedJobRole"
-                    value={data_set.expectedJobRole}
-                    onChange={handleChange}
-                  />
-                  <br />
-                  <br />
-                  <div className="save-button">
-                    <button className="button" type="Save">
-                      Save
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
+       </form>
+        <div className="width-50 login-image">
+          <div className="login-image-content">
+            <img src="Images/login-image.jpg" alt="#" />
           </div>
         </div>
       </div>
     </div>
-  );
+  </div>
+
+  )
 }
 
 export default MyAccount;
