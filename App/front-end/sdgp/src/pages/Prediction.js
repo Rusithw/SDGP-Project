@@ -12,6 +12,9 @@ function Prediction() {
     navigate("/login");
    }
 
+   userDetailsByUserName(user_session_value);
+   
+
   }, []);
 
   const [data_set, setData] = useState({
@@ -44,6 +47,8 @@ function Prediction() {
     loadDegreePrograms();
   }, [])
 
+  const [userDetailsByUserName_data, setUserDetailsByUserName] = useState("");
+
   
   const[program_data, setProgramData] = useState([]);
   const[modules_data, setModuleData] = useState([]);
@@ -73,6 +78,34 @@ function Prediction() {
       [name]: value,
     });
   };
+
+  const userDetailsByUserName = async (user_name) => {
+    const payLoad = {
+      "user_name": user_name
+     }
+      try {
+        const response = await fetch('http://localhost:3001/api/userDetailsByUserName', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payLoad),
+        });
+  
+        if (!response.ok) {
+          throw new Error('Invalid');
+        }
+  
+        const data = await response.json();
+        
+       setUserDetailsByUserName(data[0].user_first_name);
+        
+     
+      } catch (error) {
+        console.error('Error modules in:', error);
+      
+      }
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -137,7 +170,7 @@ function Prediction() {
             <form onSubmit={handleSubmit}>
             <div className="detail-form">
                 <div className="nav-padding">
-                  <h2>Please fill your details here</h2>
+                  <h2> {userDetailsByUserName_data}  Please fill your details here</h2>
                   
                   <label for="degree-selector">Select you degree program: </label><br />
                   <select name="degree-program" onChange={programSelect}>
