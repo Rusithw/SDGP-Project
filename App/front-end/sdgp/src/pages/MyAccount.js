@@ -64,8 +64,7 @@ function MyAccount() {
        <form onSubmit={handleSubmit}>
        <div className="width-50">
           <div className="login-content">
-            <h2>Sign up here</h2>
-            <p>Please fill this form to sign up</p>
+            <h2>My Account</h2>
             <label for="User name ">First name: </label><br />
             <input placeholder="First name" type="text" name="user_first_name" value={data_set.user_first_name} onChange={handleChange}/> <br />{" "}
             <br />
@@ -99,16 +98,14 @@ function MyAccount() {
           
             <br />
             <br />
-            <button className="button" type="Login">Login</button>
-            <div className="login-message">
-              <p>Already have an account? <a href="Login.html"> Sign in </a></p>
-            </div>
+            <button className="button" type="Update">Update</button>
+            
           </div>
         </div>
 
        </form>
-        <div className="width-50 login-image">
-          <div className="login-image-content">
+        <div className="width-50 my-account-image">
+          <div className="my-account-image-content">
             <img src="Images/login-image.jpg" alt="#" />
           </div>
         </div>
