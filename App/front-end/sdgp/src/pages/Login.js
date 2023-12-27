@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { ThreeDots} from 'react-loader-spinner'
 
 
 function Login() {
@@ -20,8 +21,11 @@ function Login() {
     });
   };
 
+  const [loader, setLoader]  = useState(false);
+
   const handleSubmit = async (event) => {
     event.preventDefault()
+    setLoader(true)
       try {
         const response = await fetch('http://localhost:3001/api/user/login', {
           method: 'POST',
@@ -38,11 +42,13 @@ function Login() {
         const data = await response.json();
         console.log(data);
         if(data==="0"){
-          NotificationManager.error('Please try again', 'Wrong User name or Password');
+          NotificationManager.error('Login Fail', 'Oops...!');
+          setLoader(false)
           window.sessionStorage.setItem("user_name", "");
         }else{
 
-          NotificationManager.success('Success message', 'Correct');
+          NotificationManager.success('Welcome', 'Correct');
+          setLoader(true)
           setTimeout(() => {
             navigate("/");
           }, 2000);
@@ -57,7 +63,19 @@ function Login() {
     };
 
   return (
+    
     <div className="main">
+        <ThreeDots
+    visible={loader}
+    height="80"
+    width="80"
+    color="#4fa94d"
+    radius="9"
+    ariaLabel="three-dots-loading"
+    wrapperStyle={{}}
+    wrapperClass=""
+    />
+
       <div className="sign-in-form form-style1">
         <div className="width-100">
           <form onSubmit={handleSubmit}>
