@@ -185,6 +185,16 @@ function Profile() {
                   <br />
                   <br />
 
+                  <label for="status">Select your enrolment status: </label>
+          <select name="enrolmentStatus" value={data_set.enrolmentStatus} onChange={handleChange}>
+            <option value="">Please select an option</option>
+            <option value="On going">On Going</option>
+            <option value="Done">Done</option>
+            <option value="Cancel">Cancel</option>
+          </select>
+
+          <br /> <br />
+
           <label for="degree-selector">Select your degree program: </label><br />
           <select name="degree" onChange={programSelect}>
           <option value="" >Please select an option</option>
@@ -192,14 +202,8 @@ function Profile() {
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
         ))}
           </select>
-          <br /> <br />
-          <label for="status">Select your enrolment status: </label>
-          <select name="enrolmentStatus" value={data_set.enrolmentStatus} onChange={handleChange}>
-            <option value="">Please select an option</option>
-            <option value="On going">On Going</option>
-            <option value="Done">Done</option>
-            <option value="Cancel">Cancel</option>
-          </select>
+      
+         
           <br /> <br />       
                   <label for="User name ">
                     Select your first year modules:{" "}
