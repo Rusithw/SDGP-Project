@@ -17,11 +17,12 @@ function Profile() {
   }, []);
 
   const [data_set, setData] = useState({
-    universityEnrollYear: "",
-    degreeProgram: "",
-    enrolmentStatus: "",
-    currentJobTitle: "",
-    expectedJobRole: "",
+    enrolement_date: "",
+    university_program_id: "",
+    enrolement_status: "",
+    user_id:  window.sessionStorage.getItem("user_id"),
+    // currentJobTitle: "",
+    // expectedJobRole: "",
   });
 
   
@@ -81,6 +82,7 @@ function Profile() {
   const userDetailsByUserName = async (user_name) => {
     const payLoad = {
       "user_name": user_name
+       
      }
       try {
         const response = await fetch('http://localhost:3001/api/userDetailsByUserName', {
@@ -106,7 +108,13 @@ function Profile() {
       }
   }
 
+
   const programSelect = async (event) => {
+    setData({
+      ...data_set,
+      ["university_program_id"]: event.target.value,
+      
+    });
    const payLoad = {
     "university_program_id": event.target.value
    }
@@ -149,8 +157,36 @@ function Profile() {
     }
   };
 
+  const profileDataSave = async () =>{
+    
+      try {
+        const response = await fetch('http://localhost:3001/api/profileDataSave', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data_set),
+        });
+  
+        if (!response.ok) {
+          throw new Error('Invalid');
+        }
+  
+        const data = await response.json();
+        console.log(data);   
+      
+        
+     
+      } catch (error) {
+        console.error('Error modules in:', error);
+      
+      }
+
+  }
+
   const handleSubmit =  async (event) => {
    
+    profileDataSave();
     event.preventDefault();
     console.log(data_set);
     console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
@@ -178,15 +214,15 @@ function Profile() {
                   <input
                     placeholder="Enter your university enrol year"
                     type="text"
-                    name="universityEnrollYear"
-                    value={data_set.universityEnrollYear}
+                    name="enrolement_date"
+                    value={data_set.enrolement_date}
                     onChange={handleChange}
                   />
                   <br />
                   <br />
 
                   <label for="status">Select your enrolment status: </label>
-          <select name="enrolmentStatus" value={data_set.enrolmentStatus} onChange={handleChange}>
+          <select name="enrolement_status" value={data_set.enrolement_status} onChange={handleChange}>
             <option value="">Please select an option</option>
             <option value="On going">On Going</option>
             <option value="Done">Done</option>
@@ -196,7 +232,7 @@ function Profile() {
           <br /> <br />
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree" onChange={programSelect}>
+          <select name="degree"  onChange={programSelect}>
           <option value="" >Please select an option</option>
            {program_data.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>

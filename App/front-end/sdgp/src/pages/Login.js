@@ -40,7 +40,7 @@ function Login() {
         }
   
         const data = await response.json();
-        console.log(data);
+        console.log(data_set);
         if(data==="0"){
           NotificationManager.error('Login Fail', 'Oops...!');
           setLoader(false)
@@ -53,6 +53,7 @@ function Login() {
             navigate("/");
           }, 2000);
           window.sessionStorage.setItem("user_name", data_set.userName);
+          window.sessionStorage.setItem("user_id", data);
           
         }
       

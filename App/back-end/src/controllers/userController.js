@@ -19,7 +19,7 @@ exports.userLogin = (req, res) => {
       console.log("This is:", results.length);
       if (results.length > 0) {
         if (results[0].user_password === data.userPassword) {
-          res.json("1");
+          res.json(results[0].user_id);
         } else {
           res.json("0");
         }
@@ -61,5 +61,22 @@ exports.userDetailsByUserName = (req, res) => {
       }
       res.json(results)
     }
+  )
+}
+
+exports.profileDataSave = (req, res) => {
+  const data = req.body;
+  console.log(data);
+
+  connection.query(
+    "INSERT INTO enrolement SET ?", data,
+    (error, results) =>{
+      if(error){
+        console.error("Error fetching sample data:", error);
+        res.json("0");
+        return;
+      }
+      console.log("This is:", results.length);
+  }
   )
 }

@@ -15,6 +15,7 @@ router.post('/user/signup', userController.userSignUp);
 router.get('/getPrograms', programController.getPrograms);
 router.post('/getModules', programController.getModules);
 router.post('/userDetailsByUserName', userController.userDetailsByUserName);
+router.post('/profileDataSave', userController.profileDataSave);
 
 
 
