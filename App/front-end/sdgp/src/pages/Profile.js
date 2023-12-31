@@ -11,186 +11,9 @@ function Profile() {
    if(user_session_value === null){
     navigate("/login");
    }
-   userDetailsByUserName(user_session_value);
-   
-
-  }, []);
-
-  const [data_set, setData] = useState({
-    enrolement_date: "",
-    university_program_id: "",
-    enrolement_status: "",
-    user_id:  window.sessionStorage.getItem("user_id"),
-    // currentJobTitle: "",
-    // expectedJobRole: "",
-  });
+   }, []);
 
   
-  useEffect(() => {
-    loadDegreePrograms();
-  }, []);
-
-  const [userDetailsByUserName_data, setUserDetailsByUserName] = useState("");
-
-  const[program_data, setProgramData] = useState([]);
-  const [modules_data, setModuleData] = useState([]);
-
-  const [first_year_modules, setFirstYearModules] = useState([]);
-  const [second_year_modules, setSecondYearModules] = useState([]);
-  const [third_year_modules, setThirdYearModules] = useState([]);
-  const [fourth_year_modules, setFourthYearModules] = useState([]);
-  
-
-  const handleModuleChange = (year, module) => {
-    if (year === 1) {
-      if (first_year_modules.includes(module)) {
-        setFirstYearModules(
-          first_year_modules.filter((item) => item !== module)
-        );
-      } else {
-        setFirstYearModules([...first_year_modules, module]);
-      }
-    }else if(year === 2){
-        if(second_year_modules.includes(module)){
-          setSecondYearModules(second_year_modules.filter(item => item !==module));         
-        }else{
-          setSecondYearModules([...second_year_modules, module]);
-        }
-    }else if(year === 3){
-      if(third_year_modules.includes(module)){
-        setThirdYearModules(third_year_modules.filter(item => item !== module));
-      }else{
-        setThirdYearModules([...third_year_modules, module]);
-      }
-    }else if(year === 4){
-      if(fourth_year_modules.includes(module)){
-        setFourthYearModules(fourth_year_modules.filter(item => item !== module));
-      }else{
-        setFourthYearModules([...fourth_year_modules, module]);
-      }
-    }
-  };
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setData({
-      ...data_set,
-      [name]: value,
-    });
-  };
-
-
-  const userDetailsByUserName = async (user_name) => {
-    const payLoad = {
-      "user_name": user_name
-       
-     }
-      try {
-        const response = await fetch('http://localhost:3001/api/userDetailsByUserName', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(payLoad),
-        });
-  
-        if (!response.ok) {
-          throw new Error('Invalid');
-        }
-  
-        const data = await response.json();
-        
-       setUserDetailsByUserName(data[0].user_first_name);
-        
-     
-      } catch (error) {
-        console.error('Error modules in:', error);
-      
-      }
-  }
-
-
-  const programSelect = async (event) => {
-    setData({
-      ...data_set,
-      ["university_program_id"]: event.target.value,
-      
-    });
-   const payLoad = {
-    "university_program_id": event.target.value
-   }
-    try {
-      const response = await fetch('http://localhost:3001/api/getModules', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payLoad),
-      });
-
-      if (!response.ok) {
-        throw new Error('Invalid');
-      }
-
-      const data = await response.json();
-      console.log(data);   
-      setModuleData(data);
-      
-   
-    } catch (error) {
-      console.error('Error modules in:', error);
-    
-    }
-  }
-
-
-  const loadDegreePrograms = async () => {   
-    try {
-      const response = await fetch('http://localhost:3001/api/getPrograms');
-      if (!response.ok) {
-        throw new Error('Network response was not ok.');
-      }
-      const result = await response.json();
-      setProgramData(result);
-      
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  const profileDataSave = async () =>{
-    
-      try {
-        const response = await fetch('http://localhost:3001/api/profileDataSave', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data_set),
-        });
-  
-        if (!response.ok) {
-          throw new Error('Invalid');
-        }
-  
-        const data = await response.json();
-        console.log(data);   
-      
-        
-     
-      } catch (error) {
-        console.error('Error modules in:', error);
-      
-      }
-
-  }
-
-  const handleSubmit =  async (event) => {
-   
-    profileDataSave();
-    event.preventDefault();
-    console.log(data_set);
-    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
-  };
 
   return (
     <div className="main">
@@ -203,10 +26,10 @@ function Profile() {
             </div>
           </div>
           <div className="width-50">
-            <form onSubmit={handleSubmit}>
+            <form >
               <div className="detail-form">
                 <div className="nav-padding">
-                  <h2>{userDetailsByUserName_data} Please fill your details here </h2>
+                  <h2> Please fill your details here </h2>
                   <label for="User name ">
                     Enter your university enrol year:{" "}
                   </label>
@@ -215,14 +38,14 @@ function Profile() {
                     placeholder="Enter your university enrol year"
                     type="text"
                     name="enrolement_date"
-                    value={data_set.enrolement_date}
-                    onChange={handleChange}
+                    value
+                
                   />
                   <br />
                   <br />
 
                   <label for="status">Select your enrolment status: </label>
-          <select name="enrolement_status" value={data_set.enrolement_status} onChange={handleChange}>
+          <select name="enrolement_status" value >
             <option value="">Please select an option</option>
             <option value="On going">On Going</option>
             <option value="Done">Done</option>
@@ -232,11 +55,9 @@ function Profile() {
           <br /> <br />
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree"  onChange={programSelect}>
+          <select name="degree"  >
           <option value="" >Please select an option</option>
-           {program_data.map((item) => (
-            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
-        ))}
+      
           </select>
       
          
@@ -245,17 +66,7 @@ function Profile() {
                     Select your first year modules:{" "}
                   </label>
                   <br />
-                  {modules_data.map((item) => (
-                        item.year === "1" ?<div key={item.university_program_modules_id}>
-                        <input
-                          type="checkbox"
-                          onChange={() => handleModuleChange(1, item.university_module_id)}
-                        />
-                        {item.university_module_name}
-                      </div>
-                      :""
-                    )
-                  )}
+                
 
                   <br />
                   <br />
@@ -265,17 +76,7 @@ function Profile() {
                   <br />
                   <br />
                   
-                  {modules_data.map((item) => (
-                        item.year === "2" ?<div key={item.university_program_modules_id}>
-                        <input
-                          type="checkbox"
-                          onChange={() => handleModuleChange(2, item.university_module_id)}
-                        />
-                        {item.university_module_name}
-                      </div>
-                      :""
-                    )
-                  )}                        
+                                      
 
                   <br />
                   <br />
@@ -283,17 +84,7 @@ function Profile() {
                     Select your third year modules:{" "}
                   </label>
                   <br />
-                  {modules_data.map((item) => (
-                        item.year === "3" ?<div key={item.university_program_modules_id}>
-                        <input
-                          type="checkbox"
-                          onChange={() => handleModuleChange(3, item.university_module_id)}
-                        />
-                        {item.university_module_name}
-                      </div>
-                      :""
-                    )
-                  )}
+                 
 
                   <br />
                   <br />
@@ -303,17 +94,7 @@ function Profile() {
                   <br />
                   <br />
                   
-                  {modules_data.map((item) => (
-                        item.year === "4" ?<div key={item.university_program_modules_id}>
-                        <input
-                          type="checkbox"
-                          onChange={() => handleModuleChange(4, item.university_module_id)}
-                        />
-                        {item.university_module_name}
-                      </div>
-                      :""
-                    )
-                  )}
+                  
 
                   <br />
                   <br />
