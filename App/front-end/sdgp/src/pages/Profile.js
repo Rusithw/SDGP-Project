@@ -13,7 +13,54 @@ function Profile() {
    }
    }, []);
 
+   useEffect(() => {
+      loadDegreePrograms();
+    }, []);
+
+   const [data, setData] = useState({
+    enrolement_date: "",
+    university_program_id: "",
+    enrolement_status: "",
+   })
+
+   const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData({...data, [name]: value,})
+    console.log(value)
+   }
+
+   const programSelectChange = (event) => {
+    setData({
+      ...data,
+      ["university_program_id"]: event.target.value,
+
+    });
+   }
+   
+   const handleSubmit = (event) => {
+    event.preventDefault();
+   }
   
+   const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
+
+
+   const loadDegreePrograms = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/api/getPrograms", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const data = await response.json();
+      setLoadDegreePrograms(data)
+    } catch (error) {
+      
+
+    }
+   }
 
   return (
     <div className="main">
@@ -26,7 +73,7 @@ function Profile() {
             </div>
           </div>
           <div className="width-50">
-            <form >
+            <form onSubmit={handleSubmit}>
               <div className="detail-form">
                 <div className="nav-padding">
                   <h2> Please fill your details here </h2>
@@ -38,7 +85,8 @@ function Profile() {
                     placeholder="Enter your university enrol year"
                     type="text"
                     name="enrolement_date"
-                    value
+                    value = {data.enrolement_date}
+                    onChange={handleChange}
                 
                   />
                   <br />
@@ -55,9 +103,11 @@ function Profile() {
           <br /> <br />
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree"  >
+          <select name="degree" onChange={programSelectChange} >
           <option value="" >Please select an option</option>
-      
+          {load_Degree_Programs.map((item) => (
+            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
+        ))}
           </select>
       
          
