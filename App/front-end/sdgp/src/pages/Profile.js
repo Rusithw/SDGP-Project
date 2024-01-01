@@ -48,7 +48,7 @@ function Profile() {
    const loadDegreePrograms = async () => {
     try {
       const response = await fetch("http://localhost:3001/api/getPrograms", {
-        method: "POST",
+        method: "GET",
         headers: { 'Content-Type': 'application/json' },
       });
       if (!response.ok) {
@@ -56,6 +56,7 @@ function Profile() {
       }
       const data = await response.json();
       setLoadDegreePrograms(data)
+      console.log(data)
     } catch (error) {
       
 

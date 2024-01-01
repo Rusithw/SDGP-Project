@@ -211,7 +211,7 @@ function Prediction() {
                     <select name="year2Module2" onChange={handleChange}>
                     <option value="Select your 2nd year module 2">Select your 2nd year module 2</option>
                       <option value="Client-Server Architectures">Client-Server Architectures</option>
-                    </select>
+                    </select> 
                     <br/> <br/>
                     <label for="second-year-modules">Select your 2nd year module 3: </label><br/>
                     <select name="year2Module3" onChange={handleChange}>
