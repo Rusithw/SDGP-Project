@@ -23,6 +23,8 @@ function Profile() {
     enrolement_status: "",
    })
 
+   const [year_modules, setYearModules] = useState([]);
+
    const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -36,6 +38,9 @@ function Profile() {
       ["university_program_id"]: event.target.value,
 
     });
+
+    getModules(event.target.value);
+
    }
    
    const handleSubmit = (event) => {
@@ -43,6 +48,27 @@ function Profile() {
    }
   
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
+
+   const getModules = async (university_program_id) => {
+    const payLoad = {
+      "university_program_id": university_program_id
+     }
+    try {
+      const response = await fetch("http://localhost:3001/api/getModules", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payLoad),
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const api_data = await response.json();
+      setYearModules(api_data)
+      console.log(api_data)
+    } catch (error) {
+      
+    }
+   }
 
 
    const loadDegreePrograms = async () => {
@@ -116,6 +142,10 @@ function Profile() {
                   <label for="User name ">
                     Select your first year modules:{" "}
                   </label>
+
+                  {year_modules.map((item) => (
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+        ))}
                   <br />
                 
 
