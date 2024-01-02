@@ -49,6 +49,8 @@ function Profile() {
   
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
 
+
+
    const getModules = async (university_program_id) => {
     const payLoad = {
       "university_program_id": university_program_id
@@ -142,10 +144,19 @@ function Profile() {
                   <label for="User name ">
                     Select your first year modules:{" "}
                   </label>
-
                   {year_modules.map((item) => (
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-        ))}
+                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => programSelectChange(1, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
+
+
                   <br />
                 
 
@@ -154,6 +165,17 @@ function Profile() {
                   <label for="User name ">
                     Select your second year modules:{" "}
                   </label>
+                  {year_modules.map((item) => (
+                        item.year === "2" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => programSelectChange(2, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
                   <br />
                   <br />
                   
@@ -164,6 +186,17 @@ function Profile() {
                   <label for="User name ">
                     Select your third year modules:{" "}
                   </label>
+                  {year_modules.map((item) => (
+                        item.year === "3" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => programSelectChange(3, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
                   <br />
                  
 
@@ -172,6 +205,17 @@ function Profile() {
                   <label for="User name ">
                     Select your fourth year modules:{" "}
                   </label>
+                  {year_modules.map((item) => (
+                        item.year === "4" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => programSelectChange(4, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
                   <br />
                   <br />
                   
