@@ -49,6 +49,7 @@ function Profile() {
   
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
 
+   
 
 
    const getModules = async (university_program_id) => {
@@ -122,7 +123,7 @@ function Profile() {
                   <br />
 
                   <label for="status">Select your enrolment status: </label>
-          <select name="enrolement_status" value >
+          <select name="enrolement_status" value= {data.enrolement_status} onChange={handleChange} >
             <option value="">Please select an option</option>
             <option value="On going">On Going</option>
             <option value="Done">Done</option>
@@ -148,7 +149,7 @@ function Profile() {
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          onChange={() => programSelectChange(1, item.university_module_id)}
+                          onChange= {programSelectChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -169,7 +170,7 @@ function Profile() {
                         item.year === "2" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          onChange={() => programSelectChange(2, item.university_module_id)}
+                          onChange={programSelectChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -190,7 +191,7 @@ function Profile() {
                         item.year === "3" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          onChange={() => programSelectChange(3, item.university_module_id)}
+                          onChange={programSelectChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -209,7 +210,7 @@ function Profile() {
                         item.year === "4" ?<div key={item.university_program_modules_id}>
                         <input
                           type="checkbox"
-                          onChange={() => programSelectChange(4, item.university_module_id)}
+                          onChange={programSelectChange}
                         />
                         {item.university_module_name}
                       </div>
