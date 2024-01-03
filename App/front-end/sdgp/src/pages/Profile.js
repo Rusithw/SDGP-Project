@@ -24,6 +24,17 @@ function Profile() {
    })
 
    const [year_modules, setYearModules] = useState([]);
+   const [first_year_modules, setFirstYearModules] = useState([]);
+   const [second_year_modules, setSecondYearModules] = useState([]);
+   const [third_year_modules, setThirdYearModules] = useState([]);
+   const [fourth_year_modules, setFourthYearModules] = useState([]);
+
+   
+   
+   const handleModuleChange = (event) => {
+    const value = event.target.checked; 
+    console.log(value)
+   }
 
    const handleChange = (event) => {
     const name = event.target.name;
