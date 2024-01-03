@@ -32,8 +32,6 @@ function Profile() {
    
    
    const handleModuleChange = (event) => {
-    const value = event.target.checked; 
-    console.log(value)
    }
 
    const handleChange = (event) => {
@@ -159,8 +157,10 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
+                          name="year1"
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange= {programSelectChange}
+                          onChange= {handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -180,8 +180,10 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "2" ?<div key={item.university_program_modules_id}>
                         <input
+                          name="year2"
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={programSelectChange}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -201,8 +203,10 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "3" ?<div key={item.university_program_modules_id}>
                         <input
+                          name="year3"
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={programSelectChange}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -220,8 +224,10 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "4" ?<div key={item.university_program_modules_id}>
                         <input
+                          name="year4"
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={programSelectChange}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
