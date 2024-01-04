@@ -24,6 +24,7 @@ function Profile() {
    })
 
    const [year_modules, setYearModules] = useState([]);
+
    const [first_year_modules, setFirstYearModules] = useState([]);
    const [second_year_modules, setSecondYearModules] = useState([]);
    const [third_year_modules, setThirdYearModules] = useState([]);
@@ -32,6 +33,48 @@ function Profile() {
    
    
    const handleModuleChange = (event) => {
+    var module = event.target.value;
+    var year = event.target.name;
+
+    if(year === "year1"){
+      if(first_year_modules.includes(module)){
+        setFirstYearModules(
+          first_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setFirstYearModules([...first_year_modules,module]);
+      }
+    }
+    
+    if(year === "year2"){
+      if(second_year_modules.includes(module)){
+        setSecondYearModules(
+          second_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setSecondYearModules([...second_year_modules, module]);
+      }
+    }
+
+    if(year === "year3"){
+      if(third_year_modules.includes(module)){
+        setThirdYearModules(
+          third_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setThirdYearModules([...third_year_modules, module]);
+      }
+    }
+    
+    if(year === "year4"){
+      if(fourth_year_modules.includes(module)){
+        setFourthYearModules(
+          fourth_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setFourthYearModules([...fourth_year_modules, module]);
+      }
+    }
    }
 
    const handleChange = (event) => {
@@ -54,6 +97,7 @@ function Profile() {
    
    const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
    }
   
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
