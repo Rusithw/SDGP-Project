@@ -50,25 +50,16 @@ function Prediction() {
   const [userDetailsByUserName_data, setUserDetailsByUserName] = useState("");
 
   
-  const[program_data, setProgramData] = useState([]);
-  const[modules_data, setModuleData] = useState([]);
+const [year_modules, setYearModules] = useState([]);
 
-  const [first_year_modules, setFirstYearModules] = useState([]);
-  const [second_year_modules, setSecondYearModules] = useState([]);
-  const [third_year_modules, setThirdYearModules] = useState([]);
-  const [fourth_year_modules, setFourthYearModules] = useState([]);
+   const [first_year_modules, setFirstYearModules] = useState([]);
+   const [second_year_modules, setSecondYearModules] = useState([]);
+   const [third_year_modules, setThirdYearModules] = useState([]);
+   const [fourth_year_modules, setFourthYearModules] = useState([]);
+  
+   const handleModuleChange = () => {
 
-  const handleModuleChange = (year, module) => {
-    if(year ===1){
-      if(first_year_modules.includes(module)){
-        setFirstYearModules(
-          first_year_modules.filter((item) => item !== module)
-        );
-      }else{
-        setFirstYearModules([...first_year_modules, module]);
-      }
-    }
-  }
+   }
 
   const handleChange = (event) => {
 
@@ -188,8 +179,10 @@ function Prediction() {
                   {modules_data.map((item) => (
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
+                          name='year1'
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -202,7 +195,17 @@ function Prediction() {
                  
                   <div className="year-module-non-colour">
                     <label for="second-year-modules">Select your 2nd year modules: </label><br/>
-                    
+                    {modules_data.map((item) => (
+                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
                     <br/> <br/>
                   </div>
 
@@ -211,7 +214,17 @@ function Prediction() {
 
                   <div className="year-module-colour">
                     <label for="third-year-modules">Select your 3rd year modules: </label><br/>
-                    
+                    {modules_data.map((item) => (
+                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
                     <br/> <br/>
                   </div>
 
@@ -219,7 +232,17 @@ function Prediction() {
                   
                   <div className="year-module-non-colour">
                     <label for="fourth-year-modules">Select your 4th year modules: </label><br/>
-                    
+                    {modules_data.map((item) => (
+                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                        <input
+                          type="checkbox"
+                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                        />
+                        {item.university_module_name}
+                      </div>
+                      :""
+                    )
+                  )}
                     <br/> <br/>
                   </div>
                   

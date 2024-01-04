@@ -35,6 +35,9 @@ function Profile() {
    const handleModuleChange = (event) => {
     var module = event.target.value;
     var year = event.target.name;
+    
+    console.log(year)
+    console.log(module)
 
     if(year === "year1"){
       if(first_year_modules.includes(module)){
