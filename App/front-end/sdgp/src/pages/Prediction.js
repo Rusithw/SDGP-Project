@@ -57,8 +57,54 @@ const [year_modules, setYearModules] = useState([]);
    const [third_year_modules, setThirdYearModules] = useState([]);
    const [fourth_year_modules, setFourthYearModules] = useState([]);
   
-   const handleModuleChange = () => {
+   const handleModuleChange = (event) => {
+    var module = event.target.value;
+    var year = event.target.name;
+    
+    console.log(year)
+    console.log(module)
 
+    if(year === "year1"){
+      if(first_year_modules.includes(module)){
+        setFirstYearModules(
+          first_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setFirstYearModules([...first_year_modules,module]);
+      }
+    }
+    
+    if(year === "year2"){
+      if(second_year_modules.includes(module)){
+        setSecondYearModules(
+          second_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setSecondYearModules([...second_year_modules, module]);
+      }
+    }
+
+    if(year === "year3"){
+      if(third_year_modules.includes(module)){
+        setThirdYearModules(
+          third_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setThirdYearModules([...third_year_modules, module]);
+      }
+    }
+    
+    if(year === "year4"){
+      if(fourth_year_modules.includes(module)){
+        setFourthYearModules(
+          fourth_year_modules.filter((item) => item !== module)
+        );
+      }else{
+        setFourthYearModules([...fourth_year_modules, module]);
+      }
+    }
+
+    
    }
 
   const handleChange = (event) => {
@@ -122,7 +168,7 @@ const [year_modules, setYearModules] = useState([]);
  
        const data = await response.json();
        console.log(data);  
-       setModuleData(data);
+       setYearModules(data);
        
     
      } catch (error) {
@@ -132,6 +178,8 @@ const [year_modules, setYearModules] = useState([]);
    }
 
 
+   const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
+
   const loadDegreePrograms = async () => {
     try {
       const response = await fetch('http://localhost:3001/api/getPrograms');
@@ -139,7 +187,7 @@ const [year_modules, setYearModules] = useState([]);
         throw new Error('Network response was not ok.');
       }
       const result = await response.json();
-      setProgramData(result);
+      setLoadDegreePrograms(result);
     } catch (error) {
       console.log(error.message);
     }
@@ -166,7 +214,7 @@ const [year_modules, setYearModules] = useState([]);
                   <label for="degree-selector">Select you degree program: </label><br />
                   <select name="degree-program" onChange={programSelect}>
                   <option value="" >Please select an option</option>
-                  {program_data.map((item) => (
+                  {load_Degree_Programs.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
         ))}
                   </select>
@@ -176,7 +224,7 @@ const [year_modules, setYearModules] = useState([]);
 
                   <div className="year-module-colour">
                   <label for="first-year-modules">Select your 1st year modules : </label><br/> 
-                  {modules_data.map((item) => (
+                  {year_modules.map((item) => (
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
                           name='year1'
@@ -195,11 +243,13 @@ const [year_modules, setYearModules] = useState([]);
                  
                   <div className="year-module-non-colour">
                     <label for="second-year-modules">Select your 2nd year modules: </label><br/>
-                    {modules_data.map((item) => (
-                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                    {year_modules.map((item) => (
+                        item.year === "2" ?<div key={item.university_program_modules_id}>
                         <input
+                          name='year2'
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -214,11 +264,13 @@ const [year_modules, setYearModules] = useState([]);
 
                   <div className="year-module-colour">
                     <label for="third-year-modules">Select your 3rd year modules: </label><br/>
-                    {modules_data.map((item) => (
-                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                    {year_modules.map((item) => (
+                        item.year === "3" ?<div key={item.university_program_modules_id}>
                         <input
+                          name='year3'
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
@@ -232,11 +284,13 @@ const [year_modules, setYearModules] = useState([]);
                   
                   <div className="year-module-non-colour">
                     <label for="fourth-year-modules">Select your 4th year modules: </label><br/>
-                    {modules_data.map((item) => (
-                        item.year === "1" ?<div key={item.university_program_modules_id}>
+                    {year_modules.map((item) => (
+                        item.year === "4" ?<div key={item.university_program_modules_id}>
                         <input
+                          name='year4'
+                          value={item.university_program_modules_id}
                           type="checkbox"
-                          onChange={() => handleModuleChange(1, item.university_module_id)}
+                          onChange={handleModuleChange}
                         />
                         {item.university_module_name}
                       </div>
