@@ -147,6 +147,7 @@ const [year_modules, setYearModules] = useState([]);
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(data_set);
+    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules)
   };
 
   const programSelect = async (event) => {
