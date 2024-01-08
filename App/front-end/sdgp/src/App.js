@@ -13,6 +13,7 @@ import MyAccount from "./pages/MyAccount";
 function App() {
   return (
     
+    // Created Route paths for all Main Pages
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

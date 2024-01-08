@@ -9,6 +9,7 @@ function NavBar(props) {
   const [about_us_page, setAboutUsPage] = useState("");
   const [my_account_page, setMyAccount] = useState("");
 
+  // Created a Use Effect to active each pages
   useEffect(() => {
     if (props.value === "home") {
       setHomePage("active");
@@ -60,36 +61,48 @@ function NavBar(props) {
       <ul>
         <li>
           {" "}
+          
+          {/* Linked the route path for home_page */}
           <Link to={"/"} className={home_page}>
             Home
           </Link>{" "}
         </li>
         <li>
           {" "}
+
+          {/* Linked the route path for prediction_page */}
           <Link to={"/prediction"} className={prediction_page}>
             Prediction
           </Link>{" "}
         </li>
         <li>
           {" "}
+
+          {/* Linked the route path for profile_page */}
           <Link to={"/Profile"} className={profile_page}>
             Profile
           </Link>
         </li>
         <li>
           {" "}
+
+          {/* Linked the route path for program_details_page */}
           <Link to={"/program-details"} className={program_details_page}>
             Program-Details
           </Link>{" "}
         </li>
         <li>
           {" "}
+
+          {/* Linked the route path for about_us_page */}
           <Link to={"/about-us"} className={about_us_page}>
             AboutUS
           </Link>{" "}
         </li>
         <li>
           {" "}
+
+          {/* Linked the route path for my_account_page */}
           <Link to={"/my-account"} className={my_account_page}>
             My Account
           </Link>{" "}
