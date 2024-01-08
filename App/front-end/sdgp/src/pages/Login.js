@@ -42,14 +42,18 @@ function Login() {
         const data = await response.json();
         console.log(data_set);
         if(data==="0"){
+          // Applied User Login Error Massage for Login Page
           NotificationManager.error('Login Fail', 'Oops...!');
           setLoader(false)
           window.sessionStorage.setItem("user_name", "");
         }else{
 
+          // Applied User Login Success Message for Login Page
+          // Here, In The Success Message Display The Relavent User 
           NotificationManager.success(data_set.userName,  'Welcome');
           setLoader(true)
           setTimeout(() => {
+            // If the user name & password success user will navigate to the dashboard. Below navigate path
             navigate("/");
           }, 2000);
           window.sessionStorage.setItem("user_name", data_set.userName);
@@ -66,6 +70,7 @@ function Login() {
   return (
     
     <div className="main">
+      {/* Added loader-spinner for Login Page */}
         <ThreeDots
     visible={loader}
     height="80"
@@ -107,6 +112,7 @@ function Login() {
               <div className="sign-up-message">
                 <p>
                   Don’t have any account yet?{" "}
+                  {/* Linked to the Create Account Page form Login Page */}
                   <Link to={"/create-account"} > Create an account</Link>
                 </p>
               </div>
