@@ -15,6 +15,31 @@ function ProgramDetails() {
 
   }, []);
 
+  useEffect(() => {
+    loadDegreePrograms();
+   }, []);
+
+ 
+
+  const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
+
+  //  this method is used to load all the degree programs
+  const loadDegreePrograms = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/api/getPrograms", {
+        method: "GET",
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const data = await response.json();
+      setLoadDegreePrograms(data);
+      console.log(data);
+    } catch (error) {
+      
+    }
+  }
 
   return (
     <div className="main">
@@ -24,11 +49,11 @@ function ProgramDetails() {
           <h2>Please select your degree program </h2>
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree-program">
-            <option value="Software Engineering=">BEng(Hnos) Software Engineering </option>
-            <option value="Computer Science =">BSc(Hons) Computer Science</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+          <select name="degree" onChange={loadDegreePrograms} >
+          <option value="" >Please select an option</option>
+          {load_Degree_Programs.map((item) => (
+            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
+        ))}
           </select>
           <br /> <br />
         </div>
