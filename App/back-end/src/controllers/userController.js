@@ -67,7 +67,7 @@ exports.userDetailsByUserName = (req, res) => {
   )
 }
 
-// database connection query for userlogin
+// Database query to save user profile data during enrollment
 exports.profileDataSave = (req, res) => {
   const data = req.body;
   console.log(data);

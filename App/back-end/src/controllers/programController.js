@@ -16,7 +16,7 @@ exports.getPrograms = (req, res) =>{
     });
 };
 
-// database connection query for getmodules. here, select all data fromr university_modules table & join university_program_modules
+// Database query to retrieve modules by performing INNER JOIN between university_modules and university_program_modules tables on matching university_module_id
 exports.getModules = (req, res) =>{
     const data = req.body;
     connection.query(
