@@ -49,7 +49,7 @@ function ProgramDetails() {
           <h2>Please select your degree program </h2>
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree" onChange={loadDegreePrograms} >
+          <select name="degree">
           <option value="" >Please select an option</option>
           {load_Degree_Programs.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
