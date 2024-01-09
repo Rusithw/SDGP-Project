@@ -2,7 +2,7 @@ const { error } = require("console");
 const connection = require("../db/db");
 const { json } = require("body-parser");
 
-
+// database connection query for getprograms. here, select all data fromr university_programs table
 exports.getPrograms = (req, res) =>{
     const data = req.body;
     connection.query( 'SELECT * FROM university_programs', [data] ,
@@ -16,6 +16,7 @@ exports.getPrograms = (req, res) =>{
     });
 };
 
+// database connection query for getmodules. here, select all data fromr university_modules table & join university_program_modules
 exports.getModules = (req, res) =>{
     const data = req.body;
     connection.query(

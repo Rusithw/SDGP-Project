@@ -8,8 +8,10 @@ const programController = require('../controllers/programController');
 
 
 // Define routes
+
 router.get('/sample', sampleController.getSampleData);
 router.post('/sample', sampleController.createSampleData);
+
 // API Connection created to user login
 router.post('/user/login',userController.userLogin);
 // API Connection created to user signup
