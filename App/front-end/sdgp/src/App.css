@@ -246,3 +246,9 @@ body p,body label{
 .detail-form input{
   background-color: #e0edff;
 }
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
