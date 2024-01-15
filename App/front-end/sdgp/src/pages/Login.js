@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
-import { ThreeDots} from 'react-loader-spinner'
+import { ThreeDots} from 'react-loader-spinner';
+import './Login.css';
 
 
 function Login() {
@@ -84,17 +85,23 @@ function Login() {
 
       <div className="sign-in-form form-style1">
         <div className="width-100">
+          <div className="jumbotron">
+              <h1>Career <span>Predictor</span></h1> 
+              <marquee behavior="slow" direction="to-left"><p>For a Better Future...</p></marquee>
+              <br /><br /><br />
+              <img src="https://png.pngtree.com/png-vector/20230520/ourmid/pngtree-graduation-silhouette-with-black-color-vector-png-image_7102342.png" alt="" />
+          </div>
           <form onSubmit={handleSubmit}>
           <div className="width-50">
             <div className="login-content">
-              <h2>Login</h2>
-              <p>Please fill this form to sign in</p>
+              <h2><span>Login</span></h2>
+              <p><i>Please fill this form to sign in</i> </p>
               <label for="User name ">User name: </label>
-              <br />
+              <br /><br />
               <input placeholder="User name" type="text" name="userName" value={data_set.userName} onChange={handleChange}/>{" "}
               <br /> <br />
               <label for="Password ">User Password: </label>
-              <br />
+              <br /><br />
               <input
                 placeholder="User Password"
                 type="password"
