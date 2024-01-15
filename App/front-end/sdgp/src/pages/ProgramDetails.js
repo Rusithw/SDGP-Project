@@ -19,17 +19,7 @@ function ProgramDetails() {
     loadDegreePrograms();
    }, []);
 
-  const [show_div, setShowDiv] = useState();
-  const [show_computer_science, setShowComputerScience] = useState();
-  const [show_software_engineering, setShowSoftwareEngineering] = useState("");
-  const [show_artificial_inteligence, setShowArtificialInteligence] = useState("");
 
-
-  const DegreeModuleChange = () => {
-    setShowComputerScience("hide")
-    setShowArtificialInteligence("hide")
-    setShowSoftwareEngineering("hide")
-  }
 
   const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
 
@@ -53,14 +43,14 @@ function ProgramDetails() {
 
   return (
     <div className="main">
-      <div className={show_div}> sample content </div>
+   
       <div>
         <NavBar value={"program-details"} />
         <div className="form-program-selector">
           <h2>Please select your degree program </h2>
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree" onChange={DegreeModuleChange}>
+          <select name="degree">
           <option value="" >Please select an option</option>
           {load_Degree_Programs.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
@@ -74,7 +64,7 @@ function ProgramDetails() {
         </div>
         
         <div className="program-detail-content">
-          <div className={show_computer_science}>
+          
             
           <p> <strong>BSc (Hons) Computer Science</strong> <br />
             BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
@@ -82,7 +72,7 @@ function ProgramDetails() {
             <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
           </div>
           
-        </div>
+       
         <div className="course-outline">
           <p> <strong>Course Outline</strong> <br />
             The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
