@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './commen/NavBar';
 import { useNavigate } from "react-router-dom";
+import './ProgramDetails.css';
 
 
 function ProgramDetails() {
@@ -41,60 +42,68 @@ function ProgramDetails() {
     }
   }
 
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleDropdownChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   return (
     <div className="main">
-   
+
       <div>
         <NavBar value={"program-details"} />
+        <br /><br />
         <div className="form-program-selector">
           <h2>Please select your degree program </h2>
 
-          <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree">
-          <option value="" >Please select an option</option>
-          {load_Degree_Programs.map((item) => (
-            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
-        ))}
+          <label htmlFor="degree-selector">Select your degree program: </label>
+          <br /><br />
+          <select name="degree" onChange={handleDropdownChange}>
+            <option value="">Please select an option</option>
+            {load_Degree_Programs.map((item) => (
+              <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
+            ))}
           </select>
-          <br /> <br />
-        </div>
-        <div className="program-detail-image">
-          <img src="Images/program-details-image.avif" alt="" />
 
-        </div>
-        
-        <div className="program-detail-content">
-          
-            
-          <p> <strong>BSc (Hons) Computer Science</strong> <br />
-            BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
-            <br />Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations.
-            <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
+          <br /><br />
+          <div>
+            {selectedOption === '1' && 
+              <div className='box'>
+                <h3>BEng (Hons) Software Engineering </h3>
+                <p>BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
+                <br />Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations.
+                <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
+              </div>}
+
+            {selectedOption === '2' && 
+              <div className='box'>
+                <h3>BSc (Hons) Computer Science </h3>
+                <p>BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
+                <br />Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations.
+                <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
+              </div>}
+
+            {selectedOption === '3' && 
+              <div className='box'>
+                <h3>BSc (Hons) Artificial Intelligence </h3>
+                <p>BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
+                <br />Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations.
+                <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
+              </div>}
           </div>
-          
-       
-        <div className="course-outline">
-          <p> <strong>Course Outline</strong> <br />
-            The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
-            <p> <strong>BEng (Hons) Software Engineering </strong> <br />
-            BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
-            <br />Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations.
-            <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
         </div>
-        <div className="course-outline">
-          <p> <strong>Course Outline</strong> <br />
-            The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
+        <br />
 
-            <p> <strong>BSc (Hons) Artificial Intelligence </strong> <br />
-            BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing,
-            <br />Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations.
-            <br /> It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
-        </div>
-        <div className="course-outline">
-          <p> <strong>Course Outline</strong> <br />
-            The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
-
-        </div>
         <div className="detail-form modules">
           <label for="degree-selector"> <h2>1 st year modules</h2> </label><br />
           <h3> 1. Trends in computer science</h3>
