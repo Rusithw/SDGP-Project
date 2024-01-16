@@ -81,6 +81,7 @@ exports.profileDataSave = (req, res) => {
         return;
       }
       console.log("This is:", results.length);
+      const insertedId = results.insertId;
   }
   )
 }

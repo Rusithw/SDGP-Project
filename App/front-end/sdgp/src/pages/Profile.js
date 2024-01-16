@@ -17,10 +17,11 @@ function Profile() {
       loadDegreePrograms();
     }, []);
 
-   const [data, setData] = useState({
+   const [data_set, setData] = useState({
     enrolement_date: "",
     university_program_id: "",
     enrolement_status: "",
+    user_id: window.sessionStorage.getItem("user_id")
    })
 
    const [year_modules, setYearModules] = useState([]);
@@ -83,13 +84,13 @@ function Profile() {
    const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setData({...data, [name]: value,})
+    setData({...data_set, [name]: value,})
     console.log(value)
    }
 
    const programSelectChange = (event) => {
     setData({
-      ...data,
+      ...data_set,
       ["university_program_id"]: event.target.value,
 
     });
@@ -98,10 +99,29 @@ function Profile() {
 
    }
    
-   const handleSubmit = (event) => {
+   const handleSubmit = async (event) =>{
     event.preventDefault();
-    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
-   }
+
+    try {
+      const response = await fetch('http://localhost:3001/api/user/profileDataSave', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data_set),
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid credentials');
+      }
+
+      const data = await response.json();
+      console.log(data);
+    
+    } catch (error) {
+      console.error('Error logging in:', error);  
+    }
+  };
   
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
 
@@ -144,7 +164,6 @@ function Profile() {
       console.log(data)
     } catch (error) {
       
-
     }
    }
 
@@ -171,7 +190,7 @@ function Profile() {
                     placeholder="Enter your university enrol year"
                     type="text"
                     name="enrolement_date"
-                    value = {data.enrolement_date}
+                    value = {data_set.enrolement_date}
                     onChange={handleChange}
                 
                   />
@@ -179,7 +198,7 @@ function Profile() {
                   <br />
 
                   <label for="status">Select your enrolment status: </label>
-          <select name="enrolement_status" value= {data.enrolement_status} onChange={handleChange} >
+          <select name="enrolement_status" value= {data_set.enrolement_status} onChange={handleChange} >
             <option value="">Please select an option</option>
             <option value="On going">On Going</option>
             <option value="Done">Done</option>

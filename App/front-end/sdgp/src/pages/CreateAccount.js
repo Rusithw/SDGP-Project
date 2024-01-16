@@ -80,7 +80,7 @@ function CreateAccount() {
             <input placeholder="Password" type="password" name="user_password" value={data_set.user_password} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Re-type Password: </label><br />
-            <input placeholder="Re-type Password" type="password" name="reTypePassword" value={reTypePassword} onChange={handleChange}/> <br />
+            <input placeholder="Re-type Password" type="password" name="reTypePassword"/> <br />
             <br />
             <label for="Password ">Mobile: </label><br />
             <input placeholder="Mobile" type="text" name="user_mobile" value={data_set.user_mobile} onChange={handleChange}/> <br />
@@ -97,7 +97,7 @@ function CreateAccount() {
           
             <br />
             <br />
-            <button className="button" type="Login">Login</button>
+            <button className="button" type="Login">Sign Up</button>
             <div className="login-message">
               <p>Already have an account? <Link to={"/login"} > Sign in </Link></p>
             </div>
