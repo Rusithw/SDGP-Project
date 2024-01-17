@@ -82,6 +82,24 @@ exports.profileDataSave = (req, res) => {
       }
       console.log("This is:", results.length);
       const insertedId = results.insertId;
+      res.json(insertedId)
+  }
+  )
+}
+
+exports.dataSaveModules = (req, res) => {
+  const data = req.body;
+  console.log(data);
+
+  connection.query(
+    "INSERT INTO enrolement_has_university_program_modules SET ?", data,
+    (error, results) =>{
+      if(error){
+        console.error("Error fetching sample data:", error);
+        res.json("0");
+        return;
+      }
+      console.log("This is:", results.length);
   }
   )
 }
