@@ -101,9 +101,10 @@ function Profile() {
    
    const handleSubmit = async (event) =>{
     event.preventDefault();
+    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules);
 
     try {
-      const response = await fetch('http://localhost:3001/api/user/profileDataSave', {
+      const response = await fetch('http://localhost:3001/api/profileDataSave', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -119,15 +120,52 @@ function Profile() {
       console.log(data);
     
     } catch (error) {
-      console.error('Error logging in:', error);  
+      console.error('Error handleSubmit in:', error);  
     }
   };
-  
+
+  const dataSaveModules = async (enrolement_id, university_program_modules_id) => {
+    const payLoad = {
+      "enrolement_id": enrolement_id,
+      "university_program_modules_id": university_program_modules_id,
+    }
+    try {
+      const response = await fetch('http://localhost:3001/api/dataSaveModules', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payLoad),
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid credentials');
+      }
+
+      const data= await response.json();
+      console.log(data);
+
+      for(let i=0; first_year_modules.length>i;i++){
+        dataSaveModules(data, first_year_modules[i]);
+      }
+      for(let i=0; second_year_modules.length>i;i++){
+        dataSaveModules(data, second_year_modules[i]);
+      }
+      for(let i=0; third_year_modules.length>i;i++){
+        dataSaveModules(data, third_year_modules[i]);
+      }
+      for(let i=0; fourth_year_modules.length>i;i++){
+        dataSaveModules(data, fourth_year_modules[i]);
+      }
+    
+    } catch (error) {
+      console.error('Error dataSaveModules in:', error);  
+    }
+  }
+
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
 
    
-
-
    const getModules = async (university_program_id) => {
     const payLoad = {
       "university_program_id": university_program_id
