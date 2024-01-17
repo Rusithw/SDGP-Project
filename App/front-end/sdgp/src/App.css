@@ -32,9 +32,12 @@ body p,body label{
 
 .nav-bar ul li a{
   font-weight: 800;
-  color: #0d0d66;
-  text-decoration: none; 
-  text-align: center;
+      color: #4949ff;
+      float: left;
+      text-decoration: none; 
+}
+.nav-bar ul li a.active {
+  color: green; 
 }
 
 .text{
