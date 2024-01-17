@@ -30,18 +30,11 @@ body p,body label{
   padding-right: 90px;
 }
 
-
-.nav-bar ul li a {
-      font-weight: 800;
-      color: #4949ff;
-      float: left;
-      text-decoration: none; 
-}
 .nav-bar ul li a{
   font-weight: 800;
-  color: #4949ff;
-  float: left;
+  color: #0d0d66;
   text-decoration: none; 
+  text-align: center;
 }
 
 .text{
@@ -226,9 +219,6 @@ body p,body label{
 .team-images .width-33 .space{
   padding: 70px 70px; 
   min-height: 200px;
-}
-.nav-bar ul li a.active {
-  color: green;
 }
 .error{
   color: red;

@@ -33,9 +33,9 @@ form p{
     font-size: 14px;
     color: rgba(0, 0, 0, 0.637);
 }
-form input{
-    background-color: black;
-}
+/* input[type=text]{
+    background-color: rgba(24, 36, 69, 0.199);
+} */
 
 @media screen and (max-width = 1024px){
     .jumbotron{
