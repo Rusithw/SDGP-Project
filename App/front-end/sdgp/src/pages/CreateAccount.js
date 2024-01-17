@@ -59,10 +59,16 @@ function CreateAccount() {
     <div className="main">
     <div className="sign-up-form form-style1">
       <div className="width-100">
+       <div className='jumbotron'>
+       <h1>Career <span>Predictor</span></h1>
+       <marquee behavior="slow" direction="to-left"><p>For a Better Future...</p></marquee>
+        <br /><br /><br />
+        <img src="https://png.pngtree.com/png-vector/20230520/ourmid/pngtree-graduation-silhouette-with-black-color-vector-png-image_7102342.png" alt="" />
+       </div>
        <form onSubmit={handleSubmit}>
        <div className="width-50">
           <div className="login-content">
-            <h2>Sign up here</h2>
+            <h2> <span> Sign up here </span></h2>
             <p>Please fill this form to sign up</p>
             <label for="User name ">First name: </label><br />
             <input placeholder="First name" type="text" name="user_first_name" value={data_set.user_first_name} onChange={handleChange}/> <br />{" "}
