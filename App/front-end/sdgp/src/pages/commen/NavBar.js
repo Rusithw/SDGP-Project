@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './NavBar.css';
 
 function NavBar(props) {
   const [home_page, setHomePage] = useState("");
