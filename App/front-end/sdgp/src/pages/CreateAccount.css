@@ -1,0 +1,46 @@
+body{
+    background-image: linear-gradient(to right, rgb(189, 229, 255),white);
+}
+.jumbotron{
+    float: left;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 2%;
+}
+.jumbotron h1{
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.349);
+}
+.jumbotron span{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    text-shadow: 6px 6px 6px white;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.455);
+}
+.login-content{
+    padding-top: 3%;
+    padding-bottom: 5%;
+    border-left: solid rgb(0, 18, 57) 3px;
+    margin-top: 13%;
+}
+.login-content span{
+    background-color: rgb(16, 54, 112);
+    padding: 7px;
+    color: aliceblue;
+    border-radius: 10px;
+}
+form p{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.637);
+}
+form input{
+    background-color: black;
+}
+
+@media screen and (max-width = 1024px){
+    .jumbotron{
+        float: left;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20%;
+    }
+}
