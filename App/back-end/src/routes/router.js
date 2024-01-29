@@ -25,7 +25,7 @@ router.post('/userDetailsByUserName', userController.userDetailsByUserName);
 // API Connection created to profiledatasave
 router.post('/profileDataSave', userController.profileDataSave);
 router.post('/dataSaveModules', userController.dataSaveModules);
-
+router.post('/loadProfileData', userController.loadProfileData);
 
 
 module.exports = router;
