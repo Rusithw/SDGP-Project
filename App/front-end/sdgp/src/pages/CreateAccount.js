@@ -42,11 +42,6 @@ function CreateAccount() {
 
       const data = await response.json();
       console.log(data);
-      if(data==="0"){
-        // setError("Wrong user name or password")
-      }else{
-        // setError("Ok");
-      }
     
     } catch (error) {
       console.error('Error logging in:', error);
