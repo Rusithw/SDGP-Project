@@ -239,3 +239,42 @@ body p,body label{
 .detail-form input{
   background-color: #e0edff;
 }
+
+
+h1{
+  text-align: center;
+  color: aliceblue;
+  background-color: rgba(3, 5, 76, 0.853);
+  padding: 5px;
+  border-radius: 2px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.603);
+  margin: 2%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: #fffffff3;
+  border: solid ;
+  box-shadow: 4px 4px 4px 4px rgba(2, 5, 8, 0.565);
+  margin: 5%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+img {
+  border: solid rgba(0, 0, 0, 0.466);
+  padding: 2%;
+  margin-left: 20%;
+  max-width: 50%;
+  max-height:50%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 4px rgba(2, 5, 8, 0.466);
+}
+
+.text {
+  font-size: 20px;
+  padding: 20px;
+  text-align: justify;
+}
