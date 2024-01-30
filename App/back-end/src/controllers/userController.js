@@ -103,3 +103,17 @@ exports.dataSaveModules = (req, res) => {
   }
   )
 }
+
+exports.loadProfileData = (req, res) =>{
+  const data = req.body;
+  console.log(data)
+  connection.query( 'SELECT * FROM enrolement WHERE user_id =?', [data.user_id] ,
+  (error, results)  =>{
+      if(error){
+          console.log("Error message", error);
+          res.status(500).json({ message: 'Error fetching data' });
+          return;
+      }
+      res.json(results);
+  });
+};
