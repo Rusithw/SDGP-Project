@@ -15,6 +15,7 @@ function Profile() {
 
    useEffect(() => {
       loadDegreePrograms();
+      loadProfileData(window.sessionStorage.getItem("user_id"));
     }, []);
 
    const [data_set, setData] = useState({
@@ -206,6 +207,27 @@ function Profile() {
       
     }
    }
+
+   const loadProfileData = async (user_id) =>{
+    const payLoad = {
+      "user_id": user_id
+     }
+    try {
+      const response = await fetch("http://localhost:3001/api/loadProfileData", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payLoad),
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const api_data = await response.json();
+      console.log(api_data)
+    } catch (error) {
+      
+    }
+   }
+
 
   return (
     <div className="main">
