@@ -118,6 +118,19 @@ function Profile() {
 
       const data = await response.json();
       console.log(data);
+
+      for(let i=0; first_year_modules.length>i;i++){
+        dataSaveModules(data, first_year_modules[i]);
+      }
+      for(let i=0; second_year_modules.length>i;i++){
+        dataSaveModules(data, second_year_modules[i]);
+      }
+      for(let i=0; third_year_modules.length>i;i++){
+        dataSaveModules(data, third_year_modules[i]);
+      }
+      for(let i=0; fourth_year_modules.length>i;i++){
+        dataSaveModules(data, fourth_year_modules[i]);
+      }
     
     } catch (error) {
       console.error('Error handleSubmit in:', error);  
@@ -145,18 +158,7 @@ function Profile() {
       const data= await response.json();
       console.log(data);
 
-      for(let i=0; first_year_modules.length>i;i++){
-        dataSaveModules(data, first_year_modules[i]);
-      }
-      for(let i=0; second_year_modules.length>i;i++){
-        dataSaveModules(data, second_year_modules[i]);
-      }
-      for(let i=0; third_year_modules.length>i;i++){
-        dataSaveModules(data, third_year_modules[i]);
-      }
-      for(let i=0; fourth_year_modules.length>i;i++){
-        dataSaveModules(data, fourth_year_modules[i]);
-      }
+     
     
     } catch (error) {
       console.error('Error dataSaveModules in:', error);  
