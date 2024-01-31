@@ -63,7 +63,7 @@ function AboutUs() {
 
         <div class="container">
             <div class="image">
-                <img src="jean.png" alt="#" />
+                <img src="/Images/Lisath.png" alt="#" />
             </div>
             <div class="text">
                 <p> Lisath Thisurasiri <br/> lisath.20221943@iit.ac.lk </p>
