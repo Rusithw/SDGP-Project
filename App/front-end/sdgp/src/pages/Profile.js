@@ -231,10 +231,12 @@ function Profile() {
         user_id: window.sessionStorage.getItem("user_id")
        }
       setData(new_data_set);
+      getModules(api_data[0].university_program_id);
     } catch (error) {
-     
+           
     }
    }
+   
 
 
   return (
@@ -294,6 +296,7 @@ function Profile() {
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
                           name="year1"
+                          checked
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange= {handleModuleChange}
