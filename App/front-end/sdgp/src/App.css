@@ -241,7 +241,7 @@ body p,body label{
 }
 
 
-h1{
+.text h1{
   text-align: center;
   color: aliceblue;
   background-color: rgba(3, 5, 76, 0.853);
@@ -263,7 +263,7 @@ h1{
   border-bottom-left-radius: 20px;
 }
 
-img {
+.container img {
   border: solid rgba(0, 0, 0, 0.466);
   padding: 2%;
   margin-left: 20%;
