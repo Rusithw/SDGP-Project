@@ -223,8 +223,16 @@ function Profile() {
       }
       const api_data = await response.json();
       console.log(api_data)
+
+      const new_data_set = {
+        enrolement_date: api_data[0].enrolement_date,
+        university_program_id: api_data[0].university_program_id,
+        enrolement_status: api_data[0].enrolement_status,
+        user_id: window.sessionStorage.getItem("user_id")
+       }
+      setData(new_data_set);
     } catch (error) {
-      
+     
     }
    }
 
@@ -270,7 +278,7 @@ function Profile() {
           <br /> <br />
 
           <label for="degree-selector">Select your degree program: </label><br />
-          <select name="degree" onChange={programSelectChange} >
+          <select name="degree" value={data_set.university_program_id} onChange={programSelectChange} >
           <option value="" >Please select an option</option>
           {load_Degree_Programs.map((item) => (
             <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
