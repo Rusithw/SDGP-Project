@@ -104,10 +104,11 @@ exports.dataSaveModules = (req, res) => {
   )
 }
 
+// Here created a database connection query to load profile data. Here we have applied an INNER-Join query to get data from enrollment table and enrolement_has_university_program_modules table.
 exports.loadProfileData = (req, res) =>{
   const data = req.body;
   console.log(data)
-  connection.query( 'SELECT * FROM enrolement WHERE user_id =?', [data.user_id] ,
+  connection.query( 'SELECT * FROM enrolement INNER JOIN enrolement_has_university_program_modules ON enrolement_has_university_program_modules.enrolement_id = enrolement.enrolement_id  WHERE enrolement.user_id = ?', [data.user_id] ,
   (error, results)  =>{
       if(error){
           console.log("Error message", error);
