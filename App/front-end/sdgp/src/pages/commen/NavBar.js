@@ -54,10 +54,19 @@ function NavBar(props) {
       setPredictionPage("");
       setProfilePage("");
     }
+
   }, [props]);
+  
+  const logOut = ()=>{
+    window.sessionStorage.clear();
+    window.location.reload();
+  }
 
   return (
     <div className="nav-bar">
+      <div className="logout-button-content">
+        <button className="Log-out" onClick={logOut}> Log Out </button>
+      </div>
       <ul>
         <li>
           {" "}
