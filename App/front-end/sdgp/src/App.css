@@ -293,12 +293,14 @@ body p,body label{
 
 .logout-button{
   float: right;
-  padding: 9px 20px;
-  font-size: 18px;
+  padding: 12px 80px 13px 60px;
+  font-size: 16px;
   background-color: #0066ff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin:  10px;
+  font-weight: bold;
 }
 
