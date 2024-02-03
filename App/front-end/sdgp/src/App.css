@@ -39,6 +39,12 @@ body p,body label{
 .nav-bar ul li a.active {
   color: green; 
 }
+.nav-bar li .pro-user{
+  width: 3%;
+  position: fixed; 
+  top: 4%; 
+  right: 2%; 
+}
 
 .text{
   width: 100%;

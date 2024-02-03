@@ -105,7 +105,7 @@ function NavBar(props) {
 
           {/* Linked the route path for about_us_page */}
           <Link to={"/about-us"} className={about_us_page}>
-            AboutUS
+            About Us
           </Link>{" "}
         </li>
         <li>
@@ -113,7 +113,7 @@ function NavBar(props) {
 
           {/* Linked the route path for my_account_page */}
           <Link to={"/my-account"} className={my_account_page}>
-            My Account
+            <img src="/Images/profile-user.png" alt="profile" className="pro-user" />
           </Link>{" "}
         </li>
       </ul>
