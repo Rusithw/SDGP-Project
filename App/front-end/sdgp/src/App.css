@@ -88,6 +88,7 @@ body p,body label{
   height: 50px;
 }
 
+
 .login-image img{
   width: 100%;
   height: auto;
@@ -284,3 +285,20 @@ body p,body label{
   padding: 20px;
   text-align: justify;
 }
+
+.logout-button-content {
+  position: absolute;
+  right: 0;
+}
+
+.logout-button{
+  float: right;
+  padding: 9px 20px;
+  font-size: 18px;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
