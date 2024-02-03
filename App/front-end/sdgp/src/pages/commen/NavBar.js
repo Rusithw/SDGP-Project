@@ -57,6 +57,7 @@ function NavBar(props) {
 
   }, [props]);
   
+  // here added a function call logOut. if a user click this log out button it will locate to the login again. clear window.session storage and reload page to login
   const logOut = ()=>{
     window.sessionStorage.clear();
     window.location.reload();
@@ -65,6 +66,7 @@ function NavBar(props) {
   return (
     <div className="nav-bar">
       <div className="logout-button-content">
+        {/* logout button creates and logout function call */}
         <button className="Log-out" onClick={logOut}> Log Out </button>
       </div>
       <ul>
