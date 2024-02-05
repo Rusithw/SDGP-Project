@@ -237,6 +237,9 @@ function Profile() {
     }
    }
    
+   const checkbox_valid = () =>{
+    return true;
+   }
 
 
   return (
@@ -296,7 +299,7 @@ function Profile() {
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
                           name="year1"
-                          checked
+                          checked={checkbox_valid()}
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange= {handleModuleChange}
