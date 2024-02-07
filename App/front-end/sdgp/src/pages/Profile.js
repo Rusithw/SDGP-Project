@@ -169,6 +169,7 @@ function Profile() {
    const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
 
    
+   // this is a function call get modules. this function created to get all the university modules from the database.
    const getModules = async (university_program_id) => {
     const payLoad = {
       "university_program_id": university_program_id
