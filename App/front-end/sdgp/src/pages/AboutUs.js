@@ -31,15 +31,7 @@ function AboutUs() {
             </div>
         </div>
 
-        <div class="container">
-            <div class="image">
-                <img src="/Images/Nethmina.png" alt="#" />
-            </div>
-            <div class="text">
-                <p> Nethmina Fernando <br/> nethmina.20211167@iit.ac.lk </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ducimus deleniti nam perferendis sequi. Veritatis delectus ab neque fugit, distinctio necessitatibus ipsa natus deleniti officiis voluptatum molestiae qui magni dicta.</p>
-            </div>
-        </div>
+
 
         <div class="container">
             <div class="image">
