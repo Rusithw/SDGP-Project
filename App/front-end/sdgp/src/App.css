@@ -219,7 +219,7 @@ body p,body label{
   color: #e0edff;
   padding: 35px;
 }
-.team-images img{
+/* .team-images img{
   width: 100%;
   height: auto;
 }
@@ -229,7 +229,7 @@ body p,body label{
 .team-images .width-33 .space{
   padding: 70px 70px; 
   min-height: 200px;
-}
+} */
 .error{
   color: red;
 }
@@ -258,7 +258,7 @@ body p,body label{
   margin: 2%;
 }
 
-.container {
+/* .container {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -284,7 +284,81 @@ body p,body label{
   font-size: 20px;
   padding: 20px;
   text-align: justify;
+} */
+
+/* About Us */
+
+.container1{
+  display: inline-block;
+  width: 22%;
+  text-align: justify;
+  border-radius: 10px;
+  padding: 2%;
+  margin-left: 5%;
+  background-color: aliceblue;
+  box-shadow: 4px 4px 6px 4px rgba(2, 5, 8, 0.565);
 }
+.container1:last-child{
+  width: 53%;
+  background-color: #0066ff00;
+  box-shadow: none;
+}
+.container1 img{
+  width: 100%;
+  border-radius: 10px;
+}
+.container1 img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.container1 img:hover{
+	-webkit-transform: scale(1.05);
+	transform: scale(1.1);
+  box-shadow: 3px 3px 3px 3px rgba(2, 5, 8, 0.565);
+}
+.container1:last-child img:hover{
+	-webkit-transform: scale(1.05);
+	transform: scale(1.1);
+  box-shadow: none;
+}
+.container1:last-child img:hover{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.container1 .text2{
+  text-align: center;
+  background-color: #000000e5;
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  line-height: 0.85cm;
+}
+.container{
+  background-color: #1112237f;
+  color: #e0edff;
+}
+.container .box{
+  width: 22%;
+  display: inline-block;
+  padding: 2%;
+  margin-left: 5%;
+  box-shadow: none;
+  background-color: #0066ff00;
+  text-align: center;
+}
+.container .box h2{
+  background-color: #e0edff;
+  color: #111223;
+  padding: 5px;
+}
+.container .box p{
+  text-align: center;
+  font-size: 20px;
+}
+
 
 .logout-button-content {
   position: absolute;
