@@ -11,12 +11,16 @@ function Profile() {
    if(user_session_value === null){
     navigate("/login");
    }
+   // after user log, user's name will display on the profile page "user name, please fill your details here"
+   userDetailsByUserName(user_session_value)
    }, []);
 
    useEffect(() => {
       loadDegreePrograms();
       loadProfileData(window.sessionStorage.getItem("user_id"));
     }, []);
+    const [userDetailsByUserName_data, setUserDetailsByUserName] = useState("");
+    
 
    const [data_set, setData] = useState({
     enrolement_date: "",
@@ -33,6 +37,7 @@ function Profile() {
    const [fourth_year_modules, setFourthYearModules] = useState([]);
 
    const [user_selected_modules, setUserSelectedModules] = useState([]);
+   
    
    
    const handleModuleChange = (event) => {
@@ -138,6 +143,36 @@ function Profile() {
       console.error('Error handleSubmit in:', error);  
     }
   };
+
+  // this is a function call user details by user name. this function is used to take the relevant user's name to diaplay in the profile page
+  const userDetailsByUserName = async (user_name) => {
+    const payLoad = {
+      "user_name": user_name
+     }
+      try {
+        const response = await fetch('http://localhost:3001/api/userDetailsByUserName', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payLoad),
+        });
+  
+        if (!response.ok) {
+          throw new Error('Invalid');
+        }
+  
+        const data = await response.json();
+        
+         // here, set the relevant user's name
+       setUserDetailsByUserName(data[0].user_first_name);
+        
+     
+      } catch (error) {
+        console.error('Error modules in:', error);
+      
+      }
+  }
 
   const dataSaveModules = async (enrolement_id, university_program_modules_id) => {
     const payLoad = {
@@ -267,7 +302,7 @@ function Profile() {
             <form onSubmit={handleSubmit}>
               <div className="detail-form">
                 <div className="nav-padding">
-                  <h2> Please fill your details here </h2>
+                  <h2>  {userDetailsByUserName_data}  Please fill your details here </h2>
                   <label for="User name ">
                     Enter your university enrol year:{" "}
                   </label>

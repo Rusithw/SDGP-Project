@@ -11,7 +11,7 @@ function Prediction() {
    if(user_session_value === null || user_session_value === ""){
     navigate("/login");
    }
-
+   // after user log, user's name will display on the prediction page "user name, please fill your details here"
    userDetailsByUserName(user_session_value);
    
 
@@ -116,6 +116,7 @@ const [year_modules, setYearModules] = useState([]);
     });
   };
 
+   // this is a function call user details by user name. this function is used to take the relevant user's name to diaplay in the prediction page
   const userDetailsByUserName = async (user_name) => {
     const payLoad = {
       "user_name": user_name
@@ -135,6 +136,7 @@ const [year_modules, setYearModules] = useState([]);
   
         const data = await response.json();
         
+        // here, set the relevant user's name
        setUserDetailsByUserName(data[0].user_first_name);
         
      
