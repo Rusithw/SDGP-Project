@@ -32,6 +32,7 @@ function Profile() {
    const [third_year_modules, setThirdYearModules] = useState([]);
    const [fourth_year_modules, setFourthYearModules] = useState([]);
 
+   const [user_selected_modules, setUserSelectedModules] = useState([]);
    
    
    const handleModuleChange = (event) => {
@@ -223,7 +224,7 @@ function Profile() {
         throw new Error("API Error");
       }
       const api_data = await response.json();
-      console.log(api_data)
+      setUserSelectedModules(api_data)
 
       const new_data_set = {
         enrolement_date: api_data[0].enrolement_date,
@@ -238,8 +239,17 @@ function Profile() {
     }
    }
    
-   const checkbox_valid = () =>{
-    return true;
+   const checkbox_valid = (id) =>{
+    console.log(id)
+    console.log(user_selected_modules)
+
+    for(var i=0; user_selected_modules.length>i ;i++){
+      if(user_selected_modules[i].university_program_modules_id===id){
+        return true;
+      }else{
+        return false;
+      }
+    }
    }
 
 
@@ -299,8 +309,8 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "1" ?<div key={item.university_program_modules_id}>
                         <input
-                          name="year1"
-                          checked={checkbox_valid()}
+                          name="year1"                         
+                          defaultChecked={checkbox_valid(item.university_program_modules_id)}
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange= {handleModuleChange}
@@ -323,7 +333,8 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "2" ?<div key={item.university_program_modules_id}>
                         <input
-                          name="year2"
+                          name="year2"                       
+                          defaultChecked={checkbox_valid(item.university_program_modules_id)}
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
@@ -346,7 +357,8 @@ function Profile() {
                   {year_modules.map((item) => (
                         item.year === "3" ?<div key={item.university_program_modules_id}>
                         <input
-                          name="year3"
+                          name="year3"                          
+                          defaultChecked={checkbox_valid(item.university_program_modules_id)}
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
@@ -368,6 +380,7 @@ function Profile() {
                         item.year === "4" ?<div key={item.university_program_modules_id}>
                         <input
                           name="year4"
+                          defaultChecked={checkbox_valid(item.university_program_modules_id)}
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
