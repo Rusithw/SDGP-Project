@@ -36,10 +36,9 @@ body p,body label{
       color: #4949ff;
       float: left;
       text-decoration: none; 
+
 }
-.nav-bar ul li a.active {
-  color: green; 
-}
+
 .nav-bar li .pro-user{
   width: 3%;
   position: fixed; 
@@ -382,3 +381,11 @@ body p,body label{
   font-weight: bold;
 }
 
+.nav-bar ul li a.active {
+  color: black; 
+}
+
+.nav-bar ul li a:hover{
+  color: black;
+  transition: 0.4s ease-in-out;
+}
