@@ -358,7 +358,10 @@ body p,body label{
   text-align: center;
   font-size: 20px;
 }
-
+.container .box h2::first-letter{
+  font-size: 45px;
+  color: #005782;
+}
 
 .logout-button-content {
   position: absolute;

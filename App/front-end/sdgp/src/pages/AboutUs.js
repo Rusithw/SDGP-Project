@@ -74,7 +74,7 @@ function AboutUs() {
       <div className='container'>
             <div className='box'>
                 <h2>Why?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde accusamus, illo doloribus numquam ea dolor dignissimos alias explicabo excepturi placeat!</p>
+                <p>Ipsum dolor sit amet, consectetur adipisicing elit. Unde accusamus, illo doloribus numquam ea dolor dignissimos alias explicabo excepturi placeat!</p>
             </div>
             <div className='box'>
                 <h2>How?</h2>
@@ -82,7 +82,7 @@ function AboutUs() {
             </div>
             <div className='box'>
                 <h2>Mission</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta deleniti veritatis dolorum, corporis possimus repudiandae quasi cumque! Atque, porro.</p>
+                <p>Orem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta deleniti veritatis dolorum, corporis possimus repudiandae quasi cumque! Atque, porro.</p>
             </div>
         </div>
         <br /><br />
