@@ -19,18 +19,20 @@ function Home() {
         {/* NavBar is a component */}
         <NavBar value={"home"}/>
         <div className="text">
-          <h1><strong>Career Prediction </strong></h1>
+          <h1><strong>Career Compass </strong></h1>
         </div>
-        <div className="paragraph">
+        <div className='introduction'>
           <p>
-            This is a software is used for a newly enroll student or a current
-            student to get their career path as a prediction. <br/> Also, even a past
-            university student can upload subjects, ideas, experiences etc. <br/> done
-            during his university days to this website. br Through that, a newly or
-            current student can get the job path as a prediction by comparing the
-            details of past students.
+            Ready to take control of your career? <br/>
+            Dive into our intuitive platform and unleash the potential that lies within you. 
+            Get started today and embark on a path towards success and fulfillment.
           </p>
         </div>
+        {/* <div className="paragraph">
+          <p>
+            
+          </p>
+        </div> */}
       </div>
     
     </div>
