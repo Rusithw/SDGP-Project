@@ -119,3 +119,20 @@ exports.loadProfileData = (req, res) =>{
   });
 };
 
+exports.getUser = (req, res) =>{
+  const value = req.body;
+  connection.query
+  ('SELECT * FROM user WHERE user_id=? ',
+  value.user_id,
+  (error, results) =>{
+    if(error){
+      console.log("Error:", error);
+      res.json({})
+      return
+    }
+    console.log(results[0]);
+    res.json(results[0]);
+  }
+  )
+
+};
