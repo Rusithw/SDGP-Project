@@ -26,6 +26,8 @@ router.post('/userDetailsByUserName', userController.userDetailsByUserName);
 router.post('/profileDataSave', userController.profileDataSave);
 router.post('/dataSaveModules', userController.dataSaveModules);
 router.post('/loadProfileData', userController.loadProfileData);
+// This API connection created to get user to load their details in the My Account page. 
+router.post("/getUser" , userController.getUser);
 
 
 module.exports = router;
