@@ -137,3 +137,19 @@ exports.getUser = (req, res) =>{
   )
 
 };
+
+exports.updateUser = (req, res) =>{
+  const value = req.body;
+  connection.query
+  ('UPDATE user WHERE user_id=?', 
+  value.user_id,
+  (error, results) => {
+    if(error){
+      console.log("Error", error);
+      res.json({})
+      return
+    }
+    console.log(results[this.updateUser])
+    res.json(results[this.updateUser])
+  })
+};
