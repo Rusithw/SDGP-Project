@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from "./commen/NavBar";
 
 function MyAccount() {
+
+  const user_id = 6;
 
   const [ reTypePassword, setRetypePassword] = useState("")
   const [data_set, setData] = useState({
@@ -14,6 +16,11 @@ function MyAccount() {
       user_address: "",
       city_id: "",
   });
+
+  // After calling the method  getUser() the user details are loaded when the user enters My Account page.
+  useEffect(()=> {
+    getUser();
+  }, [])
 
   const handleChange = (event) =>{
     const {name, value} = event.target;
@@ -54,6 +61,26 @@ function MyAccount() {
     }
 
   };
+
+  // This method getUser is used to get the data from the back-end using a response according to user_id and is fetched into a variable api_data, then it is passed into the setData.
+  const getUser = async () =>{
+    const get_user_id = {user_id: user_id}
+    try {
+      const response = await fetch("http://localhost:3001/api/getUser", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(get_user_id),
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const api_data = await response.json();
+      setData(api_data)
+      console.log(api_data)
+    } catch (error) {
+      
+    }
+  }
 
   return (
     <div className="main">

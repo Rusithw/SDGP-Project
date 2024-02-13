@@ -119,6 +119,7 @@ exports.loadProfileData = (req, res) =>{
   });
 };
 
+// Users have been loaded from the database(back-end) according to user id to the My Account page.
 exports.getUser = (req, res) =>{
   const value = req.body;
   connection.query
