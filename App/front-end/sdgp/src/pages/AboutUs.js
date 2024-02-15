@@ -74,15 +74,15 @@ function AboutUs() {
       <div className='container'>
             <div className='box'>
                 <h2>Why?</h2>
-                <p>Ipsum dolor sit amet, consectetur adipisicing elit. Unde accusamus, illo doloribus numquam ea dolor dignissimos alias explicabo excepturi placeat!</p>
+                <p>Most university students have no definitive idea as to what career pathway is most suitable for them.</p>
             </div>
             <div className='box'>
                 <h2>How?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quo reprehenderit at adipisci temporibus accusantium commodi sunt ratione facere nisi!</p>
+                <p>Giving accurate predictions on career paths based on a comparison between past students, university data, and user details.</p>
             </div>
             <div className='box'>
                 <h2>Mission</h2>
-                <p>Orem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta deleniti veritatis dolorum, corporis possimus repudiandae quasi cumque! Atque, porro.</p>
+                <p>The mission of career prediction software is to empower and guide graduate and undergraduate students in making informed and strategic decisions about their career paths.</p>
             </div>
         </div>
         <br /><br />
