@@ -334,8 +334,8 @@ body p,body label{
   line-height: 0.85cm;
 }
 .container{
-  background-color: #1112237f;
-  color: #e0edff;
+  background-color: #1E90FF;
+  color: black;
 }
 .container .box{
   width: 22%;
@@ -430,4 +430,39 @@ body p,body label{
   color: white; 
   text-align: center; 
   font-size: 20px;
+}
+.box .mission-img {
+  background-image: url('Images/mission.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: right; 
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+ margin: 0px 0px 0px 90px ; 
+}
+
+.box .why-img {
+  background-image: url('Images/why.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: right; 
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+ margin: 0px 0px 0px 90px ; 
+}
+
+.box .how-img {
+  background-image: url('Images/how.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: right; 
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+ margin: 0px 0px 0px 90px ; 
 }
