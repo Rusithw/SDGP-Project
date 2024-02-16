@@ -71,20 +71,6 @@ function AboutUs() {
       </div>
 
         <br /><br />
-      <div className='container'>
-            <div className='box'>
-                <h2>Why?</h2>
-                <p>Most university students have no definitive idea as to what career pathway is most suitable for them.</p>
-            </div>
-            <div className='box'>
-                <h2>How?</h2>
-                <p>Giving accurate predictions on career paths based on a comparison between past students, university data, and user details.</p>
-            </div>
-            <div className='box'>
-                <h2>Mission</h2>
-                <p>The mission of career prediction software is to empower and guide graduate and undergraduate students in making informed and strategic decisions about their career paths.</p>
-            </div>
-        </div>
         <br /><br />
     </div>
 

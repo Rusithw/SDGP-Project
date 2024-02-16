@@ -420,3 +420,11 @@ body p,body label{
 .logo span {
   font-weight: bold;
 }
+.para-content{
+  position: absolute;
+  top: 65%; 
+  left: 5%; 
+  transform: translateY(-50%); 
+  color: white; 
+  text-align: center; 
+}
