@@ -15,24 +15,16 @@ function Home() {
 
   return (
     <div className="main">
+
       <div>
         {/* NavBar is a component */}
         <NavBar value={"home"}/>
-        <div className="text">
-          <h1><strong>Career Compass </strong></h1>
+        <div className='background-image'>
+          <img src='Images/home.jpg"'></img>
+
         </div>
-        <div className='introduction'>
-          <p>
-            Ready to take control of your career? <br/>
-            Dive into our intuitive platform and unleash the potential that lies within you. 
-            Get started today and embark on a path towards success and fulfillment.
-          </p>
-        </div>
-        {/* <div className="paragraph">
-          <p>
-            
-          </p>
-        </div> */}
+       
+     
       </div>
     
     </div>

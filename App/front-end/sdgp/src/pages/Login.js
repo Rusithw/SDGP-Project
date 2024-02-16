@@ -129,7 +129,7 @@ function Login() {
           </form>
           <div className="width-50 login-image">
             <div className="login-image-content">
-              <img src="Images/login-image.jpg" alt="" />
+              <img src="" alt="" />
             </div>
           </div>
         </div>
