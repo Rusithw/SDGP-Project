@@ -24,7 +24,7 @@ function Home() {
        </div>
         <div className='content'>
         <h1 className='logo'>  Career Prediction <br/> <span> Software</span> </h1>
-        <p className='para-content'>Elevate your professional trajectory using our state-of-the-art Career Prediction Software <br/> where meticulously crafted algorithms are used to generate an accurate career pathway which is specifically tailored to your profile.
+        <p className='para-content'>Elevate your professional trajectory using our state-of-the-art Career Prediction Software, <br/><br/>where meticulously crafted algorithms are used to generate an accurate <br/><br/>career pathway which is specifically tailored to your profile. <br/><br/> Get informed on degree choices<br/><br/> and modules relevant to those courses and get more predictions based <br/><br/>on them to get a realistic and an ideal career prediction.
 </p>
       <div className='container'>
             <div className='box'>
