@@ -138,18 +138,21 @@ exports.getUser = (req, res) =>{
 
 };
 
+// This is where users are updated as a query.
 exports.updateUser = (req, res) =>{
-  const value = req.body;
-  connection.query
-  ('UPDATE user WHERE user_id=?', 
-  value.user_id,
-  (error, results) => {
+  const{id} = req.params;
+  const updatedData = req.body;
+  connection.query('UPDATE user SET ? WHERE user_id = ?', [updatedData, id], (error, result) =>{
     if(error){
-      console.log("Error", error);
-      res.json({})
+      console.error('Error updating sample data:', error);
+      res.status(500).json({message:'Error updating data'});
       return
     }
-    console.log()
-    res.json(results[this.updateUser])
-  })
+    if(result.affectedRows === 0){
+      res.status(404).json({message:'Data not found'});
+    }
+    res.json({message: 'Data updated successfully'})
+  }
+
+  )
 };
