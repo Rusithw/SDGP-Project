@@ -19,11 +19,12 @@ function Home() {
       <div>
         {/* NavBar is a component */}
         <NavBar value={"home"}/>
-        <div className='background-image'>
-          <img src='Images/home.jpg"'></img>
-
-        </div>
        
+       <div className='home-background'>        
+       </div>
+        <div className='content'>
+        <h1 className='logo'>  Career Prediction <br/> <span> Software</span> </h1>
+        </div>
      
       </div>
     
