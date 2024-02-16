@@ -149,7 +149,7 @@ exports.updateUser = (req, res) =>{
       res.json({})
       return
     }
-    console.log(results[this.updateUser])
+    console.log()
     res.json(results[this.updateUser])
   })
 };

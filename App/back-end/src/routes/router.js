@@ -29,7 +29,7 @@ router.post('/loadProfileData', userController.loadProfileData);
 // This API connection created to get user to load their details in the My Account page. 
 router.post("/getUser" , userController.getUser);
 // The API connection is used to update the user details in my account page.
-router.post('/updateUser', userController.updateUser);
+router.put('/updateUser/:id/', userController.updateUser);
 
 
 module.exports = router;
