@@ -82,7 +82,24 @@ function MyAccount() {
     }
   }
 
-  
+  // This method is used to update the users. If a user need to change certain details that user can easily update their details.
+  const updateUser = async ()=> {
+    const id = user_id;
+    try {
+      const response = await fetch("http://localhost:3001/api/updateUser/" + id, {
+        method: "PUT",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data_set),
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const api_data = await response.json();
+      alert(api_data.message)
+    } catch (error) {
+      
+    }
+  }
 
   return (
     <div className="main">
@@ -127,7 +144,7 @@ function MyAccount() {
           
             <br />
             <br />
-            <button className="button" type="Update">Update</button>
+            <button className="button" onClick={updateUser} type="Update">Update</button>
             
           </div>
         </div>
