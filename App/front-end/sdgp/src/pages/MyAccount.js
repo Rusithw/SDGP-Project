@@ -20,6 +20,7 @@ function MyAccount() {
   // After calling the method  getUser() the user details are loaded when the user enters My Account page.
   useEffect(()=> {
     getUser();
+    loadCity();
   }, [])
 
   const handleChange = (event) =>{
@@ -30,9 +31,21 @@ function MyAccount() {
     });
   };
 
+  const [load_cities, setCities] = useState([]);
+
+  const citySelectChange= (event) => {
+    setCities({
+      ...data_set,
+      ["city_id"]: event.target.value,
+
+    });
+
+     loadCity(event.target.value);
+
+   }
+
   const handleSubmit = async (event) =>{
     event.preventDefault();
-  
 
     try {
       const response = await fetch('http://localhost:3001/api/user/signup', {
@@ -101,6 +114,23 @@ function MyAccount() {
     }
   }
 
+  const loadCity = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/api/getCities", {
+        method: "GET",
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const data = await response.json();
+      setCities(data)
+      console.log(data)
+    } catch (error) {
+      
+    }
+   }
+
   return (
     <div className="main">
     <div>
@@ -111,35 +141,38 @@ function MyAccount() {
        <div className="width-50">
           <div className="login-content">
             <h2>My Account</h2>
-            <label for="User name ">First name: </label><br />
+            <label for="first name ">First name: </label><br />
             <input placeholder="First name" type="text" name="user_first_name" value={data_set.user_first_name} onChange={handleChange}/> <br />{" "}
             <br />
-            <label for="User name ">Last name: </label><br />
+            <label for="last name ">Last name: </label><br />
             <input placeholder="Last name" type="text" name="user_last_name" value={data_set.user_last_name} onChange={handleChange}/> <br />
             <br />
             <label for="User name ">User name: </label><br />
             <input placeholder="User name" type="text" name="user_name" value={data_set.user_name} onChange={handleChange}/> <br />
             <br />
-            <label for="User name ">Email: </label><br />
+            <label for="Email ">Email: </label><br />
             <input placeholder="Email" type="text" name="user_email" value={data_set.user_email} onChange={handleChange}/> <br />
             <br />
             <label for="Password ">Password: </label><br />
             <input placeholder="Password" type="password" name="user_password" value={data_set.user_password} onChange={handleChange}/> <br />
             <br />
-            <label for="Password ">Re-type Password: </label><br />
+            <label for="Re-type Password ">Re-type Password: </label><br />
             <input placeholder="Re-type Password" type="password" name="reTypePassword" value={reTypePassword} onChange={handleChange}/> <br />
             <br />
-            <label for="Password ">Mobile: </label><br />
+            <label for="Mobile">Mobile: </label><br />
             <input placeholder="Mobile" type="text" name="user_mobile" value={data_set.user_mobile} onChange={handleChange}/> <br />
             <br />
-            <label for="Password ">Address: </label><br />
+            <label for="Address ">Address: </label><br />
             <input placeholder="Address" type="text" name="user_address" value={data_set.user_address} onChange={handleChange}/> <br />
             <br/>
-            <label for="Password ">City: </label><br />
-           
-            <select name="city_id" onChange={handleChange}>
-              <option value="0" disabled="">Select City</option>
-              <option value="1">Negombo</option>
+
+
+            <label for="city ">City: </label><br />        
+            <select name="city_id" value={data_set.city_id} onChange={citySelectChange}>
+              <option value="">Select City</option>
+              {load_cities.map((item) => (
+            <option key={item.city_id} value={item.city_id}> {item.city_name} </option>
+        ))}
             </select>
           
             <br />

@@ -156,3 +156,16 @@ exports.updateUser = (req, res) =>{
 
   )
 };
+
+exports.getCities = (req, res) => {
+  const data = req.body;
+  connection.query( 'SELECT * FROM city', [data] ,
+  (error, results)  =>{
+      if(error){
+          console.log("Error message", error);
+          res.status(500).json({ message: 'Error fetching data' });
+          return;
+      }
+      res.json(results);
+  });
+}

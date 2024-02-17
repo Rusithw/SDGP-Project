@@ -30,6 +30,6 @@ router.post('/loadProfileData', userController.loadProfileData);
 router.post("/getUser" , userController.getUser);
 // The API connection is used to update the user details in my account page.
 router.put('/updateUser/:id/', userController.updateUser);
-
+router.post('/getCities', userController.getCities);
 
 module.exports = router;
