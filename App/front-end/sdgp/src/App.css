@@ -334,7 +334,7 @@ body p,body label{
   line-height: 0.85cm;
 }
 .container{
-  background-color: #1E90FF;
+  background-color: grey;
   color: black;
 }
 .container .box{
