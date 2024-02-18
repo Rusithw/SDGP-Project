@@ -156,12 +156,11 @@ function MyAccount() {
             <br/>
 
 
-            <label for="city ">City: </label><br />        
-            <select name="city_id" value={data_set.city_id} onChange={handleChange}>
-              <option value="">Select City</option>
-              {load_cities.map((item) => (
-            <option key={item.city_id} value={item.city_id}> {item.city_name} </option>
-        ))}
+            <label for="Password ">City: </label><br />
+           
+            <select name="city_id" onChange={handleChange}>
+              <option value="0" disabled="">Select City</option>
+              <option value="1">Negombo</option>
             </select>
           
             <br />
