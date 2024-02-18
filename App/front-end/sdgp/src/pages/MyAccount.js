@@ -19,8 +19,10 @@ function MyAccount() {
   });
 
   // After calling the method  getUser() the user details are loaded when the user enters My Account page.
+  // After calling the getCities method the city names are loaded when user enters the my account page.
   useEffect(()=> {
     getUser();
+    getCities();
 
   }, [])
 
@@ -105,6 +107,24 @@ function MyAccount() {
     }
   }
 
+  // The cities are loaded from the database.
+  const getCities = async()=>{
+    try {
+      const response = await fetch("http://localhost:3001/api/getCities", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const api_data = await response.json();
+      setCities(api_data)
+   
+    } catch (error) {
+      
+    }
+  }
+
 
   return (
     <div className="main">
@@ -142,12 +162,13 @@ function MyAccount() {
             <br/>
 
 
-            <label for="Password ">City: </label><br />
-           
-            <select name="city_id" onChange={handleChange}>
-              <option value="0" disabled="">Select City</option>
-              <option value="1">Negombo</option>
-            </select>
+            <label for="city">City: </label><br />
+          <select name="city_id" value={data_set.city_id} onChange={handleChange} >
+          <option value="" >Select City</option>
+          {load_cities.map((item) => (
+            <option key={item.city_id} value={item.city_id}> {item.city_name} </option>
+        ))}
+          </select>
           
             <br />
             <br />
