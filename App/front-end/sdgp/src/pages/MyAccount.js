@@ -21,7 +21,7 @@ function MyAccount() {
   // After calling the method  getUser() the user details are loaded when the user enters My Account page.
   useEffect(()=> {
     getUser();
-    loadCity();
+
   }, [])
 
   const handleChange = (event) =>{
