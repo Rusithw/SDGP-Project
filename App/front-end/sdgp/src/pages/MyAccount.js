@@ -3,7 +3,8 @@ import NavBar from "./commen/NavBar";
 
 function MyAccount() {
 
-  const user_id = 3;
+  // Here get user_id from session storage so that relevent user can view the loaded data according to user id.
+  const user_id = (window.sessionStorage.getItem("user_id"));
 
   const [ reTypePassword, setRetypePassword] = useState("")
   const [data_set, setData] = useState({
