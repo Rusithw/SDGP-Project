@@ -3,7 +3,7 @@ import NavBar from "./commen/NavBar";
 
 function MyAccount() {
 
-  const user_id = 6;
+  const user_id = 3;
 
   const [ reTypePassword, setRetypePassword] = useState("")
   const [data_set, setData] = useState({
@@ -33,16 +33,6 @@ function MyAccount() {
 
   const [load_cities, setCities] = useState([]);
 
-  const citySelectChange= (event) => {
-    setCities({
-      ...data_set,
-      ["city_id"]: event.target.value,
-
-    });
-
-     loadCity(event.target.value);
-
-   }
 
   const handleSubmit = async (event) =>{
     event.preventDefault();
@@ -61,7 +51,7 @@ function MyAccount() {
       }
 
       const data = await response.json();
-      console.log(data);
+     
       if(data==="0"){
         // setError("Wrong user name or password")
       }else{
@@ -89,7 +79,7 @@ function MyAccount() {
       }
       const api_data = await response.json();
       setData(api_data)
-      console.log(api_data)
+   
     } catch (error) {
       
     }
@@ -117,7 +107,7 @@ function MyAccount() {
   const loadCity = async () => {
     try {
       const response = await fetch("http://localhost:3001/api/getCities", {
-        method: "GET",
+        method: "POST",
         headers: { 'Content-Type': 'application/json' },
       });
       if (!response.ok) {
@@ -125,7 +115,6 @@ function MyAccount() {
       }
       const data = await response.json();
       setCities(data)
-      console.log(data)
     } catch (error) {
       
     }
@@ -168,7 +157,7 @@ function MyAccount() {
 
 
             <label for="city ">City: </label><br />        
-            <select name="city_id" value={data_set.city_id} onChange={citySelectChange}>
+            <select name="city_id" value={data_set.city_id} onChange={handleChange}>
               <option value="">Select City</option>
               {load_cities.map((item) => (
             <option key={item.city_id} value={item.city_id}> {item.city_name} </option>
