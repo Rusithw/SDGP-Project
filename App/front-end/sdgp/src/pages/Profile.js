@@ -295,7 +295,7 @@ function Profile() {
         <div className="width-100">
           <div className="width-50 profile-image">
             <div className="profile-img-content">
-              <img src="Images/login-image.jpg" alt="#" />
+              <img src="/Images/home1.jpeg" alt="#" />
             </div>
           </div>
           <div className="width-50">
