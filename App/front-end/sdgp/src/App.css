@@ -478,7 +478,7 @@ body p,body label{
 .steps h1{
   background-color: #022b63;
   padding: 0.5rem;
-  color: #a0dfff;
+  color: #a0dfff;;
   text-align: center;
 }
 ol li{
@@ -494,5 +494,5 @@ ol li h3{
   font-size: 22px;
 }
 ol li strong{
-  color: #00eeff;
+  color: #0066ff;
 }
