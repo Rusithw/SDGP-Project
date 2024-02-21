@@ -183,6 +183,7 @@ button[type=submit]{
   background-color: #009b2e;
 }
 button[type=submit]:hover{
+  transition: .4s ease-in-out;
   background-color: #00ff4c;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.493);
 }
@@ -190,6 +191,7 @@ button[type=reset]{
   background-color: #8a0303;
 }
 button[type=reset]:hover{
+  transition: .4s ease-in-out;
   background-color: #da0606;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.493);
 }
