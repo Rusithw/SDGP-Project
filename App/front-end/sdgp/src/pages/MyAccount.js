@@ -88,7 +88,7 @@ function MyAccount() {
     }
   }
 
-  // This method is used to update the users. If a user need to change certain details that user can easily update their details.
+
   const updateUser = async ()=> {
     const id = user_id;
     try {
