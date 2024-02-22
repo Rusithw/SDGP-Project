@@ -98,7 +98,7 @@ function ProgramDetails() {
         </div>
         <br />
 
-        <div className="detail-form modules">
+        <div className="detail-form modules-1">
           <label for="degree-selector"> <h2>1 st year modules</h2> </label><br />
           <h3> 1. Trends in computer science</h3>
           <p>This module focuses on trends in Computer Science which currently attract considerable industry and academic interest. It allows the students to acquire research skills which will prepare them for the group and final year project and will support their employability prospects. At the same time, it introduces key aspects of working as a professional in the world of computing, including consideration of ethics, privacy, data protection and confidentiality, and how these are incorporated into professional codes of practice such as the BCS Code of Conduct.
@@ -122,7 +122,7 @@ function ProgramDetails() {
 
         </div>
 
-        <div className="detail-form modules">
+        <div className="detail-form modules-2">
           <label for="degree-selector"> <h2>2 nd year modules</h2> </label><br />
           <h2> Core Modules </h2>
           <br />
@@ -190,7 +190,7 @@ function ProgramDetails() {
          </div>
 
          
-         <div className="detail-form modules">
+         <div className="detail-form modules-3">
           <label for="degree-selector"> <h2>3 rd year modules</h2> </label><br />
           <h3> 1. Computer Networks</h3>
           <p>This module provides students with a foundational understanding of the fundamental concepts and technologies that form the backbone of our interconnected world. Its components encompass key areas such as Network Architectures, Networking Protocols, Networking Devices, and Network Applications. Delving into these sub-parts enhances our comprehension of the intricate workings of the internet and the diverse ways in which various technologies can seamlessly collaborate. The practical applications of Computer Networks extend across a spectrum of fields, including software development, cybersecurity, game development, and beyond.
@@ -212,7 +212,7 @@ function ProgramDetails() {
         </div>
 
 
-         <div className='detail-form modules'>
+         <div className='detail-form modules-4'>
           <label for="degree-selector"> <h2>4 th year modules </h2> </label>
           <h2> Core Modules </h2>
           <br />
