@@ -261,7 +261,7 @@ button[type=reset]:hover{
 .text h1{
   text-align: center;
   color: aliceblue;
-  background-color: rgba(3, 5, 76, 0.853);
+  background-color: #072654;
   padding: 5px;
   border-radius: 2px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.603);
@@ -311,7 +311,7 @@ button[type=reset]:hover{
 }
 .container1 .text2{
   text-align: center;
-  background-color: #000000e5;
+  background-color: #072654;
   padding: 5px;
   color: #fff;
   font-size: 18px;

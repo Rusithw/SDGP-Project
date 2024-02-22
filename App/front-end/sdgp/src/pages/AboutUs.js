@@ -41,7 +41,7 @@ function AboutUs() {
             </div>
             <div class="text1">
                 <p className='text2'> Maleesha Shavindi <br/> maleesha.20220977@iit.ac.lk </p>
-                <p>A team member for the software project. An Undergraduate in IIT undergoing the Computer Science degree. Involved mainly in creating the home page in the prediction application.</p>
+                <p>A pivotal member of our project team, hailing from the esteemed IIT and currently pursuing a degree in Computer Science. With a focus on developing the home page of our prediction application,And adding more css parts for the Prediction page and Details page. </p>
             </div>
         </div>
 
@@ -51,7 +51,7 @@ function AboutUs() {
             </div>
             <div class="text1">
                 <p className='text2'> Lisath Thisurasiri <br/> lisath.20221943@iit.ac.lk </p>
-                <p>Team member in the Software development project. Currently undergoing the Computer Science degree in IIT as an undergraduate, and contributed to making the My Account page creating the Update operation.
+                <p>Team member in the Software development project. Currently undergoing the Computer Science degree in IIT as an undergraduate, and contributed to making the My Account page creating the Update operation.Also add more details for the Program-details Page     .
                 </p>
             </div>
         </div>
