@@ -205,27 +205,27 @@ const [year_modules, setYearModules] = useState([]);
        <div className="width-100">
         <div className="width-50 prediction-image">
             <div className="prediction-img-content">
-                <img src="Images/prediction-image.jpg" alt="#"/>
+                <img src="/Images/prediction.png" alt="#"/>
             </div>
         </div>
         <div className="width-50">
             <form onSubmit={handleSubmit}>
             <div className="detail-form">
                 <div className="nav-padding">
-                  <h2> {userDetailsByUserName_data}  Please fill your details here</h2>
+                  <h2> {userDetailsByUserName_data},  Please fill your details here...</h2>
                   
-                  <label for="degree-selector">Select you degree program: </label><br />
+                  <label for="degree-selector">Select you degree program: </label><br /><br />
                   <select name="degree-program" onChange={programSelect}>
                   <option value="" >Please select an option</option>
                   {load_Degree_Programs.map((item) => (
-            <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
-        ))}
+                      <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
+                  ))}
                   </select>
-                  <br/> <br/>
+                  <br/> <br/><br />
                   
                 
 
-                  <div className="year-module-colour">
+                  <div className="year-module">
                   <label for="first-year-modules">Select your 1st year modules : </label><br/> 
                   {year_modules.map((item) => (
                         item.year === "1" ?<div key={item.university_program_modules_id}>
@@ -240,11 +240,11 @@ const [year_modules, setYearModules] = useState([]);
                       :""
                     )
                   )}
-
+                  <br />
                    
                   </div>
                  
-                  <div className="year-module-non-colour">
+                  <div className="year-module">
                     <label for="second-year-modules">Select your 2nd year modules: </label><br/>
                     {year_modules.map((item) => (
                         item.year === "2" ?<div key={item.university_program_modules_id}>
@@ -261,11 +261,12 @@ const [year_modules, setYearModules] = useState([]);
                   )}
                     <br/> <br/>
                   </div>
+                  <br />
 
                  
                   
 
-                  <div className="year-module-colour">
+                  <div className="year-module">
                     <label for="third-year-modules">Select your 3rd year modules: </label><br/>
                     {year_modules.map((item) => (
                         item.year === "3" ?<div key={item.university_program_modules_id}>
@@ -282,10 +283,11 @@ const [year_modules, setYearModules] = useState([]);
                   )}
                     <br/> <br/>
                   </div>
+                  <br />
 
                   
                   
-                  <div className="year-module-non-colour">
+                  <div className="year-module">
                     <label for="fourth-year-modules">Select your 4th year modules: </label><br/>
                     {year_modules.map((item) => (
                         item.year === "4" ?<div key={item.university_program_modules_id}>
@@ -294,8 +296,7 @@ const [year_modules, setYearModules] = useState([]);
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
-                        />
-                        {item.university_module_name}
+                        />{item.university_module_name}
                       </div>
                       :""
                     )
@@ -307,7 +308,7 @@ const [year_modules, setYearModules] = useState([]);
                   
                     <div className="button-editor">
                         <div className="clear-button">
-                            <button className="button" type="button">CLEAR</button>
+                            <button className="button" type="reset">CLEAR</button>
                           </div>
                           <div className="Submit-button">
                             <button className="button" type="SUBMIT">SUBMIT</button>

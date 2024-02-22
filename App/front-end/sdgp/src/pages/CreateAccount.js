@@ -106,11 +106,6 @@ function CreateAccount() {
         </div>
 
        </form>
-        <div className="width-50 login-image">
-          <div className="login-image-content">
-            <img src="Images/login-image.jpg" alt="#" />
-          </div>
-        </div>
       </div>
     </div>
   </div>

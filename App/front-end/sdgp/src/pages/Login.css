@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to right, rgb(189, 229, 255),white);
+    background-image: linear-gradient(to right, #a8c2ff,rgb(223, 217, 217));
 }
 .jumbotron{
     float: left;
