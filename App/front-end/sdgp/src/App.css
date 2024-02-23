@@ -196,8 +196,8 @@ button[type=reset]:hover{
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.493);
 }
 .detail-form input, .year-module {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
 }
 .detail-form .year-module label{
   font-size: 20px;
