@@ -338,7 +338,8 @@ function Profile() {
       
          
           <br /> <br />       
-                  <label for="User name ">
+                <div className="year-module">
+                <label for="first-year-modules ">
                     Select your first year modules:{" "}
                   </label>
                   {year_modules.map((item) => (
@@ -355,6 +356,7 @@ function Profile() {
                       :""
                     )
                   )}
+                </div>
 
 
                   <br />
@@ -362,7 +364,8 @@ function Profile() {
 
                   <br />
                   <br />
-                  <label for="User name ">
+                    <div className="year-module">
+                    <label for="second-year-modules ">
                     Select your second year modules:{" "}
                   </label>
                   {year_modules.map((item) => (
@@ -379,6 +382,7 @@ function Profile() {
                       :""
                     )
                   )}
+                    </div>
                   <br />
                   <br />
                   
@@ -386,7 +390,8 @@ function Profile() {
 
                   <br />
                   <br />
-                  <label for="User name ">
+                    <div className="year-module">
+                    <label for="third-year-modules ">
                     Select your third year modules:{" "}
                   </label>
                   {year_modules.map((item) => (
@@ -403,12 +408,14 @@ function Profile() {
                       :""
                     )
                   )}
+                    </div>
                   <br />
                  
 
                   <br />
                   <br />
-                  <label for="User name ">
+                    <div className="year-module">
+                    <label for="fourth-year-modules ">
                     Select your fourth year modules:{" "}
                   </label>
                   {year_modules.map((item) => (
@@ -425,6 +432,7 @@ function Profile() {
                       :""
                     )
                   )}
+                    </div>
                   <br />
                   <br />
                   
