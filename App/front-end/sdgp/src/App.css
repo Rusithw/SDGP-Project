@@ -235,7 +235,22 @@ button[type=reset]:hover{
   background-color: white;
   padding: 1%;
 }
-.detail-form.modules-1{
+.detail-form.modules-1  {
+  background-color :steelblue; 
+  color: #e0edff;
+  padding: 35px;
+}
+.detail-form.modules-2  {
+  background-color :steelblue; 
+  color: #e0edff;
+  padding: 35px;
+}
+.detail-form.modules-3  {
+  background-color :steelblue; 
+  color: #e0edff;
+  padding: 35px;
+}
+.detail-form.modules-4  {
   background-color :steelblue; 
   color: #e0edff;
   padding: 35px;
