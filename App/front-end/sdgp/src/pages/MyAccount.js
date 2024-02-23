@@ -180,7 +180,7 @@ function MyAccount() {
        </form>
         <div className="width-50 my-account-image">
           <div className="my-account-image-content">
-            {/* <img src="Images/login-image.jpg" alt="#" /> */}
+             <img src="Images/myAccountNew.png" alt="#" />
           </div>
         </div>
       </div>
