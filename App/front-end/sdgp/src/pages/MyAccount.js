@@ -135,7 +135,10 @@ function MyAccount() {
        <form onSubmit={handleSubmit}>
        <div className="width-50">
           <div className="login-content">
-            <h2>My Account</h2>
+            <div className='logo-content'>
+            <h1> <strong> My Account </strong> </h1>
+            </div> <br/><br/>
+            
             <label for="first name ">First name: </label><br />
             <input placeholder="First name" type="text" name="user_first_name" value={data_set.user_first_name} onChange={handleChange}/> <br />{" "}
             <br />

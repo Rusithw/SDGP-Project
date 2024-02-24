@@ -113,6 +113,18 @@ body p,body label{
 .login-content {
   padding: 0px 45px;
 }
+
+
+.logo-content h1{
+  text-align: center;
+  color: aliceblue;
+  background-color: #072654;
+  padding: 5px 0px 11px 0px;
+  border-radius: 2px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.603);
+  margin: 2%;
+}
+
 .login-message {
   text-align: center;
 }
