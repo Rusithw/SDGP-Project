@@ -162,12 +162,12 @@ body p,body label{
 .prediction-image img{
   width: 100%;
   height: auto;
-  object-fit: contain;
+  /* object-fit: contain; */
   max-width: 100%;
 }
 
 .prediction-image-content {
-  padding-right: 20px;
+  /* padding-right: 20px; */
 }
 .button-editor {
   width: 100%;
@@ -491,6 +491,24 @@ ol li{
 ol li h3{
   color: #f9f9ff;
   font-size: 22px;
+}
+.top{
+  --offset: 50px; 
+  float: right;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #002459;
+  padding: 10px 15px 10px 15px;
+  border-radius: 50%;
+  position: sticky;
+  bottom: 20px;      
+  margin-right: 10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+}
+.top:hover{
+  background-color: #095fa5;
 }
 
 .my-account-image img{

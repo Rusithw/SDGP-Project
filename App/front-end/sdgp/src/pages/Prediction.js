@@ -314,6 +314,7 @@ const [year_modules, setYearModules] = useState([]);
                             <button className="button" type="SUBMIT">SUBMIT</button>
                           </div>
                     </div>
+                <a href="#" class="top">&#128743;</a>
                 </div>
               </div>
             </form>

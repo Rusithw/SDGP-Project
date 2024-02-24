@@ -467,6 +467,7 @@ function Profile() {
                       Save
                     </button>
                   </div>
+                  <a href="#" class="top">&#128743;</a>
                 </div>
               </div>
             </form>
