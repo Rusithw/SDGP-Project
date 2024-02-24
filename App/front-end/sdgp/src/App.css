@@ -159,16 +159,43 @@ body p,body label{
 
 /*Prediction*/
 
-.prediction-image img{
-  width: 100%;
-  height: auto;
-  /* object-fit: contain; */
+.prediction-image .prediction-img-content{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 50%), url(Images/prediction4.jpg);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  object-fit: contain;
+  padding-right: 10px;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  width: 90%;
+  height: 30rem;
   max-width: 100%;
+  border-radius: 10px;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+.topz{
+  --offset: 50px; 
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #002459;
+  padding: 10px 15px 10px 15px;
+  border-radius: 50%;
+  position: sticky;
+  bottom: 20px;      
+  margin-right: 10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+}
+.topz:hover{
+  background-color: #095fa5;
 }
 
-.prediction-image-content {
-  /* padding-right: 20px; */
-}
 .button-editor {
   width: 100%;
   display: inline-block;
