@@ -12,4 +12,44 @@
 .box h3{
     color: rgb(0, 23, 94);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
 }
+.detail-form.modules-1  {
+  background-color :steelblue; 
+  color: #e0edff;
+  padding: 35px;
+  /* display:inline-block; */
+  
+}
+.heading{
+    text-align: center;
+    font-size: larger;
+}
+.tabs-container {
+    border: 1px solid #060606;
+    display:flex;
+}
+
+.tab-list {
+    /* display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none; */
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  }
+  /* .tab-panel {
+    padding: 20px;
+    border: none;
+    background: #f4f4f4;
+    display: flex;
+  } */
