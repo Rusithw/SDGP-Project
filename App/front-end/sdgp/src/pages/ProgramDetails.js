@@ -45,9 +45,9 @@ function ProgramDetails() {
 
   const [selectedOption, setSelectedOption] = useState('');
 
-  const handleDropdownChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+  // const handleDropdownChange = (event) => {
+  //   setSelectedOption(event.target.value);
+  // };
 
   
   
@@ -60,20 +60,20 @@ function ProgramDetails() {
         <div className="form-program-selector">
           <h2>Please select your degree program </h2>
 
-          <label htmlFor="degree-selector">Select your degree program: </label>
+          {/* <label htmlFor="degree-selector">Select your degree program: </label>
           <br /><br />
           <select name="degree" onChange={handleDropdownChange}>
             <option value="">Please select an option</option>
             {load_Degree_Programs.map((item) => (
               <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
-            ))}
-          </select>
+            ))} */}
+          {/* </select> */}
 
           <div>
             <Tabs>
               <TabList>
-                <Tab>BEng(Hons) Software Engineering</Tab>
                 <Tab>BSc(Hons) Computer Science</Tab>
+                <Tab>BEng(Hons) Software Engineering</Tab>
                 <Tab>Artificial Intelligence</Tab>
               </TabList>
 
@@ -168,7 +168,7 @@ function ProgramDetails() {
                   <br />
                 </div>
 
-                <div className="detail-form modules-3">
+                {/* <div className="detail-form modules-3">
                   <label for="degree-selector"> <h2>3 rd year modules</h2> </label><br />
                   <h3> 1. Computer Networks</h3>
                   <p>This module provides students with a foundational understanding of the fundamental concepts and technologies that form the backbone of our interconnected world. Its components encompass key areas such as Network Architectures, Networking Protocols, Networking Devices, and Network Applications. Delving into these sub-parts enhances our comprehension of the intricate workings of the internet and the diverse ways in which various technologies can seamlessly collaborate. The practical applications of Computer Networks extend across a spectrum of fields, including software development, cybersecurity, game development, and beyond.
@@ -187,6 +187,17 @@ function ProgramDetails() {
                   <h3>5. Algorithms and Complexity</h3>
                   <p> Within this module, algorithms take center stage as they address problems through systematic, step-by-step instructions. Furthermore, the module equips us with essential tools to execute these algorithms efficiently. Complexity Theory is employed to quantify the time and memory requirements of an algorithm, providing insights into its efficiency in completing tasks. By delving into this module, users gain the foundational knowledge necessary for computation, empowering them to shape digital landscapes.</p>
                   <br />
+                </div> */}
+                <div className="detail-form modules-3">
+                  <label for="degree-selector"> <h2>3 rd year modules</h2> </label><br />
+                  <h3>Industrial Placment</h3>
+                  <p>A 12 month placement period is compulsory between years 2 and 4. 
+                    This experience will give you additional practical skills and a 
+                    competitive edge in the job market.This mandatory placement will not only 
+                    empower a student with a degree but also with the necessary work experience. 
+                    With this added advantage, IIT students have a 100% employment assurance and 
+                    are most often selected for high income employment at renowned organisations.</p>
+                  <br/>  
                 </div>
 
                 <div className='detail-form modules-4'>
@@ -251,7 +262,29 @@ function ProgramDetails() {
               </TabPanel>
 
               <TabPanel>
-                <h2>Content 2</h2>
+              <div className="detail-form modules-1">
+                  <label for="degree-selector"> <h2>1 st year modules</h2> </label><br />
+                  <h3> 1. Trends in computer science</h3>
+                  <p>This module focuses on trends in Computer Science which currently attract considerable industry and academic interest. It allows the students to acquire research skills which will prepare them for the group and final year project and will support their employability prospects. At the same time, it introduces key aspects of working as a professional in the world of computing, including consideration of ethics, privacy, data protection and confidentiality, and how these are incorporated into professional codes of practice such as the BCS Code of Conduct.
+                  </p>
+                  <br />
+                  <h3> 2. Software Development I </h3>
+                  <p>An introduction to computer programming in a high-level programming language. The module concentrates on teaching the fundamentals of programming and algorithm design. Basic coding structures such as sequence, selection, and iteration will be covered. There will be an emphasis on practical exercises to develop programming experience and confidence.
+                  </p>
+                  <br />
+                  <h3> 3. Software Development II </h3>
+                  <p>The module aims to develop skills in the selection and implementation of problem-solving algorithms while learning the Java programming language. It will strengthen abilities in the implementation of algorithms, in terms of adherence to requirements, design and modelling, through to the application of sound programming principles. The understanding of structures and advanced programming methods will also be developed, including sorting, the implementation of classes and methods, as well as more sophisticated data structures such as lists, queues, and stacks.</p>
+                  <br />
+                  <h3>4. Mathematics for Computing </h3>
+                  <p> This module introduces the underpinning mathematical processes and concepts used in your course. The syllabus comprises topics such as data structures, data analysis and their mathematical representation, logical foundations of a computer program, algorithmic and probabilistic reasoning, and elements of linear algebra. The approach taken is hands on. Learning the mathematical foundations of computing you apply this knowledge to a variety of problems that relate to your course and subsequent modules you will be taking. </p>
+                  <br />
+                  <h3>5. Computer Systems Fundamentals </h3>
+                  <p> This module is centered on the fundamental aspects of the way that a typical computer functions either as a standalone entity or as part of a computer network. Discussion of the main hardware components of a computer system provides the backdrop to introduce the Von Neumann fetch–decode–execute cycle as well as the way in which data and information are stored in the computer. Students will learn about the various number systems (denary, binary, and hexadecimal) that are utilized in computer systems. Progressing from the hardware level, students are introduced to the lowest programming level that humans can understand in the form of assembly programming. Above the assembly layer, there is the operating system layer. Students will be able to apply their knowledge of Binary number conversions and Logical Operations to perform Networking Calculations.  </p>
+                  <br />
+                  <h3>6. Web Design and Development </h3>
+                  <p> This module introduces web technologies and covers theoretical and practical concepts of web development. It covers a variety of commonly used Internet programming languages. Students will gain practical experience of Web page development and will be expected to write programs and Web pages conforming to given guidelines.  </p>
+
+                </div>
               </TabPanel>
 
               <TabPanel>
@@ -306,7 +339,7 @@ function ProgramDetails() {
          
 
       </div>
-      <a href="#" class="top">&#128743;</a>
+      // <a href="#" class="top">&#128743;</a>
 
 
     </div>
