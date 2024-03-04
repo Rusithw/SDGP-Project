@@ -2,7 +2,7 @@ const mysql = require('mysql');
 
 // Connected  Back End with MySQL Data Base (Data Base connection created)
 const connection = mysql.createConnection({
-  host: 'http://128.199.242.254/',
+  host: '128.199.242.254',
   user: 'sdgp',
   password: 'VUp[4u0N!fvC.LJV',
   database: 'sdgp'
