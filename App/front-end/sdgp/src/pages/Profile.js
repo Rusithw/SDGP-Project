@@ -281,10 +281,9 @@ function Profile() {
     for(var i=0; user_selected_modules.length>i ;i++){
       if(user_selected_modules[i].university_program_modules_id===id){
         return true;
-      }else{
-        return false;
       }
     }
+    return false;
    }
 
 
