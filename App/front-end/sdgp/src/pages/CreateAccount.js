@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function CreateAccount() {
@@ -14,6 +14,14 @@ function CreateAccount() {
       user_address: "",
       city_id: "",
   });
+
+   // After calling the getCities method the city names are loaded when user enters the create account page.
+  useEffect(()=> {
+    getCities();
+
+  }, [])
+
+  const [load_cities, setCities] = useState([]);
 
   const handleChange = (event) =>{
     const {name, value} = event.target;
@@ -49,6 +57,25 @@ function CreateAccount() {
     }
 
   };
+
+    // The cities are loaded from the database.
+  const getCities = async()=>{
+    try {
+      const response = await fetch("http://localhost:3001/api/getCities", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!response.ok) {
+        throw new Error("API Error");
+      }
+      const api_data = await response.json();
+      setCities(api_data)
+   
+    } catch (error) {
+      
+    }
+  }
+
 
   return (
     <div className="main">
@@ -89,12 +116,14 @@ function CreateAccount() {
             <label for="Password ">Address: </label><br />
             <input placeholder="Address" type="text" name="user_address" value={data_set.user_address} onChange={handleChange}/> <br />
             <br/>
-            <label for="Password ">City: </label><br />
-           
-            <select name="city_id" onChange={handleChange}>
-              <option value="0" disabled="">Select City</option>
-              <option value="1">Negombo</option>
-            </select>
+
+            <label for="city">City: </label><br />
+          <select name="city_id" value={data_set.city_id} onChange={handleChange} >
+          <option value="" >Select City</option>
+          {load_cities.map((item) => (
+            <option key={item.city_id} value={item.city_id}> {item.city_name} </option>
+        ))}
+          </select>
           
             <br />
             <br />
