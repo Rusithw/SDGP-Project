@@ -558,9 +558,10 @@ ol li h3{
   
 }
 
-.my-account-image-content{
-  margin-top: 200px;
-  margin-left: 2px;
-  margin-right: 20px;
-  
+
+
+.my-account-image-content2{
+  background-color: aliceblue;
+  margin-top: 240px;
+  margin-left: -25px;
 }
