@@ -285,7 +285,6 @@ function Profile() {
     }
     return false;
    }
-// this is a comment 
 
   return (
     <div className="main">
