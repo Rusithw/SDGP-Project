@@ -182,9 +182,8 @@ function MyAccount() {
 
        </form>
         <div className="width-50 my-account-image">
-          
           <div className="my-account-image-content2">
-             <img src="Images/imageCareer.jpg" alt="#" />
+             <img src="Images/my-acc-ori.jpeg" alt="#" />
           </div>
         </div>
       </div>
