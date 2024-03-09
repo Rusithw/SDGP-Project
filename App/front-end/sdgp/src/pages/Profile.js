@@ -295,6 +295,7 @@ function Profile() {
             <div className="profile-img-content">
               <img src="/Images/home1.jpeg" alt="#" />
             </div>
+            <a href="#" class="top">&#128743;</a>
           </div>
           <div className="width-50">
             <form onSubmit={handleSubmit}>
