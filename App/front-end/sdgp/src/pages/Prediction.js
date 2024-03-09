@@ -205,7 +205,8 @@ const [year_modules, setYearModules] = useState([]);
        <div className="width-100">
         <div className="width-50 prediction-image">
             <div className="prediction-img-content">
-            </div>
+        </div>
+        <a href="#" class="top">&#128743;</a>
         </div>
         <div className="width-50">
             <form onSubmit={handleSubmit}>
@@ -317,7 +318,6 @@ const [year_modules, setYearModules] = useState([]);
               </div>
             </form>
         </div>
-        <a href="#" class="topz">&#128743;</a>
        </div>
       </div>
     </div>

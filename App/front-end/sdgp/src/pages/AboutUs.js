@@ -72,6 +72,7 @@ function AboutUs() {
         </div>
 
       </div>
+      <a href="#" class="top">&#128743;</a>
 
         <br /><br />
         <br /><br />
