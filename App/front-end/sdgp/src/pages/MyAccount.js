@@ -184,6 +184,8 @@ function MyAccount() {
         <div className="width-50 my-account-image">
           <div className="my-account-image-content2">
              <img src="Images/my-acc-ori.jpeg" alt="#" />
+             <h2>----- Customize your account -----</h2>
+             <img src="Images/my-acc-2.jpeg" alt="#" />
           </div>
         </div>
       </div>

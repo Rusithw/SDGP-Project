@@ -564,3 +564,18 @@ ol li h3{
   margin-top: 13%;
   margin-left: -25px;
 }
+.my-account-image-content2 img{
+  width: 80%;
+  margin-left: 10%;
+}
+.my-account-image-content2 h2{
+  text-align: center;
+  background-color: #002459cc;
+  margin: 0px;
+  margin-top: -5px;
+  color: white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
