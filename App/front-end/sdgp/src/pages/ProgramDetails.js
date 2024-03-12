@@ -46,7 +46,7 @@ function ProgramDetails() {
         <NavBar value={"program-details"} />
         <br /><br />
         <div className="form-program-selector">
-          <h2>Please select your degree program </h2>
+          <h2 className='head2'>Please select your degree program... </h2>
           <label htmlFor="degree-selector">Select your degree program: </label>
           <br /><br />
           <select name="degree" onChange={handleDropdownChange}>
@@ -89,17 +89,17 @@ function ProgramDetails() {
         <br />
 
         <div className="detail-form modules-1">
-          <label for="degree-selector"> <h2>1 st year modules</h2> </label><br />
+          <label for="degree-selector"> <h2>1 st year modules</h2> </label><hr /><br />
           <h3> 1. Trends in computer science</h3>
           <p>This module focuses on trends in Computer Science which currently attract considerable industry and academic interest. It allows the students to acquire research skills which will prepare them for the group and final year project and will support their employability prospects. At the same time, it introduces key aspects of working as a professional in the world of computing, including consideration of ethics, privacy, data protection and confidentiality, and how these are incorporated into professional codes of practice such as the BCS Code of Conduct.
           </p>
           <br />
           <h3> 2. Software Development I </h3>
-          <p>An introduction to computer programming in a high-level programming language. The module concentrates on teaching the fundamentals of programming and algorithm design. Basic coding structures such as sequence, selection, and iteration will be covered. There will be an emphasis on practical exercises to develop programming experience and confidence.
+          <p>An introduction to computer programming in a high-level programming language: <strong>Python</strong>. The module concentrates on teaching the fundamentals of programming and algorithm design. Basic coding structures such as sequence, selection, and iteration will be covered. There will be an emphasis on practical exercises to develop programming experience and confidence.
           </p>
           <br />
           <h3> 3. Software Development II </h3>
-          <p>The module aims to develop skills in the selection and implementation of problem-solving algorithms while learning the Java programming language. It will strengthen abilities in the implementation of algorithms, in terms of adherence to requirements, design and modelling, through to the application of sound programming principles. The understanding of structures and advanced programming methods will also be developed, including sorting, the implementation of classes and methods, as well as more sophisticated data structures such as lists, queues, and stacks.</p>
+          <p>The module aims to develop skills in the selection and implementation of problem-solving algorithms while learning the <strong>Java</strong> programming language. It will strengthen abilities in the implementation of algorithms, in terms of adherence to requirements, design and modelling, through to the application of sound programming principles. The understanding of structures and advanced programming methods will also be developed, including sorting, the implementation of classes and methods, as well as more sophisticated data structures such as lists, queues, and stacks.</p>
           <br />
           <h3>4. Mathematics for Computing </h3>
           <p> This module introduces the underpinning mathematical processes and concepts used in your course. The syllabus comprises topics such as data structures, data analysis and their mathematical representation, logical foundations of a computer program, algorithmic and probabilistic reasoning, and elements of linear algebra. The approach taken is hands on. Learning the mathematical foundations of computing you apply this knowledge to a variety of problems that relate to your course and subsequent modules you will be taking. </p>
@@ -113,9 +113,8 @@ function ProgramDetails() {
         </div>
 
         <div className="detail-form modules-2">
-          <label for="degree-selector"> <h2>2 nd year modules</h2> </label><br />
+          <label for="degree-selector"> <h2>2 nd year modules</h2> </label><hr /><br />
           <h2> Core Modules </h2>
-          <br />
           <h3> 1. Object Oriented Programming</h3>
           <p>This module will teach the fundamental ideas behind the object-oriented approach to programming. It will provide students with knowledge and practical experience in writing computer programs using object-oriented programming techniques. It will cover in a practical way the design and implementation of object-oriented software for software applications through the entire software development lifecycle.
           </p>
@@ -131,8 +130,6 @@ function ProgramDetails() {
           <p>This module provides solid knowledge and skills in database systems, SQL and XML. It covers the logical design of a relational schema. It also covers the implementation of the database in a major DBMS and the manipulation of the data using SQL. Subsequently, it considers the transformation and rendering of XML documents using XSLT and the extraction of elements from XML documents using XPath and XQuery. Finally, it explores issues related to NoSQL databases and XML databases. </p>
           <br />
           <h2> Optional Modules </h2>
-          <br />
-
           <h3>5. Advanced Client-Side Development </h3>
           <p> This module provides practical knowledge and understanding of client-side or/else front end development programming using advanced HTML5, CSS3 and JavaScript. Client-side technologies, including HTML5 Audio and Video are covered together with a client-side scripting language, a UI and CSS framework and a client-side scripting framework. The module also covers issues pertaining to front-end security.  </p>
           <br />
@@ -181,7 +178,7 @@ function ProgramDetails() {
 
 
          <div className="detail-form modules-3">
-          <label for="degree-selector"> <h2>3 rd year modules</h2> </label><br />
+          <label for="degree-selector"> <h2>3 rd year modules</h2> </label><hr /><br />
           <h3> 1. Computer Networks</h3>
           <p>This module provides students with a foundational understanding of the fundamental concepts and technologies that form the backbone of our interconnected world. Its components encompass key areas such as Network Architectures, Networking Protocols, Networking Devices, and Network Applications. Delving into these sub-parts enhances our comprehension of the intricate workings of the internet and the diverse ways in which various technologies can seamlessly collaborate. The practical applications of Computer Networks extend across a spectrum of fields, including software development, cybersecurity, game development, and beyond.
           </p>
@@ -203,9 +200,8 @@ function ProgramDetails() {
 
 
          <div className='detail-form modules-4'>
-          <label for="degree-selector"> <h2>4 th year modules </h2> </label>
+          <label for="degree-selector"> <h2>4 th year modules </h2> </label><hr /><br />
           <h2> Core Modules </h2>
-          <br />
           <h3>1. Final Year Project </h3>
           <p> The module allows students to demonstrate in applied, written
               and oral forms the effective use of competences required to
@@ -225,7 +221,6 @@ function ProgramDetails() {
            <p> This module examines various aspects of computer and network security giving a sound introduction to theoretical and practical areas such as network security, cryptography, attack vectors used by hackers, security architecture, methodologies for security hardening and defense and penetration testing strategies. A substantial amount of work will be laboratory based, involving the deployment of security tools, the hardening of operating systems and the analysis of compromised systems. </p>
            <br />
            <h2> Optional Modules </h2>
-          <br />
            <h3>4. Mobile Native Application Development</h3>   
            <p> This module shall give the student the necessary knowledge and practical experience to develop native applications for mobile platforms and in particular iOS. Swift and Objective C programming languages and relevant OOD principles are taught. Core and other frameworks are covered and utilized. Development patterns are taught in the context of the iOS mobile operating system using the XCode development environment. </p>
            <br />
@@ -260,9 +255,11 @@ function ProgramDetails() {
            <p> This module builds on the previous knowledge and skills taught in the Level 5 module Robotic Principles. The main areas of teaching involve robotics dynamics and design of robotic control systems. The students are prepared to undertake complex tasks in analyzing and synthesizing robotic systems. The ethical and societal issues related to robotics signaled in the level 5 module are now covered in more deep and extensive manner. </p>
            <br />
          </div>
+         <br /><br />
 
+         <a href="#" class="top">&#128743;</a>
       </div>
-
+      
     </div>
   )
 }

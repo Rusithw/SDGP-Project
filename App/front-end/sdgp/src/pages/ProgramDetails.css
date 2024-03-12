@@ -15,41 +15,56 @@
     text-align: center;
 }
 .detail-form.modules-1  {
-  background-color :steelblue; 
-  color: #e0edff;
-  padding: 35px;
-  /* display:inline-block; */
-  
+    background-color :steelblue; 
+    color: #e0edff;
+    padding: 2%;
+    margin-top: 3%;
+    border-top-right-radius: 3%;
+    border-bottom-left-radius: 3%;
+    box-shadow: 4px 4px 4px 4px rgb(92, 92, 92);
+    }
+.detail-form.modules-2  {
+    background-color :rgb(22, 81, 130, 0.747); 
+    color: #e0edff;
+    padding: 2%;
+    margin-top: 3%;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 4px 4px 4px 4px rgb(92, 92, 92);
 }
-.heading{
-    text-align: center;
-    font-size: larger;
+  .detail-form.modules-3  {
+    background-color :rgba(20, 51, 76, 0.747); 
+    color: #e0edff;
+    padding: 2%;
+    margin-top: 3%;
+    border-top-right-radius: 3%;
+    border-bottom-left-radius: 3%;
+    box-shadow: 4px 4px 4px 4px rgb(79, 79, 79);
 }
-.tabs-container {
-    border: 1px solid #060606;
-    display:flex;
+.detail-form.modules-4  {
+    background-color :rgb(6, 31, 51, 0.747); 
+    color: #e0edff;
+    padding: 2%;
+    margin-top: 3%;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 4px 4px 4px 4px rgb(74, 74, 74);
 }
-
-.tab-list {
-    /* display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border: none; */
-  padding: 15px 20px;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
-  }
-  /* .tab-panel {
-    padding: 20px;
-    border: none;
-    background: #f4f4f4;
-    display: flex;
-  } */
+h2{
+    font-size: 35px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(241, 241, 241);
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+}
+strong{
+    color: rgb(0, 255, 102);
+}
+.head2{
+    color: rgb(7, 7, 79);
+}

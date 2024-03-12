@@ -544,7 +544,6 @@ ol li h3{
   bottom: 20px;      
   margin-right: 10px; 
   place-self: end;
-  margin-top: calc(100vh + var(--offset));
 }
 .top:hover{
   background-color: #095fa5;
