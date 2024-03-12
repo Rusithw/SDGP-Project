@@ -579,3 +579,19 @@ ol li h3{
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.box{
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 4px rgb(92, 92, 92);
+}
+.box p{
+  font-size: 16px;
+  text-align: justify;
+  line-height: 22px;
+}
+.box h3{
+  color: rgb(0, 23, 94);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

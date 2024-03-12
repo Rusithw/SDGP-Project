@@ -1,30 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './commen/NavBar';
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import { useNavigate } from "react-router-dom";
 import './ProgramDetails.css';
 
-
 function ProgramDetails() {
-
   const navigate = useNavigate();
-
   useEffect(() => {
    const user_session_value =  window.sessionStorage.getItem("user_name");
    if(user_session_value === null || user_session_value === ""){
     navigate("/login");
    }
-
   }, []);
-
   useEffect(() => {
     loadDegreePrograms();
    }, []);
-
-
-
   const [load_Degree_Programs, setLoadDegreePrograms] = useState([]);
-
   //  this method is used to load all the degree programs
   const loadDegreePrograms = async () => {
     try {
@@ -49,9 +39,6 @@ function ProgramDetails() {
     setSelectedOption(event.target.value);
   };
 
-
-  
-  
   return (
     <div className="main">
 
@@ -60,7 +47,6 @@ function ProgramDetails() {
         <br /><br />
         <div className="form-program-selector">
           <h2>Please select your degree program </h2>
-
           <label htmlFor="degree-selector">Select your degree program: </label>
           <br /><br />
           <select name="degree" onChange={handleDropdownChange}>
@@ -74,7 +60,7 @@ function ProgramDetails() {
 
           <br /><br />
           <div>
-            {selectedOption === '1' && 
+            {selectedOption === '5' && 
               <div className='box'>
                 <h3>BEng (Hons) Software Engineering </h3>
                 <p>The BEng (Hons) Software Engineering embodies the best ways to design, implement, evaluate and maintain software systems. It makes use of many of the technical aspects of computer science, especially programming and aims to develop the professional attitudes and interpersonal and technical skills you will need in the software engineering industry.</p>
@@ -82,8 +68,7 @@ function ProgramDetails() {
                 <h3>Course Outline</h3>
                 <p> The course covers software development process models, programming languages, technologies and tools including Object-Oriented Programming languages, OO analysis and design techniques, database designing and practice, mobile application development, web application development, security and forensics etc. BEng (Hons) software engineering Students will have the option of transferring to Level 5 of the BSc (Hons) Computer Science degree upon completion of the first year. </p>
               </div>}
-
-            {selectedOption === '2' && 
+            {selectedOption === '6' && 
               <div className='box'>
                 <h3>BSc (Hons) Computer Science </h3>
                 <p>BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing, Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations. It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
@@ -91,8 +76,7 @@ function ProgramDetails() {
                 <h3>Course Outline</h3>
                 <p>The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
               </div>}
-
-            {selectedOption === '3' && 
+            {selectedOption === '7' && 
               <div className='box'>
                 <h3>BSc (Hons) Artificial Intelligence </h3>
                 <p>The BSc (Hons) Artificial Intelligence and Data Science course is awarded by Robert Gordon University (RGU) in the UK in collaboration with the Informatics Institute of Technology (IIT) in Sri Lanka. This course is designed to address the shortage of the rising demand for a workforce with skills in artificial intelligence and data science (AI and DS), as well as to provide the opportunity for students aspiring to a career in AI and DS.</p>
@@ -126,9 +110,7 @@ function ProgramDetails() {
           <h3>6. Web Design and Development </h3>
           <p> This module introduces web technologies and covers theoretical and practical concepts of web development. It covers a variety of commonly used Internet programming languages. Students will gain practical experience of Web page development and will be expected to write programs and Web pages conforming to given guidelines.  </p>
 
-
         </div>
-
 
         <div className="detail-form modules-2">
           <label for="degree-selector"> <h2>2 nd year modules</h2> </label><br />
@@ -198,8 +180,6 @@ function ProgramDetails() {
          </div>
 
 
-
-
          <div className="detail-form modules-3">
           <label for="degree-selector"> <h2>3 rd year modules</h2> </label><br />
           <h3> 1. Computer Networks</h3>
@@ -220,7 +200,6 @@ function ProgramDetails() {
           <p> Within this module, algorithms take center stage as they address problems through systematic, step-by-step instructions. Furthermore, the module equips us with essential tools to execute these algorithms efficiently. Complexity Theory is employed to quantify the time and memory requirements of an algorithm, providing insights into its efficiency in completing tasks. By delving into this module, users gain the foundational knowledge necessary for computation, empowering them to shape digital landscapes.</p>
           <br />
         </div>
-
 
 
          <div className='detail-form modules-4'>
@@ -263,7 +242,7 @@ function ProgramDetails() {
            <p> The module addresses the requirements and opportunities of the burgeoning Search Engine Optimization (SEO), Digital Marketing, Social Media and Web Analytics industry by exposing students to the theory and practice of the field. This module gives theoretical and practical knowledge of how to effectively promote an interactive multimedia product (IMP) in terms of SEO, email marketing, and social media marketing. This module also covers multimedia security and privacy issues through examples from SEO, social media, and web analytics.   </p>
            <br />
            <h3>9. Strategic Management of Information Systems</h3>   
-           <p> The module on Strategic Management of Information Systems focuses on the integration of technology and business strategy within organizations. It explores how information systems can be effectively leveraged to achieve organizational goals, enhance competitive advantage, and support decision-making processes. Students gain insights into aligning IT resources with overall business objectives, assessing the strategic value of different technologies, and understanding the role of information systems in shaping and responding to industry trends. Additionally, the module covers topics such as risk management, innovation, and the impact of emerging technologies, providing students with a comprehensive understanding of the strategic implications of managing information systems in a dynamic business environment. </p>
+           <p> TO DO  </p>
            <br />
            <h3>10. Information Driven Entrepreneurship and Enterprise</h3>   
            <p> This module will present and analyze major developments and issues in entrepreneurship and enterprise, underpinned and supported by information communication technologies, especially by the Internet, enterprise systems and cloud computing. It will also encourage a mind-set in creative thinking in seeking opportunities for new information driven start-ups and provide a critical assessment of their impact. </p>
@@ -282,15 +261,10 @@ function ProgramDetails() {
            <br />
          </div>
 
-      
       </div>
-      <a href="#" class="top">&#128743;</a>
-
 
     </div>
-
   )
 }
-
 
 export default ProgramDetails;
