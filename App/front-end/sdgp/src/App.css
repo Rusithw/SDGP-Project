@@ -18,6 +18,8 @@ body p,body label{
   width: 100%;
   display: inline-block;
   cursor: pointer;
+  position: sticky;
+  top: 0;
 }
 .nav-bar ul{
   list-style: none;
@@ -383,16 +385,9 @@ button[type=reset]:hover{
 }
 
 .logout-button{
-  float: right;
-  padding: 5px 94px 8px 69px;
-  font-size: 16px;
-  background-color: #0066ff;
-  color: #fff;
+  background-color: #adadad00;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  margin:  7px 27px 0px 0px;
-  font-weight: bold;
 }
 
 .nav-bar ul li a.active {
@@ -600,4 +595,17 @@ ol li h3{
 }
 .head2{
   color: rgb(7, 7, 79);
+}
+
+@media screen and (max-width:1300px) {
+  .nav-bar{
+    width: 97%;
+  }
+}
+/* making the site responsive to the iphone users */
+@media screen and (max-width:667px) {
+  .logo{
+    font-size: 12px;
+  }
+  
 }

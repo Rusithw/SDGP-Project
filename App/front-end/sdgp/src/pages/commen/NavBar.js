@@ -67,7 +67,7 @@ function NavBar(props) {
     <div className="nav-bar">
       <div className="logout-button-content">
         {/* logout button creates and logout function call */}
-        <button className="logout-button" onClick={logOut}> Log Out </button>
+        <button className="logout-button" onClick={logOut}> <img src="/Images/logout2.png" alt="" /> </button>
       </div>
       <ul>
         <li>
