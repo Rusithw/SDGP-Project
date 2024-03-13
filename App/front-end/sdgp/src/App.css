@@ -18,8 +18,8 @@ body p,body label{
   width: 100%;
   display: inline-block;
   cursor: pointer;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
 }
 .nav-bar ul{
   list-style: none;
@@ -597,15 +597,26 @@ ol li h3{
   color: rgb(7, 7, 79);
 }
 
-@media screen and (max-width:1300px) {
-  .nav-bar{
-    width: 97%;
+@media only screen and (max-width: 600px) {
+  .content {
+    padding: 20px;
   }
-}
-/* making the site responsive to the iphone users */
-@media screen and (max-width:667px) {
-  .logo{
-    font-size: 12px;
+  .content h1{
+    top: 35%;
+    font-size: 40px;
   }
-  
+  .content h1 span{
+    font-size: 40px;
+  }
+  .container .box {
+    width: 100%;
+    margin-bottom: 20px;
+    display:contents;
+    background-color: #ffffff;
+  }
+  .para-content{
+    top: 85%;
+    font-size: 20px;
+    margin: 10%;
+  }
 }
