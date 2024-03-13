@@ -136,7 +136,7 @@ function MyAccount() {
        <div className="width-50">
           <div className="login-content">
             <div className='logo-content'>
-            <h1> <strong> My Account </strong> </h1>
+            <h1> My Account  </h1>
             </div> <br/><br/>
             
             <label for="first name ">First name: </label><br />

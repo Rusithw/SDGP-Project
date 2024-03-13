@@ -301,7 +301,7 @@ function Profile() {
             <form onSubmit={handleSubmit}>
               <div className="detail-form">
                 <div className="nav-padding">
-                  <h2>  {userDetailsByUserName_data}  Please fill your details here </h2>
+                  <h2 className='head2'>  {userDetailsByUserName_data}  Please fill your details here </h2>
                   <label for="User name ">
                     Enter your university enrol year:{" "}
                   </label>

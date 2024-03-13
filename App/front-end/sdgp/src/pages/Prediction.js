@@ -212,7 +212,7 @@ const [year_modules, setYearModules] = useState([]);
             <form onSubmit={handleSubmit}>
             <div className="detail-form">
                 <div className="nav-padding">
-                  <h2> {userDetailsByUserName_data},  Please fill your details here...</h2>
+                  <h2 className='head2'> {userDetailsByUserName_data},  Please fill your details here...</h2>
                   
                   <label for="degree-selector">Select you degree program: </label><br /><br />
                   <select name="degree-program" onChange={programSelect}>

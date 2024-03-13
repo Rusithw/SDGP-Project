@@ -21,7 +21,7 @@ function AboutUs() {
       <div className="text">
         <br /><br />
         
-        <h1><strong> Our Team </strong></h1>
+        <h1> Our Team </h1>
       </div>
       <br /><br />
         <div class="container1">
