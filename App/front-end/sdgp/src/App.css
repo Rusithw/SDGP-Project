@@ -619,4 +619,31 @@ ol li h3{
     font-size: 20px;
     margin: 10%;
   }
+  .width-50 .prediction-img-content{
+    height: 25rem;
+    margin: auto;
+    margin-top: 5%;
+  }
+  .button-editor{
+    display: flex;
+    margin-bottom: 5%;
+  }
+  .width-50 .profile-img-content img{
+    margin: auto;
+    border-radius: 12%;
+    float: left;
+  }
+  .detail-form input{
+    width: 90%;
+    font-size: 14px;
+  }
+  .width-50 .my-account-image-content2{
+    margin: auto;
+  }
+  .container1{
+    display:block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10%;
+  }
 }

@@ -293,7 +293,7 @@ function Profile() {
         <div className="width-100">
           <div className="width-50 profile-image">
             <div className="profile-img-content">
-              <img src="/Images/home1.jpeg" alt="#" />
+              <img src="/Images/prediction1.jpg" alt="#" />
             </div>
             <a href="#" class="top">&#128743;</a>
           </div>
@@ -356,13 +356,8 @@ function Profile() {
                     )
                   )}
                 </div>
+                <br />
 
-
-                  <br />
-                
-
-                  <br />
-                  <br />
                     <div className="year-module">
                     <label for="second-year-modules ">
                     Select your second year modules:{" "}
@@ -382,12 +377,6 @@ function Profile() {
                     )
                   )}
                     </div>
-                  <br />
-                  <br />
-                  
-                                      
-
-                  <br />
                   <br />
                     <div className="year-module">
                     <label for="third-year-modules ">
@@ -409,10 +398,7 @@ function Profile() {
                   )}
                     </div>
                   <br />
-                 
 
-                  <br />
-                  <br />
                     <div className="year-module">
                     <label for="fourth-year-modules ">
                     Select your fourth year modules:{" "}

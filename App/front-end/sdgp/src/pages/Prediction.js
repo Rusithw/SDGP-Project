@@ -259,9 +259,8 @@ const [year_modules, setYearModules] = useState([]);
                       :""
                     )
                   )}
-                    <br/> <br/>
+                    <br/>
                   </div>
-                  <br />
 
                  
                   
@@ -281,9 +280,8 @@ const [year_modules, setYearModules] = useState([]);
                       :""
                     )
                   )}
-                    <br/> <br/>
+                    <br/> 
                   </div>
-                  <br />
 
                   
                   
