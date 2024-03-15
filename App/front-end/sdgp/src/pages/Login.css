@@ -37,10 +37,25 @@ form p{
     background-color: rgba(24, 36, 69, 0.199);
 } */
 
-@media screen and (max-width = 1024px){
+/* @media screen and (max-width = 1024px){
     .jumbotron{
         float: left;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 20%;
     }
-}
+} */
+@media only screen and (max-width: 600px) {
+    .jumbotron img{
+        width: 100%;
+    }
+    .width-50 {
+        width: 100%;
+        margin-left: 0;
+    }
+    .login-content{
+        border-left: solid rgba(0, 18, 57, 0) 3px;
+    }
+    .jumbotron h1{
+        font-size: 40px;
+    }
+  }
