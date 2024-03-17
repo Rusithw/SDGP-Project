@@ -153,6 +153,7 @@ exports.updateUser = (req, res) =>{
     }
     res.json({message: 'Data updated successfully'})
   }
+  // comment
 
   )
 };
