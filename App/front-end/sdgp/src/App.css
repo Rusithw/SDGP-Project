@@ -608,6 +608,7 @@ ol li h3{
 }
 .head2{
   color: rgb(7, 7, 79);
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

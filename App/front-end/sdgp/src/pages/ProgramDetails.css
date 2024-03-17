@@ -77,6 +77,7 @@ strong{
     border: 1px solid #060606;
     display:flex;
     background-color: #082D64;
+    border-radius: 30px;
 }
 
 .tab-list {
@@ -97,6 +98,7 @@ strong{
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   margin-left: 90px;
+  
   }
   .tab-list:hover{
     color: white;
