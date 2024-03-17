@@ -79,7 +79,7 @@ function ProgramDetails() {
                 <h3>Course Outline</h3>
                 <p> The BSc (Hons) Artificial Intelligence and Data Science course is awarded by Robert Gordon University (RGU) in the UK in collaboration with the Informatics Institute of Technology (IIT) in Sri Lanka. This course is designed to address the shortage of the rising demand for a workforce with skills in artificial intelligence and data science (AI and DS), as well as to provide the opportunity for students aspiring to a career in AI and DS. Students will be able to gain a practical understanding of contemporary AI and DS trends and technologies in developing cutting-edge solutions. Specifically, the course adopts a general to specific organization of modules; whereby initially a range of modules organized under key streams, Systems, Mathematics, Programming and AI and DS, is gradually specialized into AI and DS modules, as students progress through Stages 1 to 4. This will include modules such as Programming, Database, Web, IoT, Algorithms, Deep Learning, Machine Learning, Machine Vision, Mathematics and Statistics; where students are exposed to both theoretical principles and state-of-the-art technological advances. This will enable students to unlock the power of automation, analytics and AI, paving the way for innovation while following the course and after graduation.</p>
               </div>}
-              {selectedOption === '8' &&
+              {/* {selectedOption === '8' &&
               <div className='box'>
                 <h3>Medicine</h3>
                 <p>The Medicine program is designed to equip students with the knowledge, skills, and professional attitudes necessary to excel in the field of medicine. By focusing on medical sciences, clinical practice, and patient care, Medicine prepares students to become competent and empathetic medical professionals.</p>
@@ -111,7 +111,7 @@ ENGINEERING </h3>
                 <hr />
                 <h3>Course Outline</h3>
                 <p>  Students delve into foundational subjects such as mathematics, physics, and materials science, providing a solid understanding of engineering fundamentals. As they progress through the program, they explore specialized areas including mechanical, electrical, civil, and chemical engineering, allowing them to develop expertise in their chosen field. The curriculum encompasses a wide range of topics, including but not limited to: mechanical engineering, electrical engineering, civil engineering, and chemical engineering. Students also have the opportunity to engage in interdisciplinary projects and gain hands-on experience through laboratory work, design projects, and industrial placements. The program emphasizes practical problem-solving skills, teamwork, and innovation, preparing graduates for diverse career opportunities in the engineering industry or further academic pursuits. </p>
-              </div>}
+              </div>} */}
           </div>
         </div>
         <br />
