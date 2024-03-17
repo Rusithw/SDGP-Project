@@ -150,7 +150,7 @@ ENGINEERING </h3>
           <h3>10. Mechanical Engineering </h3>
           <p> The Mechanical Engineering module in an Engineering course typically covers fundamental principles and advanced concepts in the field of mechanical engineering. It introduces students to topics such as mechanics, thermodynamics, fluid dynamics, materials science, and manufacturing processes. Students learn how to apply engineering principles to design, analyze, and optimize mechanical systems and components, including machinery, engines, vehicles, and structures. The module often includes theoretical knowledge alongside practical applications through laboratory experiments, projects, and case studies.  </p>
           <br />
-          
+
         </div>
 
         <div className="detail-form modules-2">
@@ -248,6 +248,23 @@ ENGINEERING </h3>
           <br />
           <h3>5. Algorithms and Complexity</h3>
           <p> Within this module, algorithms take center stage as they address problems through systematic, step-by-step instructions. Furthermore, the module equips us with essential tools to execute these algorithms efficiently. Complexity Theory is employed to quantify the time and memory requirements of an algorithm, providing insights into its efficiency in completing tasks. By delving into this module, users gain the foundational knowledge necessary for computation, empowering them to shape digital landscapes.</p>
+          <br />
+          <h3>6. Pharmacology</h3>
+          <p> The Pharmacology module in a Medicine course provides students with a comprehensive understanding of drugs and their effects on the human body. It encompasses the study of pharmacokinetics, pharmacodynamics, mechanisms of action, therapeutic uses, adverse effects, and drug interactions. Students learn about different classes of drugs, their indications, contraindications, and side effects, as well as the principles of drug development and regulation. Pharmacology is essential for future healthcare professionals to make informed decisions regarding drug therapy, ensuring safe and effective patient care.</p>
+          <br />
+          <h3>7. Finance</h3>
+          <p> The Finance module in a Business Administration course provides students with a foundational understanding of financial principles and practices essential for effective decision-making within organizations. Topics typically covered include financial statements analysis, budgeting, capital budgeting, risk management, valuation techniques, and financial markets. Through this module, students learn to interpret financial data, assess investment opportunities, manage financial resources efficiently, and understand the implications of financial decisions on the overall health and performance of a business.</p>
+          <br />
+          <h3>8. Management</h3>
+          <p> The Management module in a Business Administration course provides students with foundational knowledge and skills essential for effectively overseeing organizations and teams. It covers key topics such as planning, organizing, leading, and controlling resources to achieve organizational goals efficiently. Students learn about various management theories, decision-making processes, leadership styles, communication techniques, and strategies for problem-solving and conflict resolution.</p>
+          <br />
+          <h3>9. Cognitive Psychology</h3>
+          <p> Cognitive Psychology is a foundational module within the broader field of psychology that explores how humans perceive, think, remember, and solve problems. It investigates mental processes such as attention, language, memory, and decision-making, aiming to understand how these processes influence behavior and cognition. This module typically covers topics such as cognitive development, learning theories, cognitive biases, problem-solving strategies, and the neural basis of cognition. Students engage in theoretical discussions, empirical research, and practical applications to gain insight into the intricacies of the human mind and its cognitive functions.</p>
+          <br />
+          <br />
+          <h3>10. Electrical Engineering</h3>
+          <p> The Electrical Engineering module within the Engineering course provides students with fundamental knowledge and skills in the principles, concepts, and applications of electrical systems and devices. This module typically covers topics such as circuit analysis, electromagnetism, electronics, power systems, control systems, and signal processing. Through theoretical study and practical experimentation, students learn how to design, analyze, and troubleshoot electrical circuits and systems, preparing them for careers in various fields including power generation, telecommunications, electronics, and automation. The module often integrates hands-on laboratory work and projects to reinforce theoretical concepts and enhance practical skills, fostering a comprehensive understanding of electrical engineering principles and their real-world applications.
+</p>
           <br />
         </div>
 
