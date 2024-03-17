@@ -137,15 +137,20 @@ ENGINEERING </h3>
           <br />
           <h3>6. Web Design and Development </h3>
           <p> This module introduces web technologies and covers theoretical and practical concepts of web development. It covers a variety of commonly used Internet programming languages. Students will gain practical experience of Web page development and will be expected to write programs and Web pages conforming to given guidelines.  </p>
+          <br />
           <h3>7. Anatomy </h3>
           <p> The module "Anatomy" in the field of Medicine focuses on the study of the structure and organization of the human body. It delves into the intricate details of organs, tissues, bones, muscles, and other anatomical components, emphasizing their functions and relationships within the body. Students learn through a combination of lectures, dissections, practical sessions, and anatomical models, preparing them for clinical practice and further specialization within various medical disciplines.  </p>
+          <br />
           <h3>8. Accounting </h3>
           <p> The Accounting module in the Business Administration course provides students with fundamental knowledge and skills in financial record-keeping, analysis, and reporting essential for effective business management. It covers topics such as principles of accounting, financial statement preparation, budgeting, taxation, and auditing. Through this module, students learn to interpret financial data, make informed business decisions, and communicate financial information effectively within an organizational context.  </p>
+          <br />
           <h3>9. Developmental Psychology </h3>
           <p> The Developmental Psychology module in a Psychology course explores the psychological growth and changes that occur across the lifespan, from infancy to old age. Topics may include prenatal development, infancy, childhood, adolescence, adulthood, and aging. Students typically examine key milestones, developmental tasks, and the influence of genetics, environment, culture, and individual differences on development. This module aims to provide insights into understanding human development and its implications for behavior, cognition, and well-being across the lifespan.  </p>
+          <br />
           <h3>10. Mechanical Engineering </h3>
           <p> The Mechanical Engineering module in an Engineering course typically covers fundamental principles and advanced concepts in the field of mechanical engineering. It introduces students to topics such as mechanics, thermodynamics, fluid dynamics, materials science, and manufacturing processes. Students learn how to apply engineering principles to design, analyze, and optimize mechanical systems and components, including machinery, engines, vehicles, and structures. The module often includes theoretical knowledge alongside practical applications through laboratory experiments, projects, and case studies.  </p>
-
+          <br />
+          
         </div>
 
         <div className="detail-form modules-2">
@@ -209,6 +214,18 @@ ENGINEERING </h3>
           <br />
           <h3>19. Sensors & Interfaces </h3>
           <p> The module provides an understanding of integrated smart sensing devices and emphasis on the integration of microcontroller-based systems with sensors. The students will learn about standard sensors and transducers and will be introduced to SMART sensing system concepts that have been developed for IoT applications and are built as IoT components that convert the real-world variable into a digital data stream for transmission. Apart from familiarizing with smart communication protocols, the module enables the students to understand problems related to smart sensing systems and devices as well as experiment on standard interfacing circuits including microcontroller and serial bus interfacing. </p>
+          <br />
+          <h3>20. Biochemistry </h3>
+          <p> The Biochemistry module in a Medicine course provides fundamental knowledge of the chemical processes that occur within living organisms. It explores the molecular basis of life, focusing on the structure, function, and interactions of biomolecules such as proteins, carbohydrates, lipids, and nucleic acids. Students learn about metabolic pathways, enzyme kinetics, cellular signaling, and the role of biochemistry in disease mechanisms and treatment. This module equips future physicians with essential understanding of biochemical principles underlying normal physiology and pathological conditions, enabling them to diagnose and treat diseases effectively. </p>
+          <br />
+          <h3>21. Marketing </h3>
+          <p> The Marketing module in a Business Administration course provides students with fundamental knowledge and skills in understanding and implementing marketing strategies within organizations. It covers key concepts such as market analysis, consumer behavior, product positioning, branding, pricing strategies, promotion techniques, and distribution channels. Students learn how to develop comprehensive marketing plans that align with organizational objectives, target specific customer segments, and effectively compete in diverse market environments. Through case studies, projects, and practical exercises, students gain hands-on experience in applying marketing theories to real-world scenarios, preparing them for roles in various industries where marketing expertise is essential for business success. </p>
+          <br />
+          <h3>22. Clinical Psychology </h3>
+          <p> The Clinical Psychology module within a Psychology course delves into the application of psychological principles and theories in diagnosing, treating, and understanding mental health disorders and issues. It covers topics such as assessment techniques, therapeutic interventions, and the ethical considerations involved in clinical practice. Students explore various approaches to therapy, ranging from psychodynamic and cognitive-behavioral to humanistic and existential perspectives. They learn about the role of the clinical psychologist in different settings, such as hospitals, private practices, and community mental health centers. </p>
+          <br />
+          <h3>23. Civil Engineering </h3>
+          <p> The Civil Engineering module in an Engineering course typically covers foundational principles and practical applications in the field of civil engineering. This module delves into topics such as structural analysis and design, transportation engineering, geotechnical engineering, environmental engineering, water resources engineering, and construction management. Students learn about the design and construction of infrastructure such as roads, bridges, buildings, and water supply systems, as well as the management of construction projects. The module often includes hands-on projects, simulations, and site visits to provide students with real-world experience and skills applicable to a career in civil engineering. </p>
           <br />
          </div>
 
