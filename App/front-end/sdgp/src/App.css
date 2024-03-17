@@ -352,6 +352,9 @@ button[type=reset]:hover{
   background-color: #0066ff00;
   box-shadow: none;
 }
+.container1  b{
+  color: white;
+}
 .container1 img{
   width: 100%;
   border-radius: 10px;
@@ -390,7 +393,7 @@ button[type=reset]:hover{
   position: absolute;
   right: 0;
   margin-right: 2%;
-  top: 5%;
+  top: 8%;
 }
 
 .logout-button{
