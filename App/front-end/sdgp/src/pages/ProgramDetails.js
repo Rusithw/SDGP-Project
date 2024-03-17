@@ -137,6 +137,14 @@ ENGINEERING </h3>
           <br />
           <h3>6. Web Design and Development </h3>
           <p> This module introduces web technologies and covers theoretical and practical concepts of web development. It covers a variety of commonly used Internet programming languages. Students will gain practical experience of Web page development and will be expected to write programs and Web pages conforming to given guidelines.  </p>
+          <h3>7. Anatomy </h3>
+          <p> The module "Anatomy" in the field of Medicine focuses on the study of the structure and organization of the human body. It delves into the intricate details of organs, tissues, bones, muscles, and other anatomical components, emphasizing their functions and relationships within the body. Students learn through a combination of lectures, dissections, practical sessions, and anatomical models, preparing them for clinical practice and further specialization within various medical disciplines.  </p>
+          <h3>8. Accounting </h3>
+          <p> The Accounting module in the Business Administration course provides students with fundamental knowledge and skills in financial record-keeping, analysis, and reporting essential for effective business management. It covers topics such as principles of accounting, financial statement preparation, budgeting, taxation, and auditing. Through this module, students learn to interpret financial data, make informed business decisions, and communicate financial information effectively within an organizational context.  </p>
+          <h3>9. Developmental Psychology </h3>
+          <p> The Developmental Psychology module in a Psychology course explores the psychological growth and changes that occur across the lifespan, from infancy to old age. Topics may include prenatal development, infancy, childhood, adolescence, adulthood, and aging. Students typically examine key milestones, developmental tasks, and the influence of genetics, environment, culture, and individual differences on development. This module aims to provide insights into understanding human development and its implications for behavior, cognition, and well-being across the lifespan.  </p>
+          <h3>10. Mechanical Engineering </h3>
+          <p> The Mechanical Engineering module in an Engineering course typically covers fundamental principles and advanced concepts in the field of mechanical engineering. It introduces students to topics such as mechanics, thermodynamics, fluid dynamics, materials science, and manufacturing processes. Students learn how to apply engineering principles to design, analyze, and optimize mechanical systems and components, including machinery, engines, vehicles, and structures. The module often includes theoretical knowledge alongside practical applications through laboratory experiments, projects, and case studies.  </p>
 
         </div>
 
