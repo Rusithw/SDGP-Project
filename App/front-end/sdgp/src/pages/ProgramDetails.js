@@ -325,6 +325,32 @@ ENGINEERING </h3>
            <h3>14. Applied Robotics</h3>  
            <p> This module builds on the previous knowledge and skills taught in the Level 5 module Robotic Principles. The main areas of teaching involve robotics dynamics and design of robotic control systems. The students are prepared to undertake complex tasks in analyzing and synthesizing robotic systems. The ethical and societal issues related to robotics signaled in the level 5 module are now covered in more deep and extensive manner. </p>
            <br />
+           <h3>15. Microbiology</h3>  
+           <p> The Microbiology module in the field of Medicine focuses on the study of microorganisms such as bacteria, viruses, fungi, and parasites, and their interactions with human health and disease. It covers topics such as the structure, function, and classification of microorganisms, as well as their role in infectious diseases, immunology, and antimicrobial therapy. This module also explores laboratory techniques used for the identification and characterization of microorganisms, as well as strategies for prevention, control, and treatment of microbial infections.
+ </p>
+           <br />
+           <h3>16. Pathology</h3>  
+           <p> The module on Pathology within the field of Medicine explores the study of diseases, their causes, mechanisms, and effects on the human body. It delves into understanding the cellular and molecular changes that underlie various diseases, ranging from infections to chronic conditions like cancer. Students learn to identify pathological processes through laboratory techniques, imaging studies, and clinical observation. Overall, it provides a foundational understanding of the pathological basis of illnesses, essential for medical professionals to effectively diagnose and manage patients. </p>
+           <br />
+           <h3>17. Human Resources</h3>  
+           <p> The Human Resources module within the Business Administration course focuses on the management of an organization's most valuable asset: its people. This module covers factors including recruitment, selection, training, performance management, compensation, and employee relations. It aims to provide students with an understanding of the strategic importance of human resource management in achieving goals, as well as practical skills for effectively managing personnel within diverse workplace environments. Through this module, students gain insights into the critical role HR plays in driving organizational success and learn techniques for fostering a productive and motivated workforce. </p>
+           <br />
+           <h3>18. Social Psychology</h3>  
+           <p> The module "Social Psychology" within the broader field of psychology explores how individuals think, feel, and behave in social contexts. It examines the influence of social interactions, groups, and cultures on human behavior, attitudes, and perceptions. Topics may include social cognition, conformity, obedience, prejudice, interpersonal attraction, group dynamics, and social influence. Students learn about the practical applications of social psychology in various real-world settings, such as marketing, counseling, and organizational behavior. </p>
+           <br />
+           <h3>19. Applied Robotics</h3>  
+           <p> This module builds on the previous knowledge and skills taught in the Level 5 module Robotic Principles. The main areas of teaching involve robotics dynamics and design of robotic control systems. The students are prepared to undertake complex tasks in analyzing and synthesizing robotic systems. The ethical and societal issues related to robotics signaled in the level 5 module are now covered in more deep and extensive manner. </p>
+           <br />
+           <h3>20. Industrial-Organizational Psychology</h3>  
+           <p> The Industrial-Organizational Psychology module within the field of psychology focuses on the application of psychological principles within workplace settings. It explores topics such as employee motivation, organizational behavior, leadership, job satisfaction, personnel selection, training, and performance appraisal. This module delves into understanding how individuals behave within organizations, how to improve organizational effectiveness, and how to enhance the well-being and productivity of employees.
+ </p>
+           <br />
+           <h3>21. Chemical Engineering</h3>  
+           <p> The Chemical Engineering module within an Engineering course provides students with a fundamental understanding of chemical processes and their application in various industries. Students explore topics such as thermodynamics, fluid mechanics, reaction kinetics, mass transfer, and process design. Through theoretical learning and practical experiments, they gain insights into the principles underlying chemical reactions, separation processes, and the design of chemical reactors and unit operations. This module equips students with the skills needed to analyze and optimize chemical processes, ensuring efficiency, safety, and sustainability in industrial applications. </p>
+           <br />
+           <h3>22. Aerospace Engineering</h3>  
+           <p> The Aerospace Engineering module in the Engineering course focuses on the principles and practices of designing, constructing, and operating aircraft, spacecraft, and related systems. This module delves into aerodynamics, propulsion systems, materials science, structural analysis, and control systems specific to aerospace applications. Students learn about the challenges and innovations in aerospace engineering, including topics such as flight dynamics, space exploration, and the integration of advanced technologies like artificial intelligence and robotics. Through theoretical study, laboratory experiments, and practical projects, students gain a comprehensive understanding of the complexities involved in designing vehicles that traverse Earth's atmosphere and beyond. </p>
+           <br />
          </div>
          <br /><br />
 
