@@ -36,9 +36,9 @@ function ProgramDetails() {
 
   const [selectedOption, setSelectedOption] = useState('');
 
-  const handleDropdownChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+  // const handleDropdownChange = (event) => {
+  //   setSelectedOption(event.target.value);
+  // };
 
   return (
     <div className="main">
@@ -48,14 +48,14 @@ function ProgramDetails() {
         <br /><br />
         <div className="form-program-selector">
           <h2 className='head2'>Please select your degree program... </h2>
-          <label htmlFor="degree-selector">Select your degree program: </label>
+          {/* <label htmlFor="degree-selector">Select your degree program: </label>
           <br /><br />
           <select name="degree" onChange={handleDropdownChange}>
             <option value="">Please select an option</option>
             {load_Degree_Programs.map((item) => (
               <option key={item.university_program_id} value={item.university_program_id}> {item.university_program_name} </option>
             ))}
-          </select>
+          </select> */}
 
           
 

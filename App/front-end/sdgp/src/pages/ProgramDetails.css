@@ -68,3 +68,36 @@ strong{
 .head2{
     color: rgb(7, 7, 79);
 }
+
+.heading{
+    text-align: center;
+    font-size: larger;
+}
+.tabs-container {
+    border: 1px solid #060606;
+    display:flex;
+    background-color: #082D64;
+}
+
+.tab-list {
+    /* display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none; */
+  padding: 15px 20px;
+  background: none;
+  list-style-type: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #9EB7DC;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  margin-left: 90px;
+  }
+  .tab-list:hover{
+    color: white;
+  }
