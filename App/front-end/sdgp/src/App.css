@@ -614,6 +614,16 @@ ol li h3{
   .content {
     padding: 20px;
   }
+  .nav-bar{
+    height: 180px;
+  }
+  .nav-bar a{
+    line-height: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .logout-button-content{
+    top: 40%;
+  }
   .content h1{
     top: 35%;
     font-size: 40px;
