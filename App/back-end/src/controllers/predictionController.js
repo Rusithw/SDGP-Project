@@ -283,3 +283,18 @@ exports.predictFutureCareerPlansSimple = async (req, res) => {
         console.error('Error predicting future career plans:', error);
     }
 }
+
+getProgramName = async (programId) => {
+    try {
+        const sql = `SELECT university_program_name FROM university_programs WHERE university_program_id = ?`;
+        const result = await queryDatabase(sql, [programId]);
+        if (result.length > 0) {
+            return result[0].university_program_name;
+        } else {
+            throw new Error("Program not found");
+        }
+    } catch (error) {
+        console.error('Error fetching program name:', error);
+        throw error;
+    }
+}
