@@ -301,7 +301,6 @@ const [year_modules, setYearModules] = useState([]);
                     )
                     )}
 
-<br /> <br />
                   </div>
                   <div className="year-module-non-colour">
                     <label for="second-year-modules"> <strong> Select your 2nd year modules: </strong>  </label><br /><br />
@@ -362,20 +361,42 @@ const [year_modules, setYearModules] = useState([]);
                   </div>
                   
                   
-                  
-                    <div className="button-editor">
-                        <div className="clear-button">
-                            <button className="button" type="reset">CLEAR</button>
-                          </div>
-                          <div className="Submit-button">
-                            <button className="button" type="SUBMIT">SUBMIT</button>
-                          </div>
+                  <div>
+                    <ul>
+                      {Object.entries(pred).map(([career, percentage]) => (
+                        <li key={career} >
+                          {career}: <span style={{ "color": "red" }}>{percentage}%</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="button-editor">
+                    <div className="Submit-button">
+                      <button className="button" type="SUBMIT">Prediction Based on Form Data</button>
                     </div>
+                  </div>
                 </div>
               </div>
             </form>
+            <div>
+              <div>
+                <ul>
+                  {Object.entries(predProfile).map(([career, percentage]) => (
+                    <li key={career} >
+                      {career}: <span style={{ "color": "red" }}>{percentage}%</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="button-editor">
+                <div className="Submit-button">
+                  <button className="button" type="button" onClick={handleSubmitProfilePred}>Prediction Based on Your Profile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-       </div>
       </div>
     </div>
   )
