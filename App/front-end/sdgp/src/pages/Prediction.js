@@ -287,7 +287,7 @@ function Prediction() {
 
 
                   <div className="year-module-colour">
-                    <label for="first-year-modules">Select your 1st year modules : </label><br />
+                    <label for="first-year-modules"> <strong> Select your 1st year modules :  </strong> </label><br /><br />
                     {year_modules.map((item) => (
                       item.year === "1" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
                         <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
@@ -306,7 +306,7 @@ function Prediction() {
                   </div>
 
                   <div className="year-module-non-colour">
-                    <label for="second-year-modules">Select your 2nd year modules: </label><br />
+                    <label for="second-year-modules"> <strong> Select your 2nd year modules: </strong> </label><br /><br />
                     {year_modules.map((item) => (
                       item.year === "2" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
                         <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
@@ -324,7 +324,7 @@ function Prediction() {
                   </div>
 
                   <div className="year-module-colour">
-                    <label for="third-year-modules">Select your 3rd year modules: </label><br />
+                    <label for="third-year-modules">  <strong> Select your 3rd year modules: </strong> </label><br /><br />
                     {year_modules.map((item) => (
                       item.year === "3" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
                         <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
@@ -344,7 +344,7 @@ function Prediction() {
 
 
                   <div className="year-module-non-colour">
-                    <label for="fourth-year-modules">Select your 4th year modules: </label><br />
+                    <label for="fourth-year-modules"> <strong> Select your 4th year modules: </strong> </label><br /><br />
                     {year_modules.map((item) => (
                       item.year === "4" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
                         <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
