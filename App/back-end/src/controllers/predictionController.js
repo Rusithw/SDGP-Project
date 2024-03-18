@@ -212,3 +212,18 @@ exports.predictCareerPlans = (users) => {
 
     return careerPercentages;
 }
+
+// Main function to predict future career plans
+exports.predictFutureCareerPlans = async (req, res) => {
+    const { id } = req.params;
+    try {
+        // Retrieve enrolled users with their selected programs and modules
+        const users = await exports.getEnrolledUsersWithProgramsAndModules(id);
+        console.log(users)
+        // Predict future career plans based on university programs and modules
+        const careerPlans = exports.predictCareerPlans(users);
+        res.json(careerPlans);
+    } catch (error) {
+        console.error('Error predicting future career plans:', error);
+    }
+}
