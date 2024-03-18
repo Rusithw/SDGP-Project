@@ -298,3 +298,22 @@ getProgramName = async (programId) => {
         throw error;
     }
 }
+
+getModuleName = async (moduleId) => {
+    try {
+        const sql = `SELECT university_module_name 
+        FROM university_program_modules 
+        JOIN university_modules 
+        ON university_program_modules.university_module_id = university_modules.university_module_id 
+        WHERE university_program_modules_id = ?`;
+        const result = await queryDatabase(sql, [moduleId]);
+        if (result.length > 0) {
+            return result[0].university_module_name;
+        } else {
+            throw new Error("Module not found");
+        }
+    } catch (error) {
+        console.error('Error fetching module name:', error);
+        throw error;
+    }
+}
