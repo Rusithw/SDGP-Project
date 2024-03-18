@@ -5,7 +5,7 @@ const router = express.Router();
 const sampleController = require('../controllers/sampleController');
 const userController = require('../controllers/userController');
 const programController = require('../controllers/programController');
-
+const predictionController = require('../controllers/predictionController');
 
 // Define routes
 
@@ -32,5 +32,8 @@ router.post("/getUser" , userController.getUser);
 router.put('/updateUser/:id/', userController.updateUser);
 // API connection is used to get the cities to the My Account page.
 router.post('/getCities', userController.getCities);
+
+router.post('/prediction1/get/:id/',predictionController.predictFutureCareerPlans);
+router.post('/prediction2/get/:id/',predictionController.predictFutureCareerPlansSimple);
 
 module.exports = router;
