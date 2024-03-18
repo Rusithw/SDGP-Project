@@ -189,5 +189,26 @@ exports.predictCareerPlans = (users) => {
             // Add more modules and corresponding careers as needed
         }
         // Add more programs and corresponding modules and careers as needed
+    };
+
+    // Count occurrences of each predicted career
+    const careerCounts = {};
+    users.forEach(user => {
+        const programs = programModuleToCareer[user.university_program_name];
+        if (programs) {
+            const modules = programs[user.university_module_name];
+            if (modules) {
+                careerCounts[modules] = (careerCounts[modules] || 0) + 1;
+            }
+        }
+    });
+
+    // Calculate percentage for each career
+    const totalUsers = users.length;
+    const careerPercentages = {};
+    for (const career in careerCounts) {
+        careerPercentages[career] = (careerCounts[career] / totalUsers) * 100;
     }
+
+    return careerPercentages;
 }
