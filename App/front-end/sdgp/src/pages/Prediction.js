@@ -186,6 +186,32 @@ const [year_modules, setYearModules] = useState([]);
     }
 
   };
+
+  const handleSubmitProfilePred = async (event) => {
+    event.preventDefault();
+    const user_id = window.sessionStorage.getItem("user_id");
+    try {
+      const response = await fetch('http://localhost:3001/api/prediction1/get/' + user_id, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid');
+      }
+
+      const data = await response.json();
+      console.log('pred', data);
+      setPredProfile(data)
+    } catch (error) {
+      console.error('Error modules in:', error);
+
+    }
+
+  };
+
   const programSelect = async (event) => {
     const payLoad = {
      "university_program_id": event.target.value
