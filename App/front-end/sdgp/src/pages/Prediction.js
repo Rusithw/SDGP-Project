@@ -285,10 +285,10 @@ const [year_modules, setYearModules] = useState([]);
                   
                 
 
-                  <div className="year-module">
-                  <label for="first-year-modules">Select your 1st year modules : </label><br/> 
-                  {year_modules.map((item) => (
-                        item.year === "1" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
+                  <div className="year-module-colour">
+                    <label for="first-year-modules"> <strong> Select your 1st year modules : </strong> </label><br /><br /> 
+                    {year_modules.map((item) => (
+                      item.year === "1" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
                         <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
                         <div style={{ "float": "left" }}><input
                           name='year1'
@@ -299,67 +299,66 @@ const [year_modules, setYearModules] = useState([]);
                       </div>
                         : ""
                     )
-                  )}
-                  <br />
-                   
+                    )}
+
+<br /> <br />
                   </div>
-                 
-                  <div className="year-module">
-                    <label for="second-year-modules">Select your 2nd year modules: </label><br/>
+                  <div className="year-module-non-colour">
+                    <label for="second-year-modules"> <strong> Select your 2nd year modules: </strong>  </label><br /><br />
                     {year_modules.map((item) => (
-                        item.year === "2" ?<div key={item.university_program_modules_id}>
-                        <input
+                      item.year === "2" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
+                        <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
+                        <div style={{ "float": "left" }}><input
                           name='year2'
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
-                        />
-                        {item.university_module_name}
+                        /></div>
                       </div>
-                      :""
+                        : ""
                     )
-                  )}
-                    <br/>
+                    )}
+                    <br /> <br />
                   </div>
 
                  
                   
-
-                  <div className="year-module">
-                    <label for="third-year-modules">Select your 3rd year modules: </label><br/>
+                  <div className="year-module-colour">
+                    <label for="third-year-modules"> <strong> Select your 3rd year modules: </strong> </label><br /><br />
                     {year_modules.map((item) => (
-                        item.year === "3" ?<div key={item.university_program_modules_id}>
-                        <input
+                      item.year === "3" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
+                        <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
+                        <div style={{ "float": "left" }}><input
                           name='year3'
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
-                        />
-                        {item.university_module_name}
+                        /></div>
                       </div>
-                      :""
+                        : ""
                     )
-                  )}
-                    <br/> 
+                    )}
+                    <br /> <br />
                   </div>
 
                   
                   
-                  <div className="year-module">
-                    <label for="fourth-year-modules">Select your 4th year modules: </label><br/>
+                  <div className="year-module-non-colour">
+                    <label for="fourth-year-modules"> <strong> Select your 4th year modules: </strong>  </label><br /><br />
                     {year_modules.map((item) => (
-                        item.year === "4" ?<div key={item.university_program_modules_id}>
-                        <input
+                      item.year === "4" ? <div key={item.university_program_modules_id} style={{ "width": "100%", "display": "inline-block" }}>
+                        <div style={{ "float": "left", "padding": "19px", "min-width": "450px" }}>{item.university_module_name}</div>
+                        <div style={{ "float": "left" }}><input
                           name='year4'
                           value={item.university_program_modules_id}
                           type="checkbox"
                           onChange={handleModuleChange}
-                        />{item.university_module_name}
+                        /></div>
                       </div>
-                      :""
+                        : ""
                     )
-                  )}
-                    <br/> <br/>
+                    )}
+                    <br /> <br />
                   </div>
                   
                   
