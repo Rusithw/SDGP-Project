@@ -56,6 +56,11 @@ const [year_modules, setYearModules] = useState([]);
    const [second_year_modules, setSecondYearModules] = useState([]);
    const [third_year_modules, setThirdYearModules] = useState([]);
    const [fourth_year_modules, setFourthYearModules] = useState([]);
+
+   const [selected_program, setProgramId] = useState(0);
+
+  const [pred, setPred] = useState([]);
+  const [predProfile, setPredProfile] = useState([]);
   
    const handleModuleChange = (event) => {
     var module = event.target.value;
