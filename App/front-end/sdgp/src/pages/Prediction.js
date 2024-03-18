@@ -151,12 +151,41 @@ const [year_modules, setYearModules] = useState([]);
       }
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(data_set);
-    console.log(first_year_modules, second_year_modules, third_year_modules, fourth_year_modules)
-  };
+    const user_id = window.sessionStorage.getItem("user_id");
+    const user_name = window.sessionStorage.getItem("user_name");
 
+    const payLoad = {
+      "user_name": user_name,
+      "selected_program": selected_program,
+      "first_year_modules": first_year_modules,
+      "second_year_modules": second_year_modules,
+      "third_year_modules": third_year_modules,
+      "fourth_year_modules": fourth_year_modules
+    }
+    try {
+      const response = await fetch('http://localhost:3001/api/prediction2/get/' + user_id, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payLoad),
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid');
+      }
+
+      const data = await response.json();
+      console.log('pred', data);
+      setPred(data)
+    } catch (error) {
+      console.error('Error modules in:', error);
+
+    }
+
+  };
   const programSelect = async (event) => {
     const payLoad = {
      "university_program_id": event.target.value
