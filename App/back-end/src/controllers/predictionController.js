@@ -227,3 +227,59 @@ exports.predictFutureCareerPlans = async (req, res) => {
         console.error('Error predicting future career plans:', error);
     }
 }
+
+// Secondory function to predict future career plans
+exports.predictFutureCareerPlansSimple = async (req, res) => {
+    const { id } = req.params;
+    const dataset = req.body;
+    console.log(dataset)
+    const prog_name = await getProgramName(dataset.selected_program)
+    console.log(prog_name)
+    let allmodules = []
+    for (var i = 0; dataset.first_year_modules.length > i; i++) {
+        set = {
+            user_id: id,
+            user_name: dataset.user_name,
+            university_program_name: prog_name,
+            university_module_name: await getModuleName(dataset.first_year_modules[i])
+        }
+        allmodules.push(set)
+    }
+    for (var i = 0; dataset.second_year_modules.length > i; i++) {
+        set = {
+            user_id: id,
+            user_name: dataset.user_name,
+            university_program_name: prog_name,
+            university_module_name: await getModuleName(dataset.second_year_modules[i])
+        }
+        allmodules.push(set)
+    }
+    for (var i = 0; dataset.third_year_modules.length > i; i++) {
+        set = {
+            user_id: id,
+            user_name: dataset.user_name,
+            university_program_name: prog_name,
+            university_module_name: await getModuleName(dataset.third_year_modules[i])
+        }
+        allmodules.push(set)
+    }
+    for (var i = 0; dataset.fourth_year_modules.length > i; i++) {
+        set = {
+            user_id: id,
+            user_name: dataset.user_name,
+            university_program_name: prog_name,
+            university_module_name: await getModuleName(dataset.fourth_year_modules[i])
+        }
+        allmodules.push(set)
+    }
+    console.log(allmodules)
+    try {
+        // Retrieve enrolled users with their selected programs and modules
+        const users = allmodules
+        // Predict future career plans based on university programs and modules
+        const careerPlans = exports.predictCareerPlans(users);
+        res.json(careerPlans);
+    } catch (error) {
+        console.error('Error predicting future career plans:', error);
+    }
+}
