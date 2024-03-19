@@ -56,7 +56,9 @@ function Home() {
         </li>
         <br />
         <li><h3>Prediction</h3>
-          <p>Go to the <strong>Prediction</strong> tab. Check each and every module you are doing. Submit it. Wait for the prediction.</p>
+          <p>Go to the <strong>Prediction</strong> tab. Check each and every module you are doing. Submit it. Wait for the prediction.</p> <p> You can get 2 types of predictions
+Prediction base - gives a prediction of what you've selected on the PREDICTION page
+Profile base - gives a prediction of what you've entered on the PROFILE page </p>
         </li>
         <br />
         <li><h3>Ta Da!</h3>
