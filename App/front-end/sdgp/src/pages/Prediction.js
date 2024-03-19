@@ -268,12 +268,17 @@ function Prediction() {
             <div className="prediction-img-content">
               <img src="Images/prediction-image.jpg" alt="#" />
             </div>
+            <br /><br /><br />
+            <div className="prediction-img-content2">
+              <img src="Images/prediction-image.jpg" alt="#" />
+            </div>
+            <br />
           </div>
           <div className="width-50">
             <form onSubmit={handleSubmit}>
               <div className="detail-form">
                 <div className="nav-padding">
-                  <h2> {userDetailsByUserName_data}  Please fill your details here</h2>
+                  <h2 className='head2'> {userDetailsByUserName_data}  Please fill your details here</h2>
 
                   <label for="degree-selector">Select you degree program: </label><br />
                   <select name="degree-program" onChange={programSelect}>

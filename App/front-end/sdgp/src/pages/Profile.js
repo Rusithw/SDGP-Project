@@ -295,6 +295,10 @@ function Profile() {
             <div className="profile-img-content">
               <img src="/Images/prediction1.jpg" alt="#" />
             </div>
+            <br /><br /><br /><br />
+            <div className="profile-img-content">
+              <img src="/Images/prediction6.jpeg" alt="#" />
+            </div>
             <a href="#" class="top">&#128743;</a>
           </div>
           <div className="width-50">

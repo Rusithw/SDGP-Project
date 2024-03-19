@@ -203,6 +203,24 @@ body p,body label{
   margin-top: 4rem;
   margin-left: 2rem;
 }
+.prediction-image .prediction-img-content2{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 50%), url(Images/prediction5.jpeg);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  object-fit: contain;
+  padding-right: 10px;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  width: 90%;
+  height: 30rem;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
 .topz{
   --offset: 50px; 
   float: left;
@@ -644,17 +662,22 @@ ol li h3{
   }
   .width-50 .prediction-img-content{
     height: 25rem;
-    margin: auto;
+    margin-top: 5%;
+    margin-left: 10px;
+  }
+  .width-50 .prediction-img-content2{
+    height: 25rem;
+    margin-left: 10px;
     margin-top: 5%;
   }
   .button-editor{
     display: flex;
     margin-bottom: 5%;
   }
-  .width-50 .profile-img-content img{
-    margin: auto;
+  .profile-img-content img{
     border-radius: 12%;
     float: left;
+    margin-left: -25px;
   }
   .detail-form input{
     width: 90%;
