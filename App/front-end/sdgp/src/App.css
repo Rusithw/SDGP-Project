@@ -220,6 +220,7 @@ body p,body label{
   border-radius: 10px;
   margin-top: 4rem;
   margin-left: 2rem;
+  bottom: 0px;
 }
 .topz{
   --offset: 50px; 

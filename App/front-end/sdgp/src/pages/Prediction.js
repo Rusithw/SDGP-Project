@@ -266,11 +266,9 @@ function Prediction() {
         <div className="width-100">
           <div className="width-50 prediction-image">
             <div className="prediction-img-content">
-              <img src="Images/prediction-image.jpg" alt="#" />
             </div>
             <br /><br /><br />
             <div className="prediction-img-content2">
-              <img src="Images/prediction-image.jpg" alt="#" />
             </div>
             <br />
           </div>
