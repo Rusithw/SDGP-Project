@@ -364,8 +364,11 @@ function Prediction() {
                     <br /> <br />
                   </div>
 
+                  
 
-                  <div>
+
+                  <div className='result'>
+                    <h3>- Prediction Based on Form Data -</h3>
                     <ul>
                       {Object.entries(pred).map(([career, percentage]) => (
                         <li key={career} >
@@ -374,6 +377,7 @@ function Prediction() {
                       ))}
                     </ul>
                   </div>
+                  <br />
                   <div className="button-editor">
                     <div className="Submit-button">
                       <button className="button" type="SUBMIT">Prediction Based on Form Data</button>
@@ -382,8 +386,10 @@ function Prediction() {
                 </div>
               </div>
             </form>
+            <br />
             <div>
-              <div>
+              <div className='result'>
+                    <h3>- Prediction Based on Profile -</h3>
                 <ul>
                   {Object.entries(predProfile).map(([career, percentage]) => (
                     <li key={career} >
@@ -392,6 +398,7 @@ function Prediction() {
                   ))}
                 </ul>
               </div>
+              <br />
               <div className="button-editor">
                 <div className="Submit-button">
                   <button className="button" type="button" onClick={handleSubmitProfilePred}>Prediction Based on Your Profile</button>

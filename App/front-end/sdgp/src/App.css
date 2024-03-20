@@ -94,6 +94,9 @@ body p,body label{
   background-color: #009bad;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.493);
 }
+.button:active{
+  transform: translateY(3px);
+}
 .login-content .button{
   width: 100%;
   height: 50px;
@@ -172,10 +175,10 @@ body p,body label{
 .profile-image img{
   width: 95%;
   height: auto;
-  object-fit: contain;
+  /* object-fit: contain; */
   max-width: 100%;
   padding-right: 10px;
-  padding: 35px;
+  padding-left: 35px;
   border-radius: 100%;
 }
 
@@ -221,6 +224,19 @@ body p,body label{
   margin-top: 4rem;
   margin-left: 2rem;
   bottom: 0px;
+}
+.result{
+  background-color: #c3ffff;
+  color: rgb(0, 0, 0);
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.493);
+}
+.result li{
+  list-style-type: square;
+}
+.result h3{
+  text-align: center;
 }
 .topz{
   --offset: 50px; 
