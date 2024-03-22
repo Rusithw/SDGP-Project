@@ -65,7 +65,79 @@ function ProgramDetails() {
               <Tab>Psychology</Tab>
               <Tab>Engineering</Tab>
             </TabList>
-          </Tabs>  
+
+            <TabPanel>
+            <div className='box'>
+                <h3>BEng (Hons) Software Engineering </h3>
+                <p>The BEng (Hons) Software Engineering embodies the best ways to design, implement, evaluate and maintain software systems. It makes use of many of the technical aspects of computer science, especially programming and aims to develop the professional attitudes and interpersonal and technical skills you will need in the software engineering industry.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p> The course covers software development process models, programming languages, technologies and tools including Object-Oriented Programming languages, OO analysis and design techniques, database designing and practice, mobile application development, web application development, security and forensics etc. BEng (Hons) software engineering Students will have the option of transferring to Level 5 of the BSc (Hons) Computer Science degree upon completion of the first year. </p>
+              </div>
+            </TabPanel>
+            
+            <TabPanel>
+            <div className='box'>
+                <h3>BSc (Hons) Computer Science </h3>
+                <p>BSc (Hons) Computer Science provides a solid foundation and training regarding the fundamentals of the computer science field, along with the opportunity to specialize in Mobile and Web Computing, Games and Computer Graphics Development or Multimedia Computing disciplines. It would provide technical knowledge to develop applications to a wide variety of end-user requirements and situations. It also aims at harnessing and developing professional attitudes and interpersonal skills that are required to work effectively, professionally and ethically within the ICT sphere.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>The key aspects of this course are its flexibility and the ability for you to build a customized route within the computer science discipline. You will be able to follow recommended pathways from a range of computing areas that suit your developing interests. You will develop a wide range of skills and knowledge in areas such as systems analysis & design, mobile/web application development, game and multimedia development, user interface development and network security.</p>
+              </div> 
+            </TabPanel>
+
+            <TabPanel>
+            <div className='box'>
+                <h3>BSc (Hons) Artificial Intelligence </h3>
+                <p>The BSc (Hons) Artificial Intelligence and Data Science course is awarded by Robert Gordon University (RGU) in the UK in collaboration with the Informatics Institute of Technology (IIT) in Sri Lanka. This course is designed to address the shortage of the rising demand for a workforce with skills in artificial intelligence and data science (AI and DS), as well as to provide the opportunity for students aspiring to a career in AI and DS.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p> The BSc (Hons) Artificial Intelligence and Data Science course is awarded by Robert Gordon University (RGU) in the UK in collaboration with the Informatics Institute of Technology (IIT) in Sri Lanka. This course is designed to address the shortage of the rising demand for a workforce with skills in artificial intelligence and data science (AI and DS), as well as to provide the opportunity for students aspiring to a career in AI and DS. Students will be able to gain a practical understanding of contemporary AI and DS trends and technologies in developing cutting-edge solutions. Specifically, the course adopts a general to specific organization of modules; whereby initially a range of modules organized under key streams, Systems, Mathematics, Programming and AI and DS, is gradually specialized into AI and DS modules, as students progress through Stages 1 to 4. This will include modules such as Programming, Database, Web, IoT, Algorithms, Deep Learning, Machine Learning, Machine Vision, Mathematics and Statistics; where students are exposed to both theoretical principles and state-of-the-art technological advances. This will enable students to unlock the power of automation, analytics and AI, paving the way for innovation while following the course and after graduation.</p>
+              </div> 
+            </TabPanel>
+
+            <TabPanel>
+            <div className='box'>
+                <h3>MEDICINE</h3>
+                <p>The Medicine program is designed to equip students with the knowledge, skills, and professional attitudes necessary to excel in the field of medicine. By focusing on medical sciences, clinical practice, and patient care, Medicine prepares students to become competent and empathetic medical professionals.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>The Medicine program offers a comprehensive exploration of medical science, clinical practice, and healthcare systems. Students study anatomy, physiology, pharmacology, pathology, and medical ethics while engaging in hands-on clinical experiences and hospital rotations. Emphasis is placed on evidence-based medicine, interdisciplinary collaboration, and communication skills. Elective courses and research projects allow students to delve into specialized areas of medicine, and upon completion of the first year, students may have the option to transfer to Level 5 of other relevant medical degrees, providing flexibility in their educational path.</p>
+              </div> 
+            </TabPanel>
+
+            <TabPanel>
+            <div className='box'>
+                <h3>BUSINESS ADMINISTRATION</h3>
+                <p>The Business Administration program equips students with essential knowledge and skills for effectively managing various aspects of business operations, including finance, marketing, human resources, and strategic planning. Combining theoretical foundations with practical applications, this degree fosters critical thinking and decision-making abilities necessary to thrive in dynamic business environments.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>This course covers a wide range of subjects essential for understanding the intricacies of modern business operations and management practices. Students will explore topics such as organizational behavior, strategic management, marketing principles, financial analysis, human resource management, operations management, and entrepreneurship. Additionally, the curriculum includes modules on business ethics, international business, information technology in business, and data analysis. Throughout the program, students will engage in case studies, projects, and practical exercises to apply theoretical concepts to real-world business scenarios.</p>
+              </div> 
+            </TabPanel>
+
+            <TabPanel>
+            <div className='box'>
+                <h3>PSYCHOLOGY</h3>
+                <p>The BSc (Hons) Psychology program explores the intricacies of human behavior, cognition, and emotions, utilizing empirical research methods and theoretical frameworks to analyze and understand psychological phenomena. It fosters critical thinking, research skills, and ethical considerations, preparing students for diverse career paths in psychology while emphasizing professional development and interpersonal communication essential in the field.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>  Students delve into various subfields including cognitive psychology, developmental psychology, social psychology, clinical psychology, and more. The curriculum covers fundamental theories, research methodologies, and practical applications in understanding human behavior and mental processes. Topics include psychological assessment, neuroscience, abnormal psychology, and counseling techniques. Additionally, students gain valuable skills in statistical analysis, experimental design, and critical thinking, which are essential for conducting empirical research in psychology.</p>
+              </div>
+            </TabPanel>
+
+            <TabPanel>
+            <div className='box'>
+                <h3> ENGINEERING </h3>
+                <p>The BSc (Hons) Engineering program integrates foundational principles and advanced techniques to analyze, design, construct, and innovate various engineering systems across multiple disciplines. It emphasizes hands-on learning, problem-solving, and the development of critical thinking and communication skills necessary to excel in diverse engineering fields, fostering professionals ready to tackle real-world challenges in today's rapidly evolving technological landscape.</p>
+                <hr />
+                <h3>Course Outline</h3>
+                <p>  Students delve into foundational subjects such as mathematics, physics, and materials science, providing a solid understanding of engineering fundamentals. As they progress through the program, they explore specialized areas including mechanical, electrical, civil, and chemical engineering, allowing them to develop expertise in their chosen field. The curriculum encompasses a wide range of topics, including but not limited to: mechanical engineering, electrical engineering, civil engineering, and chemical engineering. Students also have the opportunity to engage in interdisciplinary projects and gain hands-on experience through laboratory work, design projects, and industrial placements. The program emphasizes practical problem-solving skills, teamwork, and innovation, preparing graduates for diverse career opportunities in the engineering industry or further academic pursuits. </p>
+              </div>
+            </TabPanel>
+
+          </Tabs>
+            
           {/* <div>
             {selectedOption === '5' &&
               <div className='box'>
