@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './commen/NavBar';
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import { useNavigate } from "react-router-dom";
 import './ProgramDetails.css';
 
@@ -54,7 +55,18 @@ function ProgramDetails() {
          
 
           <br /><br />
-          <div>
+          <Tabs>
+            <TabList>
+              <Tab>BEng (Hons) Software Engineering</Tab>
+              <Tab>BSc (Hons) Computer Science</Tab>
+              <Tab>BSc (Hons) Artificial Intelligence</Tab>
+              <Tab>Medicine</Tab>
+              <Tab>Business Administration</Tab>
+              <Tab>Psychology</Tab>
+              <Tab>Engineering</Tab>
+            </TabList>
+          </Tabs>  
+          {/* <div>
             {selectedOption === '5' &&
               <div className='box'>
                 <h3>BEng (Hons) Software Engineering </h3>
@@ -105,14 +117,13 @@ function ProgramDetails() {
               </div>}
               {selectedOption === '11' &&
               <div className='box'>
-                <h3> 
-ENGINEERING </h3>
+                <h3> ENGINEERING </h3>
                 <p>The BSc (Hons) Engineering program integrates foundational principles and advanced techniques to analyze, design, construct, and innovate various engineering systems across multiple disciplines. It emphasizes hands-on learning, problem-solving, and the development of critical thinking and communication skills necessary to excel in diverse engineering fields, fostering professionals ready to tackle real-world challenges in today's rapidly evolving technological landscape.</p>
                 <hr />
                 <h3>Course Outline</h3>
                 <p>  Students delve into foundational subjects such as mathematics, physics, and materials science, providing a solid understanding of engineering fundamentals. As they progress through the program, they explore specialized areas including mechanical, electrical, civil, and chemical engineering, allowing them to develop expertise in their chosen field. The curriculum encompasses a wide range of topics, including but not limited to: mechanical engineering, electrical engineering, civil engineering, and chemical engineering. Students also have the opportunity to engage in interdisciplinary projects and gain hands-on experience through laboratory work, design projects, and industrial placements. The program emphasizes practical problem-solving skills, teamwork, and innovation, preparing graduates for diverse career opportunities in the engineering industry or further academic pursuits. </p>
               </div>}
-          </div>
+          </div> */}
         </div>
         <br />
 
