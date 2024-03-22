@@ -56,14 +56,14 @@ function ProgramDetails() {
 
           <br /><br />
           <Tabs>
-            <TabList>
-              <Tab>BEng (Hons) Software Engineering</Tab>
-              <Tab>BSc (Hons) Computer Science</Tab>
-              <Tab>BSc (Hons) Artificial Intelligence</Tab>
-              <Tab>Medicine</Tab>
-              <Tab>Business Administration</Tab>
-              <Tab>Psychology</Tab>
-              <Tab>Engineering</Tab>
+            <TabList className="tabs-container">
+              <Tab className="tab-list">BEng (Hons) Software Engineering</Tab>
+              <Tab className="tab-list">BSc (Hons) Computer Science</Tab>
+              <Tab className="tab-list">BSc (Hons) Artificial Intelligence</Tab>
+              <Tab className="tab-list">Medicine</Tab>
+              <Tab className="tab-list">Business Administration</Tab>
+              <Tab className="tab-list">Psychology</Tab>
+              <Tab className="tab-list">Engineering</Tab>
             </TabList>
 
             <TabPanel>

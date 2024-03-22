@@ -76,28 +76,30 @@ strong{
 .tabs-container {
     border: 1px solid #060606;
     display:flex;
-    background-color: #082D64;
+    background-color: steelblue;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
 }
 
 .tab-list {
-    /* display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border: none; */
   padding: 15px 20px;
   background: none;
   list-style-type: none;
   border: none;
+  border-radius: 50px;
   outline: none;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  color: #9EB7DC;
+  color: #efefef;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
-  margin-left: 90px;
+  
   }
   .tab-list:hover{
     color: white;
+    background-color: rgb(7, 7, 79);
+    border-radius: 80px;
   }
+  
