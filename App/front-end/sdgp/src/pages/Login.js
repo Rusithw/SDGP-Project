@@ -5,6 +5,8 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { ThreeDots} from 'react-loader-spinner';
 import './Login.css';
 
+// Welcome to the Career Prediction System, where you can create your own university profile and get predictions based on the modules you have selected in profile or make your own customized predictions by making informed module selections.
+
 
 function Login() {
   const navigate = useNavigate();
